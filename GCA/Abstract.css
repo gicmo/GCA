@@ -1,0 +1,76 @@
+#aid {
+    color: gray;
+    font-style: bold;
+    font-family: Helvetica, "sans-serif";
+    float: left;
+    padding-bottom: 2ex;
+}
+
+#topic {
+    padding-top: 1ex;
+    font-size: small;
+    text-align: right;
+    float: right;
+}
+
+#title {
+    font-family: Helvetica, "sans-serif";
+    font-size: large;
+    clear: both;
+}
+
+#author {
+    font-family: Helvetica, "sans-serif";
+    font-size: medium;
+}
+
+#epithat {
+    font-size : 70%;
+}
+
+#affiliations {
+    font-style: italic;
+    font-size: small;
+}
+
+#affiliations ol {
+    margin-left: 0pt;
+    margin-bottom: 0pt;
+    padding-left: 1.5em;
+    padding-bottom: 0pt;
+}
+
+#correspondence {
+    font-size: small;
+    margin-bottom: 0pt;
+    padding-bottom: 0pt;
+}
+
+#abstract {
+    padding-top: 0pt;
+    margin-top: 0pt;
+    text-align: justify;
+}
+
+.appendix h4 {
+    font-size: small;
+    padding-bottom: 0pt;
+    margin-bottom: 0pt;
+}
+
+.appendix p {
+    font-size: small;
+}
+
+.figure {
+    width: 100%;
+}
+
+.figure img {
+    max-width: 100%;
+}
+.figure p {
+    font-family: Helvetica, sans-serif;
+    font-size: small;
+    text-align: center;
+}

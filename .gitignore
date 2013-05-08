@@ -1,0 +1,45 @@
+# ingore binaries
+bin
+obj
+lib
+main
+test/bin
+Makefile.conf
+
+# ingore documentation
+doc/html
+
+# ignore hdf5 files
+*.hdf
+*.h5
+*.hdf5
+*.he5
+
+# ignore temp files
+*.swp
+*~
+*.orig
+
+# ignore files from dbg
+.dbg.
+*.dSYM
+
+# ignore codeblocs project files
+*.cbp
+*.depend
+*.layout
+
+# ignore OSX specific files
+.DS_Store
+buid/
+
+#ignore eclipse project files
+.cproject
+.project
+.settings
+Debug
+main.cpp
+src/pandora_cpp.cpp
+
+#ignore sublime specific files
+*.sublime-*
