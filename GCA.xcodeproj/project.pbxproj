@@ -68,6 +68,7 @@
 		E9AA6A9715DE8FD200B20172 /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA6A9615DE8FD200B20172 /* Affiliation.m */; };
 		E9AFCCA515EBBB3900101946 /* NSAttributedString+GSX.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AFCCA415EBBB3900101946 /* NSAttributedString+GSX.m */; };
 		E9AFCCA715EBBFE500101946 /* Information.gsx in Resources */ = {isa = PBXBuildFile; fileRef = E9AFCCA615EBBFE500101946 /* Information.gsx */; };
+		E9BE6BE5173AD509007A26EC /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = E9BE6BE4173AD509007A26EC /* Readme.md */; };
 		E9CBC2BE15CBF415002188D4 /* Program.json in Resources */ = {isa = PBXBuildFile; fileRef = E9CBC2BD15CBF415002188D4 /* Program.json */; };
 		E9D1ABF115EF66C3003F8A00 /* Abstract.css in Resources */ = {isa = PBXBuildFile; fileRef = E9D1ABF015EF66C3003F8A00 /* Abstract.css */; };
 		E9D1AC1015EFBCAD003F8A00 /* Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D1AC0F15EFBCAD003F8A00 /* Abstract.m */; };
@@ -167,6 +168,7 @@
 		E9AFCCA315EBBB3900101946 /* NSAttributedString+GSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+GSX.h"; sourceTree = "<group>"; };
 		E9AFCCA415EBBB3900101946 /* NSAttributedString+GSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+GSX.m"; sourceTree = "<group>"; };
 		E9AFCCA615EBBFE500101946 /* Information.gsx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Information.gsx; sourceTree = "<group>"; };
+		E9BE6BE4173AD509007A26EC /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = SOURCE_ROOT; };
 		E9CBC2BD15CBF415002188D4 /* Program.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Program.json; sourceTree = "<group>"; };
 		E9D1ABF015EF66C3003F8A00 /* Abstract.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Abstract.css; sourceTree = "<group>"; };
 		E9D1AC0E15EFBCAD003F8A00 /* Abstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Abstract.h; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 		E99EE5E115B6E6D10007DC94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9BE6BE4173AD509007A26EC /* Readme.md */,
 				E9095782173AABB500A1B6E0 /* Abstracts.storedata */,
 				E9095747173A93AD00A1B6E0 /* LICENSE */,
 				E9D1ABF015EF66C3003F8A00 /* Abstract.css */,
@@ -460,6 +463,7 @@
 				E9095791173AACE200A1B6E0 /* 00-StarWhite@2x.png in Resources */,
 				E9095792173AACE200A1B6E0 /* 00-StarWhiteFilled.png in Resources */,
 				E9095793173AACE200A1B6E0 /* 00-StarWhiteFilled@2x.png in Resources */,
+				E9BE6BE5173AD509007A26EC /* Readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
