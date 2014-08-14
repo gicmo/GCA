@@ -39,6 +39,12 @@
         [eventType isEqualToString:@"header"]) {
         self.title.text = event[@"title"];
         self.author.hidden = YES;
+    
+        if (event[@"info"]) {
+            self.author.text = event[@"info"];
+            self.author.hidden = NO;
+        }
+        
     } else if ([eventType isEqualToString:@"talk"] ||
                [eventType isEqualToString:@"ctalk"]) {
         self.author.text = event[@"speaker"];
@@ -99,6 +105,8 @@
     } else if ([eventType isEqualToString:@"ctalk"]) {
         return NROW_FOUR;
     } else if ([eventType isEqualToString:@"session"] && event[@"chair"]) {
+        return NROW_TWO;
+    } else if(event[@"info"]) {
         return NROW_TWO;
     }
     
