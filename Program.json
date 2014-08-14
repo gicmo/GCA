@@ -1,0 +1,191 @@
+[{
+    "date":"25.09.2013",
+    "events": [
+               {
+               "type":  "session",
+               "title": "OPENING LECTURE",
+               "chair": "Felix Wichmann"
+               },
+               {
+               "time":  "13:30",
+               "type":  "talk",
+               "title": "A functional and perceptual signature of the second visual area in primates",
+               "speaker": "Anthony Movshon & Eero Simoncelli (New York, USA)"
+               },
+               {
+               "time" : "15:00",
+               "type" : "food",
+               "title": "Coffee break"
+               },
+               {
+               "type":  "session",
+               "title": "OPENING SESSION"
+               },
+               {
+               "time" : "15:30",
+               "type" : "general",
+               "title": "Opening Matthias Bethge & Andreas Herz"
+               },
+               {
+               "time" : "15:50",
+               "type" : "general",
+               "title": "Welcome BMBF & Bernstein Award 2013"
+               },
+               {
+               "time" : "16:15",
+               "type" : "general",
+               "title": "Lecture by the Bernstein Award Winner"
+               },
+               {
+               "time" : "17:00",
+               "type" : "poster",
+               "title": "POSTER SESSION I"
+               },
+               {
+               "time" : "20:00",
+               "type" : "general",
+               "title": "Science Slam & Neurovision Film Contest",
+               "info": "(location HS2)"
+               }
+            ]
+ 
+ }, {
+ 
+    "date":"26.09.2013",
+    "events": [
+
+               { "type":  "session",
+                 "title": "PHYSIOLOGY OF VISION", "chair" : "Anthony Movshon"},
+               
+               { "type":  "talk",
+               "time" : "09:00", "speaker": "Martin Usrey (Davis, USA)",
+                "title": "Organization and dynamics of neural circuits for vision"},
+               
+               { "type":  "talk",
+               "time" : "09:45", "speaker": "Pieter Roelfsema (Amsterdam, The Netherlands)",
+                "title": "The neuronal mechanisms that are responsible for perceptual organization"},
+               
+               { "type" : "food",
+               "time" : "10:30", "title": "Coffee break"},
+               
+               { "type":  "talk",
+               "time" : "11:00", "speaker": "Anitha Pasupathy (Washington, USA)",
+               "title" : "Partial occlusions and primate V4"},
+               
+               { "type":  "session",
+                 "title": "Contributed talks"},
+               
+               { "type":  "ctalk",
+               "time" : "11:45", "speaker": "A. Tikidji-Hamburyan, T. Münch",
+                "title": "Ambient luminance changes ganglion cell responses qualitatively"},
+               
+               { "type":  "ctalk",
+               "time" : "12:00", "speaker": "J. Liu, T. Gollisch",
+                "title": "Spike-triggered analysis of contrast adaptation in the retina"},
+               
+               { "type":  "ctalk",
+               "time" : "12:15", "speaker": "J.D.F. Weidinger, W. Keil, D. Tsigankov, M. Schnabel, M. Kaschube, F. Wolf",
+                 "title": "Understanding order and disorder in visual cortical circuits through self- organization"},
+               
+               { "type" : "food",
+               "time" : "12:30", "title": "Lunch"},
+               
+               { "type":  "session",
+                 "title" : "COMPUTATIONAL VISION", "chair" : "Michael Black"},
+               
+               { "type":  "talk",
+               "time" : "14:00", "speaker": "Ruth Rosenholtz (Boston, USA)",
+                "title": "Rethinking the roles of selective attention and economical encoding in vision"},
+               
+               { "type":  "talk",
+               "time" : "14:45", "speaker": "Antonio Torralba (Boston, USA)",
+                "title": "Who is to blame in object detection failures?"},
+               
+               { "time" : "15:30",  "title" : "Coffee break"},
+               
+               { "type":  "talk",
+               "time" : "16:00",  "speaker": "Pietro Perona (Pasadena, USA)",
+               "title": "Visual search – faster, better, spikier"},
+               
+               {  "type":  "session",
+                 "title": "Contributed talks"},
+               
+               { "type":  "ctalk",
+               "time" : "16:45",  "speaker": "V. Mehrpour, J.C. Martinez-Trujillo, S. Treue",
+                "title": "Saliency enhancement by attention in area MT of the visual cortex of rhesus monkeys"},
+               
+               { "type":  "ctalk",
+               "time" : "17:00",  "speaker": "J. Goulet, J. Kipping, T. Preuss, J.L. van Hemmen",
+                "title": "Multimodal integration allows the Mauthner cells to induce a fast escape"},
+               
+               { "type":  "ctalk",
+               "time" : "17:15",  "speaker": "J. Lefebvre, A. Pouget, J. Beck",
+               "title": "Learning non-linear probabilistic computations in recurrent spiking networks"},
+               
+               {  "type" : "poster",
+                  "time" : "17:30",  "title": "POSTER SESSION II"},
+               
+               { "time" : "20:00", "title": "Conference dinner, Restaurant Museum"}
+ 
+    ]
+ }, {
+ 
+ "date":"27.09.2013",
+ "events": [
+ 
+            { "type":  "session", "title": "CORTICAL DYNAMICS AND CIRCUITS", "chair" : "Fred Wolf"},
+            
+            {  "type":  "talk", "time" : "09:00",  "speaker": "David Fitzpatrick (Florida, USA)",
+            "title" : "Rapid developmental changes in the patterns of population activity accompany the onset of visual experience in ferret visual cortex"},
+            
+            {  "type":  "talk", "time" : "09:45",  "speaker": "Natalie Rochefort (Edinburgh, UK)",
+            "title" : "Visually-evoked calcium signalling in dendrites and spines of cortical neurons in vivo"},
+            
+            {  "type" : "food","time" : "10:30", "title" : "Coffee break"},
+            
+            {  "type":  "talk", "time" : "11:00",  "speaker": "Alfonso Renart (Lisbon, Portugal)",
+            "title" : "Spontaneous dynamics of cortical circuits during activated states"},
+            
+            { "type":  "session", "title": "Contributed Talks"},
+            
+            {  "type":  "ctalk", "time" : "11:45",  "speaker": "M. Deger, R. Naud, W. Gerstner",
+            "title" : "Network dynamics of spiking neurons with adaptation"},
+            
+            {  "type":  "ctalk", "time" : "12:00",  "speaker": "A. Burgalossi, Q. Tang, S. Ray, R. Naumann, H. Schmidt, M. Brecht",
+            "title" : "Structural determinants of spatial representations in layer 2 of medial entorhinal cortex"},
+            
+            {  "type":  "ctalk", "time" : "12:15",  "speaker": "K. Wimmer, A. Compte, A. Roxin, A. Renart, J. de la Rocha",
+            "title" : "Stimulus fluctuations together with top-down feedback can account for the dy- namics of choice probabilities in MT"},
+            
+            { "type" : "food", "time" : "12:30", "title" : "Lunch"},
+            
+            { "type":  "session", "title": "DECISION MAKING", "chair" : "Michael Brecht"},
+            
+            {  "type":  "talk", "time" : "14:00", "speaker": "Alla Karpova (Janelia Farm, USA)",
+            "title" : "Decision-making under uncertainty: Probing the neural basis of mental models"},
+            
+            {  "type":  "talk", "time" : "14:45", "speaker": "Adam Kepecs (Cold Spring Harbor, USA)",
+            "title" : "Confidence: thinking about thinking or thinking about statistics and the brain"},
+            
+            { "type" : "food", "time" : "15:30", "title" : "Coffee break"},
+            
+            {  "type":  "talk", "time" : "16:00", "speaker": "Carlos Brody (Princeton, USA)",
+            "title" : "Neural substrates of decision-making"},
+            
+            { "type":  "session", "title": "AWARD SESSION & OUTLOOK"},
+            
+            { "type" : "general", "time" : "16:45", "title" : "Brains for Brains Award"},
+            
+            { "type":  "talk", "speaker" : "Martha Bisio (Genova, Italy)",
+            "title" : "Characterization of electrophysiological activity of confined neuronal populations during development"},
+            
+            { "type":  "talk", "speaker": "Ralph Bourdoukan (Paris, France)",
+            "title" : "Spiking networks learning to balance excitation and inhibition develop an optimal representation"},
+            
+            { "type" : "general", "time" : "17:30", "title" : "Bernstein NeuroVision Film Award"},
+            
+            { "type" : "general", "time" : "18:00", "title" : "Closing Remarks & Outlook",
+            "info" : "Organizers of the Bernstein Conference 2013 and 2014"}
+ 
+        ]}
+ ]

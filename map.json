@@ -1,0 +1,20 @@
+ [
+  {
+    "description": "Brechtbau, Tübingen",
+    "name": "Workshop venue",
+    "point": {
+    "lat": 48.526985,
+    "long":  9.063087
+    },
+    "type": 0
+  },
+    {
+        "description": "Neue Aula, Universität Tübingen",
+        "name": "Congress venue",
+        "point": {
+            "lat": 48.524517,
+            "long":  9.059576
+        }, 
+        "type": 0
+    }
+]
