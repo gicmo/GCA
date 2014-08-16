@@ -4,6 +4,7 @@ import lxml.etree
 import json
 import sys
 
+
 class Foo(object):
 
     def __init__(self):
@@ -23,62 +24,57 @@ class Foo(object):
 
 def parse_point(text):
     cord = text.split(',')
-    long = float (cord[0])
-    lat = float (cord[1])
-    point = {'lat' : lat, 'long' : long}
+    lng = float(cord[0])
+    lat = float(cord[1])
+    point = {'lat': lat, 'long': lng}
     return point
 
-styleDict = {
-    16 : 0,
-    10 : 1,
-    6  : 1,
 
-    8  : 2,
-    7  : 2,
-    1  : 2,
-    9  : 2,
-    4  : 2,
-    14 : 2,
+class PoiType(object):
+    PT_VENUE = 0
+    PT_UNI = 1
+    PT_HOTEL = 2
+    PT_HOTEL_2 = 3
+    PT_TRANSPORT = 4
+    PT_FOOD = 5
 
-    17 : 3,
-    18 : 3,
+styleDict = {'#icon-503-4186F0': PoiType.PT_VENUE,
+             '#icon-1035': PoiType.PT_HOTEL,
+             '#icon-503-DB4436': PoiType.PT_FOOD,
+             '#icon-1459': PoiType.PT_TRANSPORT}
 
-    15 : 4,
-    3  : 4,
-    12 : 4,
-    2  : 4,
-    11 : 4,
-    13 : 4,
-    5  : 4
-}
 
 def parse_style(text):
-    num = int(text[6:])
-    return styleDict[num]
+    if text not in styleDict:
+        sys.stderr.write('[W] [%s] not in styleDict\n' % text)
+        return PoiType.PT_FOOD
+    return styleDict[text]
+
 
 def parse_placemark(node):
     pm = {}
     for child in node.iterchildren():
         tag = child.tag[child.tag.rfind('}')+1:]
-        if child.tag == '{http://earth.google.com/kml/2.2}Point':
+        if child.tag == '{http://www.opengis.net/kml/2.2}Point':
             coordinates_tag = child.getchildren()[0]
             pm['point'] = parse_point(coordinates_tag.text)
-        elif child.tag == '{http://earth.google.com/kml/2.2}styleUrl':
+        elif child.tag == '{http://www.opengis.net/kml/2.2}styleUrl':
             pm['type'] = parse_style(child.text)
         else:
-            pm[tag] = child.text
+            pm[tag] = child.text.strip()
 
     return pm
+
 
 def main():
     fd = file(sys.argv[1])
     doc = lxml.etree.parse(fd)
     kml = doc.getroot()
-    if not kml.tag == '{http://earth.google.com/kml/2.2}kml':
+    if not kml.tag == '{http://www.opengis.net/kml/2.2}kml':
         print 'NOT A KML DOC!'
         return
     #Use XPath to get all the placemark tags in the document
-    pmn = doc.xpath('//k:Placemark', namespaces={'k': 'http://earth.google.com/kml/2.2'})
+    pmn = doc.xpath('//k:Placemark', namespaces={'k': 'http://www.opengis.net/kml/2.2'})
     placemarks = []
     for node in pmn:
         placemark = parse_placemark (node)
