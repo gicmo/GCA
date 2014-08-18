@@ -86,7 +86,6 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     NSInteger count = [[self.fetchResultsCtrl sections] count];
-    NSLog(@"number of sections in tv: %d", count);
     return count;
 }
 
