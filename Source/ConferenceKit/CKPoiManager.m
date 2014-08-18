@@ -57,7 +57,7 @@
         poi.coordinate = point;
         poi.title = [dict objectForKey:@"name"];
         poi.subtitle = [dict objectForKey:@"description"];
-        poi.poiType = [[dict objectForKey:@"type"] integerValue];
+        poi.poiType = (kCKPoiType) [[dict objectForKey:@"type"] integerValue];
         poi.cid = [dict objectForKey:@"cid"];
         poi.poiId = poiId++;
         
