@@ -1,9 +1,9 @@
 //
 //  Organization.m
-//  AbstractManager
+//  GCA
 //
-//  Created by Christian Kellner on 8/9/12.
-//  Copyright (c) 2012 G-Node. All rights reserved.
+//  Created by Christian Kellner on 19/08/14.
+//  Copyright (c) 2014 G-Node. All rights reserved.
 //
 
 #import "Organization.h"
@@ -17,6 +17,7 @@
 @dynamic department;
 @dynamic name;
 @dynamic section;
+@dynamic uuid;
 @dynamic members;
 
 @end

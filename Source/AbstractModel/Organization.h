@@ -1,9 +1,9 @@
 //
 //  Organization.h
-//  AbstractManager
+//  GCA
 //
-//  Created by Christian Kellner on 8/9/12.
-//  Copyright (c) 2012 G-Node. All rights reserved.
+//  Created by Christian Kellner on 19/08/14.
+//  Copyright (c) 2014 G-Node. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString * department;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * section;
+@property (nonatomic, retain) NSString * uuid;
 @property (nonatomic, retain) NSSet *members;
 @end
 

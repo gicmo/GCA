@@ -15,6 +15,7 @@
 #import "CKDataStore.h"
 #import "Abstract.h"
 #import "Author.h"
+#import "Author+Format.h"
 
 @interface AbstractsListTVC () <AbstrarctVCDelegate, UISearchBarDelegate> {
     BOOL showFav;
@@ -117,7 +118,7 @@
     Author *author = [abstract.authors objectAtIndex:0];
     
     UIFont *font = infoCell.authors.font;
-    NSMutableString *authorLabel = [[NSMutableString alloc] initWithString:author.name];
+    NSMutableString *authorLabel = [[NSMutableString alloc] initWithString:[author formatName]];
     
     
     for (int idx = 1; idx < [abstract.authors count]; idx++) {
@@ -129,14 +130,14 @@
         else
             separator = @", ";
         
-        [authorLabel appendFormat:@"%@%@", separator, coAuthor.name];
+        [authorLabel appendFormat:@"%@%@", separator, [coAuthor formatName]];
     }
     
     //FIXME
     if ([authorLabel sizeWithFont:font].width < infoCell.frame.size.width - 40) {
         infoCell.authors.text = authorLabel;
     } else {
-        infoCell.authors.text = [NSString stringWithFormat:@"%@ et al.", author.name];
+        infoCell.authors.text = [NSString stringWithFormat:@"%@ et al.", [author formatName]];
     }
     
     if (abstract.isFavorite) {

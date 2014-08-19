@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E9216DE017E74D1B0013973B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9216DDF17E74D1B0013973B /* Images.xcassets */; };
-		E9216E6A17E8EAA00013973B /* Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = E9216E6917E8EAA00013973B /* Abstract.m */; };
 		E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9216E6B17E8EAC70013973B /* Abstracts.xcdatamodeld */; };
+		E96241E319A3804700B189D6 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241E219A3804700B189D6 /* Organization.m */; };
+		E96241E619A3804800B189D6 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241E519A3804800B189D6 /* Author.m */; };
+		E96241E919A3804800B189D6 /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241E819A3804800B189D6 /* Reference.m */; };
+		E96241EC19A3804800B189D6 /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241EB19A3804800B189D6 /* Affiliation.m */; };
+		E96241EF19A3804800B189D6 /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241EE19A3804800B189D6 /* Correspondence.m */; };
+		E96241F219A3804800B189D6 /* Figure.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241F119A3804800B189D6 /* Figure.m */; };
+		E96241F519A3804800B189D6 /* Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241F419A3804800B189D6 /* Abstract.m */; };
+		E96241F819A3814900B189D6 /* Author+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241F719A3814900B189D6 /* Author+Format.m */; };
+		E96241FB19A3816900B189D6 /* Organization+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241FA19A3816900B189D6 /* Organization+Format.m */; };
 		E9829D4717C24A490024EBC0 /* G-Node.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4517C24A490024EBC0 /* G-Node.png */; };
 		E9829D4817C24A490024EBC0 /* G-Node@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4617C24A490024EBC0 /* G-Node@2x.png */; };
 		E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9829D5117C25EED0024EBC0 /* AbstractsSVC.m */; };
@@ -56,10 +64,6 @@
 		E9D3143F17BF875500DACDB4 /* 07-Previous@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3143017BF875500DACDB4 /* 07-Previous@2x.png */; };
 		E9D3144217BF880600DACDB4 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3144117BF880600DACDB4 /* MapVC.m */; };
 		E9D3145317BF8B9E00DACDB4 /* AbstractGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3144717BF8B9E00DACDB4 /* AbstractGroup.m */; };
-		E9D3145517BF8B9E00DACDB4 /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3144B17BF8B9E00DACDB4 /* Affiliation.m */; };
-		E9D3145617BF8B9E00DACDB4 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3144D17BF8B9E00DACDB4 /* Author.m */; };
-		E9D3145717BF8B9E00DACDB4 /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3144F17BF8B9E00DACDB4 /* Correspondence.m */; };
-		E9D3145817BF8B9E00DACDB4 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3145117BF8B9E00DACDB4 /* Organization.m */; };
 		E9D3145A17BF8BE200DACDB4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D3145917BF8BE200DACDB4 /* CoreData.framework */; };
 		E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3145E17BF8CF200DACDB4 /* CKDataStore.m */; };
 		E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3146117BF9EFF00DACDB4 /* AbstractsListTVC.m */; };
@@ -84,9 +88,25 @@
 
 /* Begin PBXFileReference section */
 		E9216DDF17E74D1B0013973B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
-		E9216E6817E8EAA00013973B /* Abstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Abstract.h; sourceTree = "<group>"; };
-		E9216E6917E8EAA00013973B /* Abstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Abstract.m; sourceTree = "<group>"; };
 		E9216E6C17E8EAC70013973B /* Abstracts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Abstracts.xcdatamodel; sourceTree = "<group>"; };
+		E96241E119A3804700B189D6 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Organization.h; path = AbstractModel/Organization.h; sourceTree = "<group>"; };
+		E96241E219A3804700B189D6 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Organization.m; path = AbstractModel/Organization.m; sourceTree = "<group>"; };
+		E96241E419A3804800B189D6 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Author.h; path = AbstractModel/Author.h; sourceTree = "<group>"; };
+		E96241E519A3804800B189D6 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Author.m; path = AbstractModel/Author.m; sourceTree = "<group>"; };
+		E96241E719A3804800B189D6 /* Reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reference.h; path = AbstractModel/Reference.h; sourceTree = "<group>"; };
+		E96241E819A3804800B189D6 /* Reference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reference.m; path = AbstractModel/Reference.m; sourceTree = "<group>"; };
+		E96241EA19A3804800B189D6 /* Affiliation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Affiliation.h; path = AbstractModel/Affiliation.h; sourceTree = "<group>"; };
+		E96241EB19A3804800B189D6 /* Affiliation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Affiliation.m; path = AbstractModel/Affiliation.m; sourceTree = "<group>"; };
+		E96241ED19A3804800B189D6 /* Correspondence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Correspondence.h; path = AbstractModel/Correspondence.h; sourceTree = "<group>"; };
+		E96241EE19A3804800B189D6 /* Correspondence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Correspondence.m; path = AbstractModel/Correspondence.m; sourceTree = "<group>"; };
+		E96241F019A3804800B189D6 /* Figure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Figure.h; path = AbstractModel/Figure.h; sourceTree = "<group>"; };
+		E96241F119A3804800B189D6 /* Figure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Figure.m; path = AbstractModel/Figure.m; sourceTree = "<group>"; };
+		E96241F319A3804800B189D6 /* Abstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Abstract.h; path = AbstractModel/Abstract.h; sourceTree = "<group>"; };
+		E96241F419A3804800B189D6 /* Abstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Abstract.m; path = AbstractModel/Abstract.m; sourceTree = "<group>"; };
+		E96241F619A3814900B189D6 /* Author+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Author+Format.h"; path = "AbstractModel/Author+Format.h"; sourceTree = "<group>"; };
+		E96241F719A3814900B189D6 /* Author+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Author+Format.m"; path = "AbstractModel/Author+Format.m"; sourceTree = "<group>"; };
+		E96241F919A3816900B189D6 /* Organization+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Organization+Format.h"; path = "AbstractModel/Organization+Format.h"; sourceTree = "<group>"; };
+		E96241FA19A3816900B189D6 /* Organization+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Organization+Format.m"; path = "AbstractModel/Organization+Format.m"; sourceTree = "<group>"; };
 		E9829D4517C24A490024EBC0 /* G-Node.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "G-Node.png"; path = "Artwork/G-Node.png"; sourceTree = SOURCE_ROOT; };
 		E9829D4617C24A490024EBC0 /* G-Node@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "G-Node@2x.png"; path = "Artwork/G-Node@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9829D5017C25EED0024EBC0 /* AbstractsSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractsSVC.h; sourceTree = "<group>"; };
@@ -153,14 +173,6 @@
 		E9D3144117BF880600DACDB4 /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVC.m; sourceTree = "<group>"; };
 		E9D3144617BF8B9E00DACDB4 /* AbstractGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractGroup.h; path = AbstractModel/AbstractGroup.h; sourceTree = "<group>"; };
 		E9D3144717BF8B9E00DACDB4 /* AbstractGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractGroup.m; path = AbstractModel/AbstractGroup.m; sourceTree = "<group>"; };
-		E9D3144A17BF8B9E00DACDB4 /* Affiliation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Affiliation.h; path = AbstractModel/Affiliation.h; sourceTree = "<group>"; };
-		E9D3144B17BF8B9E00DACDB4 /* Affiliation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Affiliation.m; path = AbstractModel/Affiliation.m; sourceTree = "<group>"; };
-		E9D3144C17BF8B9E00DACDB4 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Author.h; path = AbstractModel/Author.h; sourceTree = "<group>"; };
-		E9D3144D17BF8B9E00DACDB4 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Author.m; path = AbstractModel/Author.m; sourceTree = "<group>"; };
-		E9D3144E17BF8B9E00DACDB4 /* Correspondence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Correspondence.h; path = AbstractModel/Correspondence.h; sourceTree = "<group>"; };
-		E9D3144F17BF8B9E00DACDB4 /* Correspondence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Correspondence.m; path = AbstractModel/Correspondence.m; sourceTree = "<group>"; };
-		E9D3145017BF8B9E00DACDB4 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Organization.h; path = AbstractModel/Organization.h; sourceTree = "<group>"; };
-		E9D3145117BF8B9E00DACDB4 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Organization.m; path = AbstractModel/Organization.m; sourceTree = "<group>"; };
 		E9D3145917BF8BE200DACDB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E9D3145D17BF8CF200DACDB4 /* CKDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKDataStore.h; path = ConferenceKit/CKDataStore.h; sourceTree = "<group>"; };
 		E9D3145E17BF8CF200DACDB4 /* CKDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKDataStore.m; path = ConferenceKit/CKDataStore.m; sourceTree = "<group>"; };
@@ -374,23 +386,31 @@
 		E9D3144317BF8B8400DACDB4 /* AbstractModel */ = {
 			isa = PBXGroup;
 			children = (
+				E96241F919A3816900B189D6 /* Organization+Format.h */,
+				E96241FA19A3816900B189D6 /* Organization+Format.m */,
+				E96241F619A3814900B189D6 /* Author+Format.h */,
+				E96241F719A3814900B189D6 /* Author+Format.m */,
 				E9216E6B17E8EAC70013973B /* Abstracts.xcdatamodeld */,
-				E9216E6817E8EAA00013973B /* Abstract.h */,
-				E9216E6917E8EAA00013973B /* Abstract.m */,
+				E96241F319A3804800B189D6 /* Abstract.h */,
+				E96241F419A3804800B189D6 /* Abstract.m */,
+				E96241F019A3804800B189D6 /* Figure.h */,
+				E96241F119A3804800B189D6 /* Figure.m */,
+				E96241ED19A3804800B189D6 /* Correspondence.h */,
+				E96241EE19A3804800B189D6 /* Correspondence.m */,
+				E96241EA19A3804800B189D6 /* Affiliation.h */,
+				E96241EB19A3804800B189D6 /* Affiliation.m */,
+				E96241E719A3804800B189D6 /* Reference.h */,
+				E96241E819A3804800B189D6 /* Reference.m */,
+				E96241E419A3804800B189D6 /* Author.h */,
+				E96241E519A3804800B189D6 /* Author.m */,
+				E96241E119A3804700B189D6 /* Organization.h */,
+				E96241E219A3804700B189D6 /* Organization.m */,
 				E9D3146F17BFAF1900DACDB4 /* Abstract+Utils.h */,
 				E9D3147017BFAF1900DACDB4 /* Abstract+Utils.m */,
 				E9D3146C17BFAEFD00DACDB4 /* Abstract+HTML.h */,
 				E9D3146D17BFAEFD00DACDB4 /* Abstract+HTML.m */,
 				E9D3144617BF8B9E00DACDB4 /* AbstractGroup.h */,
 				E9D3144717BF8B9E00DACDB4 /* AbstractGroup.m */,
-				E9D3144A17BF8B9E00DACDB4 /* Affiliation.h */,
-				E9D3144B17BF8B9E00DACDB4 /* Affiliation.m */,
-				E9D3144C17BF8B9E00DACDB4 /* Author.h */,
-				E9D3144D17BF8B9E00DACDB4 /* Author.m */,
-				E9D3144E17BF8B9E00DACDB4 /* Correspondence.h */,
-				E9D3144F17BF8B9E00DACDB4 /* Correspondence.m */,
-				E9D3145017BF8B9E00DACDB4 /* Organization.h */,
-				E9D3145117BF8B9E00DACDB4 /* Organization.m */,
 			);
 			name = AbstractModel;
 			sourceTree = "<group>";
@@ -516,35 +536,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9D313D217BF7B3100DACDB4 /* main.m in Sources */,
-				E9216E6A17E8EAA00013973B /* Abstract.m in Sources */,
 				E9D313D617BF7B3100DACDB4 /* AppDelegate.m in Sources */,
 				E9D3140017BF7BE600DACDB4 /* CKMarkdownParser.m in Sources */,
 				E9D3140117BF7BE600DACDB4 /* CKMarkdownView.m in Sources */,
 				E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */,
+				E96241E919A3804800B189D6 /* Reference.m in Sources */,
 				E9D3140217BF7BE600DACDB4 /* CKPoiManager.m in Sources */,
 				E9D3140317BF7BE600DACDB4 /* UIColor+ConferenceKit.m in Sources */,
 				E9D3141017BF7C1B00DACDB4 /* autolink.c in Sources */,
 				E9D3141117BF7C1B00DACDB4 /* buffer.c in Sources */,
 				E9D3141217BF7C1B00DACDB4 /* markdown.c in Sources */,
+				E96241FB19A3816900B189D6 /* Organization+Format.m in Sources */,
+				E96241F819A3814900B189D6 /* Author+Format.m in Sources */,
+				E96241EF19A3804800B189D6 /* Correspondence.m in Sources */,
 				E9D3141317BF7C1B00DACDB4 /* stack.c in Sources */,
 				E9D3141617BF7C8D00DACDB4 /* InfoVC.m in Sources */,
+				E96241E319A3804700B189D6 /* Organization.m in Sources */,
 				E9D3144217BF880600DACDB4 /* MapVC.m in Sources */,
 				E9D3145317BF8B9E00DACDB4 /* AbstractGroup.m in Sources */,
-				E9D3145517BF8B9E00DACDB4 /* Affiliation.m in Sources */,
-				E9D3145617BF8B9E00DACDB4 /* Author.m in Sources */,
-				E9D3145717BF8B9E00DACDB4 /* Correspondence.m in Sources */,
-				E9D3145817BF8B9E00DACDB4 /* Organization.m in Sources */,
 				E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */,
 				E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */,
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
 				E9D3146B17BFAEB500DACDB4 /* AbstractVC.m in Sources */,
 				E9D3146E17BFAEFD00DACDB4 /* Abstract+HTML.m in Sources */,
+				E96241E619A3804800B189D6 /* Author.m in Sources */,
 				E9D3147117BFAF1900DACDB4 /* Abstract+Utils.m in Sources */,
 				E9D3148417C0A39800DACDB4 /* ProgramRootVC.m in Sources */,
+				E96241F519A3804800B189D6 /* Abstract.m in Sources */,
+				E96241F219A3804800B189D6 /* Figure.m in Sources */,
 				E9D3148717C0A62400DACDB4 /* ProgramPointCell.m in Sources */,
 				E9D3148D17C0A6C200DACDB4 /* ProgramDayTVC.m in Sources */,
 				E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */,
 				E9829D5517C2883E0024EBC0 /* WorkshopCell.m in Sources */,
+				E96241EC19A3804800B189D6 /* Affiliation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,14 +669,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Christian Kellner (42RKK3EW2J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GCA;
 				PROVISIONING_PROFILE = "9A972E32-5B06-4B58-974F-C4336B6521AB";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -662,12 +689,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Christian Kellner (42RKK3EW2J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GCA;
 				PROVISIONING_PROFILE = "9A972E32-5B06-4B58-974F-C4336B6521AB";
 				WRAPPER_EXTENSION = app;
