@@ -45,7 +45,7 @@
     UIView *mdView = self.mdView;
     
     //the logos bits
-    UIImage *logoImage = [UIImage imageNamed:@"BC13-Logo"];
+    UIImage *logoImage = [UIImage imageNamed:@"BC-Logo"];
     UIImageView *logo = [[UIImageView alloc] initWithImage:logoImage];
     logo.translatesAutoresizingMaskIntoConstraints = NO;
     [self.container addSubview:logo];
