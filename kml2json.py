@@ -38,10 +38,10 @@ class PoiType(object):
     PT_TRANSPORT = 4
     PT_FOOD = 5
 
-styleDict = {'#icon-503-4186F0': PoiType.PT_VENUE,
+styleDict = {'#icon-959-4186F0': PoiType.PT_VENUE,
              '#icon-1035': PoiType.PT_HOTEL,
-             '#icon-503-DB4436': PoiType.PT_FOOD,
-             '#icon-1459': PoiType.PT_TRANSPORT}
+             '#icon-961-009D57': PoiType.PT_FOOD,
+             '#icon-962-FAD199': PoiType.PT_TRANSPORT}
 
 
 def parse_style(text):
