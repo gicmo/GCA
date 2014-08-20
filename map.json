@@ -1,20 +1,38 @@
- [
-  {
-    "description": "Brechtbau, Tübingen",
-    "name": "Workshop venue",
-    "point": {
-    "lat": 48.526985,
-    "long":  9.063087
-    },
-    "type": 0
-  },
+[
     {
-        "description": "Neue Aula, Universität Tübingen",
-        "name": "Congress venue",
+        "ExtendedData": "", 
+        "name": "Zentrales H\u00f6rsaal Geb\u00e4ude ZHG", 
         "point": {
-            "lat": 48.524517,
-            "long":  9.059576
+            "lat": 51.541093, 
+            "long": 9.935449000000064
         }, 
         "type": 0
+    }, 
+    {
+        "ExtendedData": "", 
+        "name": "Bullerjahn Speise- und Schankwirtschaft im Ratskeller", 
+        "point": {
+            "lat": 51.532991, 
+            "long": 9.934835000000021
+        }, 
+        "type": 5
+    }, 
+    {
+        "ExtendedData": "", 
+        "name": "Paulinerkirche", 
+        "point": {
+            "lat": 51.53366, 
+            "long": 9.932164000000057
+        }, 
+        "type": 0
+    }, 
+    {
+        "ExtendedData": "", 
+        "name": "Hauptbahnhof G\u00f6ttingen", 
+        "point": {
+            "lat": 51.53707, 
+            "long": 9.926979999999958
+        }, 
+        "type": 4
     }
 ]
