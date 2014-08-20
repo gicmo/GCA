@@ -8,8 +8,9 @@ Main conference, Workshops and PhD Student Event:
 Central Lecture Hall - ZHG, Platz der Göttinger Sieben 5
 Public Lecture: Paulinerkirche, Papendiek 14
 
-Opening hours registration desk
---------------------------------
+Registration desk
+------------------
+Opening hours:
 Tuesday, September 2    12:00 - 18:30 h
 Wednesday, September 3  08:00 - 19:00 h
 Thursday, September 4   08:00 - 19:00 h
