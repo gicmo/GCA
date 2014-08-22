@@ -127,7 +127,9 @@
         [html appendFormat:@"</div><br/>"];
     }
 
-    [html appendFormat:@"<div>doi: <a href=\"http://dx.doi.org/%@\">%@</a></div><br/>", self.doi, self.doi];
+    if (self.doi) {
+        [html appendFormat:@"<div>doi: <a href=\"http://dx.doi.org/%@\">%@</a></div><br/>", self.doi, self.doi];
+    }
     [html appendString:@"</body></html>"];
 
     
