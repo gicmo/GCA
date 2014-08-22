@@ -91,7 +91,7 @@
         AbstractGroup *group = nil;
         int32_t abstractIndex = 0;
         
-        NSString *idStr = [absDict objectForKey:@"id"];
+        NSString *idStr = [absDict objectForKey:@"sortId"];
         if (idStr) {
             aid = (int32_t) [idStr integerValue];
             NSUInteger ngroups = groups.count;
@@ -115,6 +115,10 @@
         abstract.doi = [NSString mkStringForJS:absDict[@"doi"]];
         abstract.topic = [NSString mkStringForJS:absDict[@"topic"]];
 
+        if (absDict[@"altId"]) {
+            abstract.altid = (int32_t) [absDict[@"altId"] integerValue];
+        }
+        
         NSLog(@"NEW: %@\n", [absDict objectForKey:@"title"]);
         if (abstractIndex > [group.abstracts count]) {
             NSLog(@"%d,%ld", aid, group.abstracts.count);
