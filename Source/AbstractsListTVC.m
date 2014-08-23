@@ -322,8 +322,8 @@
 }
 
 #pragma mark - Search Bar delegates
-#define SEARCH_PREDICATE @"(title CONTAINS[c] %@ OR (ANY authors.name CONTAINS[c] %@))"
-#define SEARCH_REDICATE_FAV @"isFavorite == YES AND ((title CONTAINS[c] %@ OR (ANY authors.name CONTAINS[c] %@)))"
+#define SEARCH_PREDICATE @"(title CONTAINS[c] %@ OR (ANY authors.lastName CONTAINS[c] %@) OR (ANY authors.lastName CONTAINS[c] %@))"
+#define SEARCH_REDICATE_FAV @"isFavorite == YES AND ((title CONTAINS[c] %@ OR (ANY authors.lastName CONTAINS[c] %@) OR (ANY authors.lastName CONTAINS[c] %@)))"
 #define FAV_PREDICATE @"isFavorite == YES"
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
@@ -337,7 +337,7 @@
         } else {
             predString = SEARCH_PREDICATE;
         }
-        predicate = [NSPredicate predicateWithFormat:predString, searchText, searchText];
+        predicate = [NSPredicate predicateWithFormat:predString, searchText, searchText, searchText];
     }
 
     [self dataPerformQuery:predicate];
