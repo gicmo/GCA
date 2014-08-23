@@ -9,8 +9,10 @@
 #import "ProgramRootVC.h"
 #import "ProgramDayTVC.h"
 #import "UIColor+ConferenceKit.h"
+#import "AbstractVC.h"
+#import "CKDataStore.h"
 
-@interface ProgramRootVC () <ProgramDayDelegate>
+@interface ProgramRootVC () <ProgramDayDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *dayLabel;
@@ -117,6 +119,9 @@
     [super viewDidLoad];
 
     self.toolbar.tintColor = [UIColor ckColor];
+    self.navigationController.toolbar.hidden = YES;
+    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.delegate = self;
     self.container.translatesAutoresizingMaskIntoConstraints = NO;
     
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Program" ofType:@"json"];
@@ -199,12 +204,41 @@
     }];
 }
 
+- (void) navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    BOOL hideNavigationBar = [viewController isKindOfClass:[ProgramRootVC class]];
+    self.navigationController.navigationBarHidden = hideNavigationBar;
+}
+
 #pragma mark -
 #pragma mark ProgramDayDelegate
 
 -(void)programDay:(ProgramDayTVC *)programDay didSelectEvent:(NSDictionary *)event
 {
+    NSString *uuid = event[@"abstract"];
     
+    if (!uuid) {
+        //no uuid, nothing to do
+        return;
+    }
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Abstract"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uuid == %@", uuid];
+    request.predicate = predicate;
+    
+    CKDataStore *ds = [CKDataStore defaultStore];
+    NSArray *result = [ds.managedObjectContext executeFetchRequest:request error:nil];
+    
+    if (result.count < 1) {
+        //NSLog(@"Warning: Absrtact for frontid: %@ not found\n", frontid);
+        return;
+    }
+    
+    AbstractVC *abc = [self.storyboard instantiateViewControllerWithIdentifier:@"AbstractVC"];
+    abc.abstract = [result lastObject];
+    abc.showNavigator = NO;
+    
+    [self.navigationController pushViewController:abc animated:YES];
 }
 
 @end

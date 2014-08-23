@@ -35,12 +35,13 @@
 {
     [super viewDidLoad];
     
-    
     UINib *programCellNib = [UINib nibWithNibName:@"ProgramPointCell" bundle:nil];
     [self.tableView registerNib:programCellNib forCellReuseIdentifier:@"ProgramPointCell"];
     
     UINib *workshopCellNib = [UINib nibWithNibName:@"WorkshopCell" bundle:nil];
     [self.tableView registerNib:workshopCellNib forCellReuseIdentifier:@"WorkshopCell"];
+    
+    self.tableView.delegate = self;
     
 }
 
@@ -106,5 +107,13 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSDictionary *event = [self.events objectAtIndex:indexPath.row];
+    [self.delegate programDay:self didSelectEvent:event];
+}
 
 @end
