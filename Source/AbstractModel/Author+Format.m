@@ -16,4 +16,12 @@
     return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
 }
 
+-(NSString *)fullName
+{
+    NSString *middle = self.middleName ?: @"";
+    
+    return [NSString stringWithFormat:@"%@ %@ %@",
+            self.firstName, middle, self.lastName];
+}
+
 @end

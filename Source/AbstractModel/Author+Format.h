@@ -9,5 +9,6 @@
 #import "Author.h"
 
 @interface Author (Format)
+@property (nonatomic, readonly) NSString *fullName;
 -(NSString *)formatName;
 @end

@@ -42,7 +42,7 @@
 
     [html appendString:@"<div><h2 id=\"author\">"];
     for (Author *author in self.authors) {
-        [html appendFormat:@"%@", [author formatName]];
+        [html appendFormat:@"%@", [author fullName]];
 
         [html appendFormat:@"<sup id=\"epithat\">"];
         NSUInteger count = 0;
