@@ -52,6 +52,20 @@
     text-align: justify;
 }
 
+.appendix {
+    font-size: small;
+}
+
+.appendix a:visted {
+    text-decoration: none;
+    color: #054081;
+}
+
+.appendix a:link {
+    text-decoration: none;
+    color: #054081;
+}
+
 .appendix h4 {
     font-size: small;
     padding-bottom: 0pt;
