@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--AbstractVC-->
         <scene sceneID="q2a-Ge-62A">
             <objects>
-                <viewController id="5Vm-XM-7pL" customClass="AbstractVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AbstractVC" id="5Vm-XM-7pL" customClass="AbstractVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fIS-Dc-snd"/>
                         <viewControllerLayoutGuide type="bottom" id="9gh-NQ-tUc"/>
@@ -34,7 +34,7 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="CoR-32-5LX"/>
                                     <barButtonItem title="Item" id="6pU-0l-H4k">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" momentary="YES" id="BfM-ip-XEg">
-                                            <rect key="frame" x="680" y="6" width="81" height="32"/>
+                                            <rect key="frame" x="671" y="6" width="81" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
                                                 <segment title="prev"/>
@@ -117,7 +117,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbV-oi-74L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3600" y="1707"/>
+            <point key="canvasLocation" x="4574" y="1707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O19-JT-ixQ">
@@ -136,7 +136,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgX-Ov-ToS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2882" y="1799"/>
+            <point key="canvasLocation" x="3856" y="1799"/>
         </scene>
         <!--Split View Controller - Abstracts-->
         <scene sceneID="9YB-WC-YG4">
@@ -165,7 +165,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="21v-ai-C7Q" kind="relationship" relationship="viewControllers" id="BYh-C2-8qA"/>
-                        <segue destination="y81-5G-Hgj" kind="relationship" relationship="viewControllers" id="mu5-Hq-3yr"/>
+                        <segue destination="zCa-ZQ-mls" kind="relationship" relationship="viewControllers" id="mu5-Hq-3yr"/>
                         <segue destination="wBT-9s-2cj" kind="relationship" relationship="viewControllers" id="xG0-PJ-5xU"/>
                         <segue destination="gUZ-Z6-S6L" kind="relationship" relationship="viewControllers" id="0jY-yF-UQJ"/>
                     </connections>
@@ -207,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="1713" y="39"/>
         </scene>
-        <!--Program RootVC - Schedule-->
+        <!--Program RootVC-->
         <scene sceneID="meh-MT-gxL">
             <objects>
                 <viewController id="y81-5G-Hgj" customClass="ProgramRootVC" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-XQ-NFC">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-XQ-NFC">
                                 <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                                 <items>
                                     <barButtonItem image="07-Previous.png" id="2z7-Db-v0I">
@@ -237,7 +237,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AZ-W5-Yzx">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4AZ-W5-Yzx">
                                 <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -253,7 +253,7 @@
                             <constraint firstItem="4AZ-W5-Yzx" firstAttribute="top" secondItem="lkg-XQ-NFC" secondAttribute="bottom" id="yI4-4r-hea"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="02-Calendar.png" id="Jfk-pO-hKZ"/>
+                    <navigationItem key="navigationItem" id="46i-6l-n4j"/>
                     <connections>
                         <outlet property="container" destination="4AZ-W5-Yzx" id="uSY-GH-OLE"/>
                         <outlet property="dayLabel" destination="k8i-JP-tUM" id="qiw-gO-poB"/>
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gH-qB-1pQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="1142"/>
+            <point key="canvasLocation" x="2799" y="1142"/>
         </scene>
         <!--MapVC - Map-->
         <scene sceneID="V4A-If-aft">
@@ -319,7 +319,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrd-Ph-EGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2717" y="373"/>
+            <point key="canvasLocation" x="3691" y="373"/>
+        </scene>
+        <!--Navigation Controller - Schedule-->
+        <scene sceneID="4bq-rN-060">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zCa-ZQ-mls" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="02-Calendar.png" id="Jfk-pO-hKZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MU9-Aj-lzU">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y81-5G-Hgj" kind="relationship" relationship="rootViewController" id="Pa6-LX-2G0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GId-Uv-5Lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="1142"/>
         </scene>
     </scenes>
     <resources>

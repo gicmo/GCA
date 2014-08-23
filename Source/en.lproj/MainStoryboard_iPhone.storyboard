@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--InfoVC - Info-->
@@ -93,7 +93,7 @@
         <!--AbstractVC-->
         <scene sceneID="o9n-Dn-7y3">
             <objects>
-                <viewController id="Qcs-0A-pPa" customClass="AbstractVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AbstractVC" id="Qcs-0A-pPa" customClass="AbstractVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SHr-1k-n1z"/>
                         <viewControllerLayoutGuide type="bottom" id="VmQ-qM-4ns"/>
@@ -153,7 +153,7 @@
             </objects>
             <point key="canvasLocation" x="989" y="1454"/>
         </scene>
-        <!--Program RootVC - Schedule-->
+        <!--Program RootVC-->
         <scene sceneID="K6m-KV-d3f">
             <objects>
                 <viewController id="h1V-c2-T67" customClass="ProgramRootVC" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                             <userLayoutGuide affinity="minY"/>
                         </userGuides>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioj-sx-Hfv">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ioj-sx-Hfv">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <barButtonItem image="07-Previous.png" id="uus-wL-q7B">
@@ -186,7 +186,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04x-6a-c2I">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04x-6a-c2I">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -202,7 +202,7 @@
                             <constraint firstItem="04x-6a-c2I" firstAttribute="leading" secondItem="ioj-sx-Hfv" secondAttribute="leading" id="vLS-Ih-K5q"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="02-Calendar.png" id="q9J-L7-avg"/>
+                    <navigationItem key="navigationItem" id="bUY-DP-Izc"/>
                     <connections>
                         <outlet property="container" destination="04x-6a-c2I" id="ESV-G0-zU3"/>
                         <outlet property="dayLabel" destination="rWu-eJ-bZn" id="w1C-en-4OX"/>
@@ -213,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Trx-jY-LZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="907" y="735"/>
+            <point key="canvasLocation" x="1433" y="735"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -227,7 +227,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="O0B-bA-riR" kind="relationship" relationship="viewControllers" id="tza-oS-esh"/>
-                        <segue destination="h1V-c2-T67" kind="relationship" relationship="viewControllers" id="4K7-P1-aao"/>
+                        <segue destination="jM3-d9-IaQ" kind="relationship" relationship="viewControllers" id="4K7-P1-aao"/>
                         <segue destination="FZF-DK-Hsp" kind="relationship" relationship="viewControllers" id="6gP-Dq-oSc"/>
                         <segue destination="IbE-AY-be3" kind="relationship" relationship="viewControllers" id="9bc-Nk-YxP"/>
                     </connections>
@@ -310,6 +310,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cID-LE-cvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-46" y="1104"/>
+        </scene>
+        <!--Navigation Controller - Schedule-->
+        <scene sceneID="NJh-lo-xwz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jM3-d9-IaQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="02-Calendar.png" id="q9J-L7-avg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r7Y-hs-KiP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h1V-c2-T67" kind="relationship" relationship="rootViewController" id="KwS-nt-q5T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oi3-by-8v9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="735"/>
         </scene>
     </scenes>
     <resources>
