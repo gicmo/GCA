@@ -105,7 +105,7 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0h-BU-qnc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFS-jz-OkK">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
@@ -314,7 +314,7 @@
         <!--Navigation Controller - Schedule-->
         <scene sceneID="NJh-lo-xwz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jM3-d9-IaQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jM3-d9-IaQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Schedule" image="02-Calendar.png" id="q9J-L7-avg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r7Y-hs-KiP">
