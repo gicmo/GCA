@@ -5,7 +5,8 @@
                "time":  "13:30",
                "type":  "talk",
                "title": "From Sensation to Perception: Sensory predictions in an electric fish",
-               "speaker": "L Abbott & N Sawtell (New York, USA)"
+               "speaker": "L Abbott & N Sawtell (New York, USA)",
+               "abstract": "0387b106-0fd8-4190-8041-41f77f36c8fc"
                },
                {
                "time":  "15:00",
@@ -55,19 +56,21 @@
                "time":  "08:30",
                "type":  "talk",
                "title": "Beyond the STRF: Receptive field sensitivities are locally and rapidly reshaped by immediate sensory context",
-               "speaker": "M Sahani (London, UK)"
+               "speaker": "M Sahani (London, UK)",
+               "abstract": "6c18bdf4-e980-4eea-8009-dcda7a95e8f7"
                },
                {
                "time":  "09:15",
                "type":  "talk",
                "title": "Neural representations of the pitch, timbre and source location of complex sounds",
-               "speaker": "J Schnupp (Oxford, UK)"
+               "speaker": "J Schnupp (Oxford, UK)",
+               "abstract": "51b5f26b-f26c-421b-a8a8-4ced3c625586"
                },
                {
                "time":  "10:00",
                "type":  "talk",
                "title": "Self-organized learning and inference explain key properties of neural variability",
-               "speaker": "C Hartmann (Frankfurt, Germany), A Lazar, J Triesch"
+               "speaker": "C Hartmann (Frankfurt, Germany), A Lazar, J Triesch",
                },
                {
                "time" : "10:15",
@@ -78,19 +81,21 @@
                "time":  "10:45",
                "type":  "talk",
                "title": "In vivo calcium imaging of information processing in mouse neocortex during behavior",
-               "speaker": "F Helmchen (Zürich, Switzerland)"
+               "speaker": "F Helmchen (Zürich, Switzerland)",
+               "abstract": "6a04acfc-507a-4325-a189-c13d08b96024"
                },
                {
                "time":  "11:30",
                "type":  "talk",
                "title": "Efficient coding and balanced networks: A unification",
-               "speaker": "C Machens (Lisbon, Portugal)"
+               "speaker": "C Machens (Lisbon, Portugal)",
+               "abstract": "2bacc8ed-6b4d-4fae-a1f4-9d2f46e00106"
                },
                {
                "time":  "12:15",
                "type":  "talk",
                "title": "Synaptic unreliability facilitates information transmission in balanced cortical populations",
-               "speaker": "L Gatys (Tübingen, Germany), A Ecker, T Tchumatchenko, M Bethge"
+               "speaker": "L Gatys (Tübingen, Germany), A Ecker, T Tchumatchenko, M Bethge",
                },
                {
                "time" : "12:30",
@@ -106,19 +111,21 @@
                "time" : "13:30",
                "type":  "talk",
                "title": "Machine listening and computational auditory neuroscience models - A relation with mutual benefits",
-               "speaker": "B Meyer (Oldenburg, Germany)"
+               "speaker": "B Meyer (Oldenburg, Germany)",
+               "abstract": "f25d88f7-0f78-4746-896a-62f78460bf38"
                },
                {
                "time" : "14:15",
                "type":  "talk",
                "title": "Restoration of sight with photovoltaic subretinal prosthesis",
-               "speaker": "D Palanker (Stanford, USA"
+               "speaker": "D Palanker (Stanford, USA)",
+               "abstract": "3a14bf6e-438d-4068-bac9-3ef862d8256c"
                },
                {
                "time" : "15:00",
                "type":  "talk",
                "title": "Adaptive feedback control of pathological oscillations in spiking neural networks",
-               "speaker": "I Vlachos (Freiburg, Germany), Arvind Kumar"
+               "speaker": "I Vlachos (Freiburg, Germany), A Kumar"
                },
                {
                "time" : "15:15",
@@ -129,7 +136,8 @@
                "time" : "15:45",
                "type":  "talk",
                "title": "The extraction of neural information from the surface EMG for the control of upper-limb prostheses: Emerging avenues and challenges",
-               "speaker": "D Farina (Göttingen, Germany)"
+               "speaker": "D Farina (Göttingen, Germany)",
+               "abstract": "e7ac5252-bdf3-461e-a060-7bce2f9c4013"
                },
                {
                "time" : "16:30",
@@ -166,19 +174,21 @@
                "time":  "08:30",
                "type":  "talk",
                "title": "The functional logic of cortical circuits",
-               "speaker": "M Sur (Cambridge, USA)"
+               "speaker": "M Sur (Cambridge, USA)",
+               "abstract": "77d15846-ba55-4474-89b1-040ff3cdc066"
                },
                {
                "time":  "09:15",
                "type":  "talk",
                "title": "Mapping the behavioral repertoire of cortical interneurons",
-               "speaker": "A Kepecs (Cold Spring Harbor, USA)"
+               "speaker": "A Kepecs (Cold Spring Harbor, USA)",
+               "abstract": "50309a73-2087-4632-83c4-a7230555e1af"
                },
                {
                "time":  "10:00",
                "type":  "talk",
                "title": "Reprogramming the balance of excitation-inhibition via optical coactivation to control neuronal gain modulation",
-               "speaker": "Sarah Jarvis (London, UK), Konstantin Nikolic, Simon R Schultz"
+               "speaker": "S Jarvis (London, UK), K Nikolic, S Schultz"
                },
                {
                "time" : "10:15",
@@ -195,7 +205,8 @@
                "time":  "11:00",
                "type":  "talk",
                "title": "Imaging and optogenetic tools for elucidating cortical circuit structure-function after stroke",
-               "speaker": "T Murphy (Vancouver, Canada)"
+               "speaker": "T Murphy (Vancouver, Canada)",
+               "abstract": "0615aa4d-ddce-4252-b998-ae738827a7bc"
                },
                {  
                   "type":  "session",
@@ -206,7 +217,8 @@
                "time":  "11:45",
                "type":  "talk",
                "title": "Predicting the accuracy of a decision: A neural mechanism for confidence",
-               "speaker": "M Shadlen (New York, USA)"
+               "speaker": "M Shadlen (New York, USA)",
+               "abstract": "28e93a74-61a3-41ff-bf71-3d0b50a30025"
                },
                {
                "time" : "12:30",
@@ -217,13 +229,14 @@
                "time":  "13:30",
                "type":  "talk",
                "title": "Inferring the brain's task-strategy from neuronal responses during perceptual decision-making",
-               "speaker": "Ralf M Haefner (New York, USA)"
+               "speaker": "R Haefner (New York, USA)"
                },
                {
                "time":  "13:45",
                "type":  "talk",
                "title": "Neural mechanisms for making decisions in a dynamic world",
-               "speaker": "Paul Cisek (Montréal, Canada)"
+               "speaker": "P Cisek (Montréal, Canada)",
+               "abstract": "b1caea3f-5607-49db-8f43-4e036d2b7cc7"
                },
                {
                "time":  "14:30",
@@ -234,13 +247,14 @@
                "time":  "15:00",
                "type":  "talk",
                "title": "Goal anticipation in a computational model of place-cell sequences during sharp wave-ripples",
-               "speaker": "L Goenner (Chemnitz, Germany), Julien Vitay, Fred Hamker"
+               "speaker": "L Goenner (Chemnitz, Germany), J Vitay, F Hamker"
                },
                {
                "time":  "15:15",
                "type":  "talk",
                "title": "A role for coherent neural activity in coordinating look and reach movements",
-               "speaker": "B Pesaran (New York, USA)"
+               "speaker": "B Pesaran (New York, USA)",
+               "abstract": "72b41ac8-44b8-421e-9598-0519e621a289"
                },
                {
                "time":  "16:00",
