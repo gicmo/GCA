@@ -89,14 +89,6 @@
     if (self.references && self.references.count) {
         [html appendFormat:@"<div class=\"appendix\"><p><h4>References</h4><ol>"];
         for (Reference *ref in self.references) {
-            NSString *link = nil;
-            if (ref.link) {
-                link = ref.link;
-            } else if (ref.doi) {
-                link = [NSString stringWithFormat:@"http://dx.doi.org/%@", ref.doi];
-            } else {
-                link = @"";
-            }
 
             [html appendString:@"<li>"];
             [html appendFormat:@"%@", ref.text];
