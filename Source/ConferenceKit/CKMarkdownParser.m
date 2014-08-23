@@ -283,13 +283,13 @@ linebreak (struct buf *ob, void *opaque)
 void
 doc_header(struct buf *ob, void *opaque)
 {
-    NSLog(@"doc header");
+    //NSLog(@"doc header");
 }
 
 void
 doc_footer(struct buf *ob, void *opaque)
 {
-    NSLog(@"N: doc footer");
+    //NSLog(@"N: doc footer");
 }
 
 static const struct sd_callbacks md_callbacks = {

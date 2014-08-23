@@ -97,7 +97,7 @@
             } else {
                 link = @"";
             }
-            NSLog(@"%@", link);
+
             [html appendString:@"<li>"];
             [html appendFormat:@"%@", ref.text];
             if (ref.link) {

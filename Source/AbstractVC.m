@@ -201,10 +201,9 @@
 navigationType:(UIWebViewNavigationType)navigationType
 {
     NSURL *url = request.URL;
-    NSLog(@"should start loading.. %@", [url absoluteString]);
+    //NSLog(@"should start loading.. %@", [url absoluteString]);
     
     if ([[url absoluteString] hasPrefix:@"file:///"]) {
-        NSLog(@"XXXX");
         return YES;
     }
     
