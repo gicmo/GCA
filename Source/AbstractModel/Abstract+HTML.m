@@ -78,6 +78,11 @@
 
     [html appendFormat:@"<div><p id=\"abstract\">%@</p></div>", [self.text formatHTML]];
 
+    if (self.altid) {
+        [html appendFormat:@"<div>See also poster: %@</div>",
+         [Abstract formatId:self.altid withSpaces:YES]];
+    }
+    
     if (self.acknoledgements && self.acknoledgements.length)
         [html appendFormat:@"<div class=\"appendix\"><h4>Acknowledgements</h4><p>%@</p></div>", [self.acknoledgements formatHTML]];
 
@@ -130,11 +135,6 @@
 
     if (self.doi) {
         [html appendFormat:@"<div>doi: <a href=\"http://dx.doi.org/%@\">%@</a></div><br/>", self.doi, self.doi];
-    }
-    
-    if (self.altid) {
-        [html appendFormat:@"<div>See also poster: %@</div>",
-         [Abstract formatId:self.altid withSpaces:YES]];
     }
     
     [html appendString:@"</body></html>"];
