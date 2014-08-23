@@ -38,15 +38,20 @@
     return @"U";
 }
 
+
 - (NSString *) formatId:(BOOL)withSpace
 {
-    
-    NSString *str = [NSString stringWithFormat:@"%@%s%d",
-                     [Abstract formatGroupId:self.groupId],
-                     withSpace ? " " : "",
-                     self.abstractId];
-    return str;
+    return [Abstract formatId:self.aid withSpaces:withSpace];
 }
 
 
++ (NSString *) formatId:(int32_t)sortId withSpaces:(BOOL)withSpace
+{
+    int32_t aid = sortId & 0xFFFF;
+    int32_t gid = (sortId & (0xFFFF << 16)) >> 16;
+    NSString *str = [NSString stringWithFormat:@"%@%s%d",
+                     [Abstract formatGroupId:gid],
+                     withSpace ? " " : "", aid];
+    return str;
+}
 @end
