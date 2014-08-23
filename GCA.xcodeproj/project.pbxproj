@@ -31,7 +31,6 @@
 		E962423019A38B1500B189D6 /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241E819A3804800B189D6 /* Reference.m */; };
 		E962423219A38B1500B189D6 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241E519A3804800B189D6 /* Author.m */; };
 		E962423419A38B1500B189D6 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241E219A3804700B189D6 /* Organization.m */; };
-		E962423619A38B1500B189D6 /* Abstract+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3147017BFAF1900DACDB4 /* Abstract+Utils.m */; };
 		E962423819A38B1500B189D6 /* Abstract+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3146D17BFAEFD00DACDB4 /* Abstract+HTML.m */; };
 		E962423A19A38B1500B189D6 /* AbstractGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3144717BF8B9E00DACDB4 /* AbstractGroup.m */; };
 		E962423B19A38B2F00B189D6 /* Abstracts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9216E6B17E8EAC70013973B /* Abstracts.xcdatamodeld */; };
@@ -39,6 +38,8 @@
 		E962424019A38B6500B189D6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E962423C19A38B4800B189D6 /* Cocoa.framework */; };
 		E962424119A38B8700B189D6 /* Abstract.css in Resources */ = {isa = PBXBuildFile; fileRef = E9938ED6199CD56E003163D5 /* Abstract.css */; };
 		E962424419A38BC500B189D6 /* JSONImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = E962424319A38BC500B189D6 /* JSONImporter.m */; };
+		E976936419A87A8700320EAD /* Abstract+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = E976936319A87A8700320EAD /* Abstract+Format.m */; };
+		E976936519A87A8700320EAD /* Abstract+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = E976936319A87A8700320EAD /* Abstract+Format.m */; };
 		E9829D4717C24A490024EBC0 /* G-Node.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4517C24A490024EBC0 /* G-Node.png */; };
 		E9829D4817C24A490024EBC0 /* G-Node@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4617C24A490024EBC0 /* G-Node@2x.png */; };
 		E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9829D5117C25EED0024EBC0 /* AbstractsSVC.m */; };
@@ -92,7 +93,6 @@
 		E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3146717BFA1B800DACDB4 /* AbstractInfoCell.m */; };
 		E9D3146B17BFAEB500DACDB4 /* AbstractVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3146A17BFAEB400DACDB4 /* AbstractVC.m */; };
 		E9D3146E17BFAEFD00DACDB4 /* Abstract+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3146D17BFAEFD00DACDB4 /* Abstract+HTML.m */; };
-		E9D3147117BFAF1900DACDB4 /* Abstract+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3147017BFAF1900DACDB4 /* Abstract+Utils.m */; };
 		E9D3147517BFB03E00DACDB4 /* 00-Star.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3147217BFB03E00DACDB4 /* 00-Star.png */; };
 		E9D3147617BFB03E00DACDB4 /* 00-Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3147317BFB03E00DACDB4 /* 00-Star@2x.png */; };
 		E9D3147717BFB03E00DACDB4 /* 00-StarFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3147417BFB03E00DACDB4 /* 00-StarFilled.png */; };
@@ -139,6 +139,8 @@
 		E962423E19A38B5700B189D6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		E962424219A38BC500B189D6 /* JSONImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONImporter.h; sourceTree = "<group>"; };
 		E962424319A38BC500B189D6 /* JSONImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONImporter.m; sourceTree = "<group>"; };
+		E976936219A87A8700320EAD /* Abstract+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Abstract+Format.h"; path = "AbstractModel/Abstract+Format.h"; sourceTree = "<group>"; };
+		E976936319A87A8700320EAD /* Abstract+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Abstract+Format.m"; path = "AbstractModel/Abstract+Format.m"; sourceTree = "<group>"; };
 		E9829D4517C24A490024EBC0 /* G-Node.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "G-Node.png"; path = "Artwork/G-Node.png"; sourceTree = SOURCE_ROOT; };
 		E9829D4617C24A490024EBC0 /* G-Node@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "G-Node@2x.png"; path = "Artwork/G-Node@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9829D5017C25EED0024EBC0 /* AbstractsSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractsSVC.h; sourceTree = "<group>"; };
@@ -217,8 +219,6 @@
 		E9D3146A17BFAEB400DACDB4 /* AbstractVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractVC.m; sourceTree = "<group>"; };
 		E9D3146C17BFAEFD00DACDB4 /* Abstract+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Abstract+HTML.h"; path = "AbstractModel/Abstract+HTML.h"; sourceTree = "<group>"; };
 		E9D3146D17BFAEFD00DACDB4 /* Abstract+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Abstract+HTML.m"; path = "AbstractModel/Abstract+HTML.m"; sourceTree = "<group>"; };
-		E9D3146F17BFAF1900DACDB4 /* Abstract+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Abstract+Utils.h"; path = "AbstractModel/Abstract+Utils.h"; sourceTree = "<group>"; };
-		E9D3147017BFAF1900DACDB4 /* Abstract+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Abstract+Utils.m"; path = "AbstractModel/Abstract+Utils.m"; sourceTree = "<group>"; };
 		E9D3147217BFB03E00DACDB4 /* 00-Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "00-Star.png"; path = "Artwork/00-Star.png"; sourceTree = SOURCE_ROOT; };
 		E9D3147317BFB03E00DACDB4 /* 00-Star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "00-Star@2x.png"; path = "Artwork/00-Star@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9D3147417BFB03E00DACDB4 /* 00-StarFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "00-StarFilled.png"; path = "Artwork/00-StarFilled.png"; sourceTree = SOURCE_ROOT; };
@@ -473,12 +473,12 @@
 				E96241E519A3804800B189D6 /* Author.m */,
 				E96241E119A3804700B189D6 /* Organization.h */,
 				E96241E219A3804700B189D6 /* Organization.m */,
-				E9D3146F17BFAF1900DACDB4 /* Abstract+Utils.h */,
-				E9D3147017BFAF1900DACDB4 /* Abstract+Utils.m */,
 				E9D3146C17BFAEFD00DACDB4 /* Abstract+HTML.h */,
 				E9D3146D17BFAEFD00DACDB4 /* Abstract+HTML.m */,
 				E9D3144617BF8B9E00DACDB4 /* AbstractGroup.h */,
 				E9D3144717BF8B9E00DACDB4 /* AbstractGroup.m */,
+				E976936219A87A8700320EAD /* Abstract+Format.h */,
+				E976936319A87A8700320EAD /* Abstract+Format.m */,
 			);
 			name = AbstractModel;
 			sourceTree = "<group>";
@@ -639,13 +639,13 @@
 				E962422419A38B1500B189D6 /* Organization+Format.m in Sources */,
 				E962422619A38B1500B189D6 /* Author+Format.m in Sources */,
 				E962422819A38B1500B189D6 /* Abstract.m in Sources */,
+				E976936519A87A8700320EAD /* Abstract+Format.m in Sources */,
 				E962422A19A38B1500B189D6 /* Figure.m in Sources */,
 				E962422C19A38B1500B189D6 /* Correspondence.m in Sources */,
 				E962422E19A38B1500B189D6 /* Affiliation.m in Sources */,
 				E962423019A38B1500B189D6 /* Reference.m in Sources */,
 				E962423219A38B1500B189D6 /* Author.m in Sources */,
 				E962423419A38B1500B189D6 /* Organization.m in Sources */,
-				E962423619A38B1500B189D6 /* Abstract+Utils.m in Sources */,
 				E962424419A38BC500B189D6 /* JSONImporter.m in Sources */,
 				E962423819A38B1500B189D6 /* Abstract+HTML.m in Sources */,
 				E962423A19A38B1500B189D6 /* AbstractGroup.m in Sources */,
@@ -680,10 +680,10 @@
 				E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */,
 				E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */,
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
+				E976936419A87A8700320EAD /* Abstract+Format.m in Sources */,
 				E9D3146B17BFAEB500DACDB4 /* AbstractVC.m in Sources */,
 				E9D3146E17BFAEFD00DACDB4 /* Abstract+HTML.m in Sources */,
 				E96241E619A3804800B189D6 /* Author.m in Sources */,
-				E9D3147117BFAF1900DACDB4 /* Abstract+Utils.m in Sources */,
 				E9D3148417C0A39800DACDB4 /* ProgramRootVC.m in Sources */,
 				E96241F519A3804800B189D6 /* Abstract.m in Sources */,
 				E96241F219A3804800B189D6 /* Figure.m in Sources */,
@@ -859,7 +859,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Christian Kellner (42RKK3EW2J)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
@@ -867,7 +867,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GCA;
-				PROVISIONING_PROFILE = "9A972E32-5B06-4B58-974F-C4336B6521AB";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
@@ -879,7 +879,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Christian Kellner (42RKK3EW2J)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
@@ -887,7 +887,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GCA;
-				PROVISIONING_PROFILE = "9A972E32-5B06-4B58-974F-C4336B6521AB";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -902,6 +902,7 @@
 				E962421F19A38A4800B189D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9D313BD17BF7B3100DACDB4 /* Build configuration list for PBXProject "GCA" */ = {
 			isa = XCConfigurationList;
