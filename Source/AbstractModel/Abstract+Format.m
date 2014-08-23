@@ -2,9 +2,10 @@
 //Copyright (c) 2012-2013, Christian Kellner <kellner@bio.lmu.de>
 //License: BSD-3 (see LICENSE)
 
-#import "Abstract+Utils.h"
 
-@implementation Abstract (Utils)
+#import "Abstract+Format.h"
+
+@implementation Abstract (Format)
 
 - (int32_t)groupId
 {
@@ -47,21 +48,5 @@
     return str;
 }
 
-- (NSString *) figureIdForFigure:(NSInteger)idx ofNFigures:(NSInteger)nfigures
-{
-    NSString *groupString = [[Abstract formatGroupId:self.groupId] lowercaseString];
-    
-    char suffix = '\0';
-    
-    if (nfigures > 1) {
-        suffix = 'a' + idx;
-    }
-    
-    NSString *str = [NSString stringWithFormat:@"%@%02d%c.jpg",
-                     groupString,
-                     self.abstractId,
-                     suffix];
-    return str;
-}
 
 @end

@@ -8,7 +8,7 @@
 #import "Affiliation.h"
 
 #import "Abstract+HTML.h"
-#import "Abstract+Utils.h"
+#import "Abstract+Format.h"
 
 #import "UIColor+ConferenceKit.h"
 

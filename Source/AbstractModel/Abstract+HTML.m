@@ -7,7 +7,7 @@
 //
 
 #import "Abstract+HTML.h"
-#import "Abstract+Utils.h"
+#import "Abstract+Format.h"
 #import "Author.h"
 #import "Author+Format.h"
 #import "Organization.h"
