@@ -13,19 +13,19 @@
 {
     NSMutableArray *components = [[NSMutableArray alloc] init];
 
-    if (self.department) {
+    if (self.department && self.department.length) {
         [components addObject:self.department];
     }
 
-    if (self.section) {
+    if (self.section && self.section.length) {
         [components addObject:self.section];
     }
 
-    if (self.address) {
+    if (self.address && self.address.length) {
         [components addObject:self.address];
     }
 
-    if (self.country) {
+    if (self.country && self.country.length) {
         [components addObject:self.country];
     }
 
