@@ -7,6 +7,7 @@
 //
 
 #import "Abstract+HTML.h"
+#import "Abstract+Utils.h"
 #import "Author.h"
 #import "Author+Format.h"
 #import "Organization.h"
@@ -35,7 +36,7 @@
     [html appendString:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"Abstract.css\" />"];
     [html appendString:@"<meta name='viewport' content='initial-scale=1.0,maximum-scale=10.0'/>"];
     [html appendString:@"</head><body>"];
-    //[html appendFormat:@"<div id=\"aid\">%@</div>", [self formatId:YES]];
+    [html appendFormat:@"<div id=\"aid\">%@</div>", [self formatId:YES]];
     [html appendFormat:@"<div id=\"topic\">%@</div>", self.topic];
     [html appendFormat:@"<div><h1 id=\"title\">%@</h2></div>", self.title];
 
