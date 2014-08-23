@@ -131,6 +131,12 @@
     if (self.doi) {
         [html appendFormat:@"<div>doi: <a href=\"http://dx.doi.org/%@\">%@</a></div><br/>", self.doi, self.doi];
     }
+    
+    if (self.altid) {
+        [html appendFormat:@"<div>See also poster: %@</div>",
+         [Abstract formatId:self.altid withSpaces:YES]];
+    }
+    
     [html appendString:@"</body></html>"];
 
     
