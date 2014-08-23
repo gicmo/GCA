@@ -93,15 +93,19 @@
             if (ref.link) {
                 link = ref.link;
             } else if (ref.doi) {
-                link = ref.doi;
+                link = [NSString stringWithFormat:@"http://dx.doi.org/%@", ref.doi];
             } else {
                 link = @"";
             }
-
+            NSLog(@"%@", link);
             [html appendString:@"<li>"];
-            [html appendFormat:@"<a href=\"%@\">%@</a>", link, ref.text];
+            [html appendFormat:@"%@", ref.text];
+            if (ref.link) {
+                [html appendFormat:@"<a href=\"%@\"> %@</a>",
+                 ref.link, ref.text ? @"Link" : ref.link];
+            }
             if (ref.doi) {
-                [html appendFormat:@"<a href=\"http://dx.doi.org/%@\">%@</a>", ref.doi, ref.doi];
+                [html appendFormat:@"<a href=\"http://dx.doi.org/%@\"> %@</a>", ref.doi, ref.doi];
             }
             [html appendString:@"</li>"];
 
