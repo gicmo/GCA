@@ -14,7 +14,7 @@
                },
                {  
                   "type":  "session",
-                  "title": "Contributed talks"
+                  "title": "OPENING SESSION"
                },
                {
                "time":  "15:30",
@@ -37,7 +37,7 @@
                "title": "POSTER SESSION I"
                },
                {
-               "time" : "20:0",
+               "time" : "20:00",
                "type" : "food",
                "title": "Conference Dinner (Bullerjahn - Ratskeller)"
                }
@@ -45,7 +45,7 @@
  
  }, {
  
-    "date": "04.08.2014",
+    "date": "04.09.2014",
     "events": [{  
                   "type":  "session",
                   "title": "SENSORY CODING/DECODING",
@@ -100,7 +100,7 @@
                {  
                   "type":  "session",
                   "title": "NEUROPROSTHETICS",
-                  "chair": "Thomas Euler, Florentin Woergoetter"
+                  "chair": "T Euler, F Woergoetter"
                },
                {
                "time" : "13:30",
@@ -151,12 +151,12 @@
                {
                "time":  "19:30",
                "type":  "general",
-               "title": "Public Lecture (Paulinerkirche)"
+               "title": "Public Lecture (Paulinerkirche, in German)"
                }
  
     ]
  }, {
- "date":"05.08.2014",
+ "date":"05.09.2014",
  "events": [{  
                   "type":  "session",
                   "title": "OPTOGENETIC ANALYSIS OF CORTICAL COMPUTATION ",
@@ -212,6 +212,23 @@
                "time" : "12:30",
                "type" : "food",
                "title": "Lunch"
+               },
+               {
+               "time":  "13:30",
+               "type":  "talk",
+               "title": "Inferring the brain's task-strategy from neuronal responses during perceptual decision-making",
+               "speaker": "Ralf M Haefner (New York, USA)"
+               },
+               {
+               "time":  "13:45",
+               "type":  "talk",
+               "title": "Neural mechanisms for making decisions in a dynamic world",
+               "speaker": "Paul Cisek (Montréal, Canada)"
+               },
+               {
+               "time":  "14:30",
+               "type":  "food",
+               "title": "Coffee break"
                },
                {
                "time":  "15:00",
