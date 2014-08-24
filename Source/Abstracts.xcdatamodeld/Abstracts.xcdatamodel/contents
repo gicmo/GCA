@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.8" systemVersion="13E28" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Abstract" representedClassName="Abstract" syncable="YES">
         <attribute name="acknoledgements" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="aid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -12,10 +12,10 @@
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="session" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" attributeType="String" syncable="YES"/>
-        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="uuid" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" attributeType="String" indexed="YES" syncable="YES"/>
         <relationship name="affiliations" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Affiliation" inverseName="forAbstract" inverseEntity="Affiliation" syncable="YES"/>
         <relationship name="authors" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Author" inverseName="wroteAbstract" inverseEntity="Author" syncable="YES"/>
         <relationship name="correspondenceAt" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Correspondence" inverseName="forAbstract" inverseEntity="Correspondence" syncable="YES"/>
@@ -29,8 +29,8 @@
     </entity>
     <entity name="Author" representedClassName="Author" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="firstName" attributeType="String" syncable="YES"/>
-        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="middleName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uuid" attributeType="String" syncable="YES"/>
         <relationship name="isAffiliatedTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Affiliation" inverseName="ofAuthors" inverseEntity="Affiliation" syncable="YES"/>
@@ -65,7 +65,7 @@
         <relationship name="ofAbstract" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Abstract" inverseName="references" inverseEntity="Abstract" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Abstract" positionX="0" positionY="0" width="128" height="345"/>
+        <element name="Abstract" positionX="0" positionY="0" width="128" height="343"/>
         <element name="Affiliation" positionX="250" positionY="-27" width="128" height="90"/>
         <element name="Author" positionX="259" positionY="-378" width="128" height="163"/>
         <element name="Correspondence" positionX="340" positionY="171" width="128" height="90"/>
