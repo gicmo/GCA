@@ -33,6 +33,7 @@
 #import "Affiliation.h"
 #import "AbstractGroup.h"
 #import "JSONImporter.h"
+#import "ConferenceController.h"
 
 #import <WebKit/WebKit.h>
 
@@ -42,7 +43,7 @@
 @interface AppDelegate ()  <NSTableViewDataSource, NSTableViewDelegate, NSOutlineViewDataSource, NSOutlineViewDelegate>
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @property (weak) IBOutlet NSOutlineView *abstractOutline;
 
@@ -51,6 +52,11 @@
 @property (strong, nonatomic) NSString *latexStylesheet;
 @property (strong, nonatomic) NSString *htmlStylesheet;
 @property (strong, nonatomic) NSString *groupsFile;
+
+@property (weak) IBOutlet NSWindow *abstractsWindow;
+
+@property (strong, nonatomic) ConferenceController *conferenceSheet;
+
 @end
 
 @implementation AppDelegate
@@ -291,6 +297,25 @@
 
 
 #pragma mark - menu
+
+
+- (IBAction)showConferencesSheet:(id)sender {
+
+    self.conferenceSheet = [[ConferenceController alloc] initWithWindowNibName:@"ConferenceController"];
+
+    [self.window beginSheet:self.conferenceSheet.window completionHandler:^(NSModalResponse returnCode) {
+        NSLog(@"Foo!!");
+
+        if (returnCode == NSModalResponseOK) {
+            NSLog(@"%@", self.conferenceSheet.selectedConference.name);
+        }
+
+        self.conferenceSheet = NULL;
+    }];
+
+}
+
+
 - (IBAction)menuSetGroupsJSON:(id)sender {
     NSOpenPanel *chooser = [NSOpenPanel openPanel];
     chooser.title = @"Please select stylesheet";

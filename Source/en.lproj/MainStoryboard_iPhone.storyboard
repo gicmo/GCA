@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--InfoVC - Info-->
+        <!--Info-->
         <scene sceneID="fdM-cJ-1U1">
             <objects>
                 <viewController id="O0B-bA-riR" customClass="InfoVC" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                             <userLayoutGuide affinity="minY"/>
                         </userGuides>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ioj-sx-Hfv">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioj-sx-Hfv">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <barButtonItem image="07-Previous.png" id="uus-wL-q7B">
@@ -186,7 +186,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04x-6a-c2I">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04x-6a-c2I">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -236,7 +236,7 @@
             </objects>
             <point key="canvasLocation" x="-720" y="490"/>
         </scene>
-        <!--MapVC - Map-->
+        <!--Map-->
         <scene sceneID="DNX-ii-pew">
             <objects>
                 <viewController id="IbE-AY-be3" customClass="MapVC" sceneMemberID="viewController">
@@ -292,7 +292,7 @@
             </objects>
             <point key="canvasLocation" x="-353" y="203"/>
         </scene>
-        <!--Navigation Controller - Abstracts-->
+        <!--Abstracts-->
         <scene sceneID="NYB-Yo-2Nf">
             <objects>
                 <navigationController id="FZF-DK-Hsp" sceneMemberID="viewController">
@@ -311,7 +311,7 @@
             </objects>
             <point key="canvasLocation" x="-46" y="1104"/>
         </scene>
-        <!--Navigation Controller - Schedule-->
+        <!--Schedule-->
         <scene sceneID="NJh-lo-xwz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jM3-d9-IaQ" sceneMemberID="viewController">
@@ -341,10 +341,10 @@
         <image name="06-Next.png" width="20" height="20"/>
         <image name="07-Previous.png" width="20" height="20"/>
     </resources>
-    <color key="tintColor" red="0.13333334028720856" green="0.30980393290519714" blue="0.60000002384185791" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.13333334028720856" green="0.30980393290519714" blue="0.60000002384185791" alpha="1" colorSpace="deviceRGB"/>
 </document>

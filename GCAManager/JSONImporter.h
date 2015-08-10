@@ -12,6 +12,7 @@
 @interface JSONImporter : NSObject
 -(id) initWithContext:(NSManagedObjectContext *)context;
 -(BOOL) importAbstracts:(NSData *)data intoGroups:(NSArray *)groups;
+-(BOOL) importConference:(NSData *)data;
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @end

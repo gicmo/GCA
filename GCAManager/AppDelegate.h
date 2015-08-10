@@ -12,5 +12,6 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (nonatomic, strong) NSArray *abstracts;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

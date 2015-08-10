@@ -16,6 +16,7 @@
 #import "Organization.h"
 #import "Reference.h"
 #import "Figure.h"
+#import "Conference.h"
 
 
 //******************************************************************************
@@ -221,6 +222,22 @@
     return YES;
 }
 
+-(BOOL) importConference:(NSData *)data {
+    id dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    if (![dict isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"NOT A DICT!\n");
+        return NO;
+    }
+
+    NSManagedObjectContext *context = self.context;
+
+    NSString *uuid = dict[@"uuid"];
+    Conference *conf = [self openObj:@"Conference" WithUUID:uuid];
+    conf.name = dict[@"name"];
+    conf.uuid = uuid;
+    
+    return YES;
+}
 
 
 @end
