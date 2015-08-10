@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90A3D281B7B75D3007C9401 /* Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D171B7B75D3007C9401 /* Abstract.m */; };
+		E90A3D291B7B75D3007C9401 /* Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D171B7B75D3007C9401 /* Abstract.m */; };
+		E90A3D2A1B7B75D3007C9401 /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D191B7B75D3007C9401 /* Affiliation.m */; };
+		E90A3D2B1B7B75D3007C9401 /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D191B7B75D3007C9401 /* Affiliation.m */; };
+		E90A3D2C1B7B75D3007C9401 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1B1B7B75D3007C9401 /* Author.m */; };
+		E90A3D2D1B7B75D3007C9401 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1B1B7B75D3007C9401 /* Author.m */; };
+		E90A3D2E1B7B75D3007C9401 /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1D1B7B75D3007C9401 /* Conference.m */; };
+		E90A3D2F1B7B75D3007C9401 /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1D1B7B75D3007C9401 /* Conference.m */; };
+		E90A3D301B7B75D3007C9401 /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1F1B7B75D3007C9401 /* Correspondence.m */; };
+		E90A3D311B7B75D3007C9401 /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1F1B7B75D3007C9401 /* Correspondence.m */; };
+		E90A3D321B7B75D3007C9401 /* Figure.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D211B7B75D3007C9401 /* Figure.m */; };
+		E90A3D331B7B75D3007C9401 /* Figure.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D211B7B75D3007C9401 /* Figure.m */; };
+		E90A3D341B7B75D3007C9401 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D231B7B75D3007C9401 /* Group.m */; };
+		E90A3D351B7B75D3007C9401 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D231B7B75D3007C9401 /* Group.m */; };
+		E90A3D361B7B75D3007C9401 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D251B7B75D3007C9401 /* Organization.m */; };
+		E90A3D371B7B75D3007C9401 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D251B7B75D3007C9401 /* Organization.m */; };
+		E90A3D381B7B75D3007C9401 /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D271B7B75D3007C9401 /* Reference.m */; };
+		E90A3D391B7B75D3007C9401 /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D271B7B75D3007C9401 /* Reference.m */; };
+		E90A3D3D1B7B79A6007C9401 /* ConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D3B1B7B79A6007C9401 /* ConferenceController.m */; };
+		E90A3D3E1B7B79A6007C9401 /* ConferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90A3D3C1B7B79A6007C9401 /* ConferenceController.xib */; };
 		E9216DE017E74D1B0013973B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9216DDF17E74D1B0013973B /* Images.xcassets */; };
 		E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9216E6B17E8EAC70013973B /* Abstracts.xcdatamodeld */; };
 		E96241F819A3814900B189D6 /* Author+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241F719A3814900B189D6 /* Author+Format.m */; };
@@ -33,26 +53,26 @@
 		E9829D5717C288560024EBC0 /* WorkshopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9829D5617C288560024EBC0 /* WorkshopCell.xib */; };
 		E9938ED7199CD56E003163D5 /* Abstract.css in Resources */ = {isa = PBXBuildFile; fileRef = E9938ED6199CD56E003163D5 /* Abstract.css */; };
 		E9938EDF199CDC15003163D5 /* Abstracts.storedata in Resources */ = {isa = PBXBuildFile; fileRef = E9938EDE199CDC15003163D5 /* Abstracts.storedata */; };
-		E9AF81C91B789F7C0002F96D /* Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81C81B789F7C0002F96D /* Abstract.m */; };
-		E9AF81CA1B789F7C0002F96D /* Abstract.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81C81B789F7C0002F96D /* Abstract.m */; };
-		E9AF81CD1B789F7D0002F96D /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81CC1B789F7D0002F96D /* Affiliation.m */; };
-		E9AF81CE1B789F7D0002F96D /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81CC1B789F7D0002F96D /* Affiliation.m */; };
-		E9AF81D51B789F7D0002F96D /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81D41B789F7D0002F96D /* Reference.m */; };
-		E9AF81D61B789F7D0002F96D /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81D41B789F7D0002F96D /* Reference.m */; };
-		E9AF81D91B789F7D0002F96D /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81D81B789F7D0002F96D /* Conference.m */; };
-		E9AF81DA1B789F7D0002F96D /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81D81B789F7D0002F96D /* Conference.m */; };
-		E9AF81DD1B789F7D0002F96D /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81DC1B789F7D0002F96D /* Organization.m */; };
-		E9AF81DE1B789F7D0002F96D /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81DC1B789F7D0002F96D /* Organization.m */; };
-		E9AF81E11B789F7D0002F96D /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81E01B789F7D0002F96D /* Author.m */; };
-		E9AF81E21B789F7D0002F96D /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81E01B789F7D0002F96D /* Author.m */; };
-		E9AF81E51B789F7D0002F96D /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81E41B789F7D0002F96D /* Correspondence.m */; };
-		E9AF81E61B789F7D0002F96D /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81E41B789F7D0002F96D /* Correspondence.m */; };
-		E9AF81E91B789F7D0002F96D /* Figure.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81E81B789F7D0002F96D /* Figure.m */; };
-		E9AF81EA1B789F7D0002F96D /* Figure.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81E81B789F7D0002F96D /* Figure.m */; };
-		E9AF81EE1B78A61E0002F96D /* ConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81EC1B78A61E0002F96D /* ConferenceController.m */; };
-		E9AF81EF1B78A61E0002F96D /* ConferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9AF81ED1B78A61E0002F96D /* ConferenceController.xib */; };
-		E9AF81FE1B78FEC90002F96D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81FD1B78FEC90002F96D /* Group.m */; };
-		E9AF81FF1B78FEC90002F96D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81FD1B78FEC90002F96D /* Group.m */; };
+		E9AF81C91B789F7C0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81CA1B789F7C0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81CD1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81CE1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81D51B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81D61B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81D91B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81DA1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81DD1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81DE1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81E11B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81E21B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81E51B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81E61B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81E91B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81EA1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81EE1B78A61E0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81EF1B78A61E0002F96D /* (null) in Resources */ = {isa = PBXBuildFile; };
+		E9AF81FE1B78FEC90002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9AF81FF1B78FEC90002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9D313C617BF7B3100DACDB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C517BF7B3100DACDB4 /* UIKit.framework */; };
 		E9D313C817BF7B3100DACDB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C717BF7B3100DACDB4 /* Foundation.framework */; };
 		E9D313CA17BF7B3100DACDB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C917BF7B3100DACDB4 /* CoreGraphics.framework */; };
@@ -114,6 +134,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90A3D161B7B75D3007C9401 /* Abstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Abstract.h; path = AbstractModel/Abstract.h; sourceTree = "<group>"; };
+		E90A3D171B7B75D3007C9401 /* Abstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Abstract.m; path = AbstractModel/Abstract.m; sourceTree = "<group>"; };
+		E90A3D181B7B75D3007C9401 /* Affiliation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Affiliation.h; path = AbstractModel/Affiliation.h; sourceTree = "<group>"; };
+		E90A3D191B7B75D3007C9401 /* Affiliation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Affiliation.m; path = AbstractModel/Affiliation.m; sourceTree = "<group>"; };
+		E90A3D1A1B7B75D3007C9401 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Author.h; path = AbstractModel/Author.h; sourceTree = "<group>"; };
+		E90A3D1B1B7B75D3007C9401 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Author.m; path = AbstractModel/Author.m; sourceTree = "<group>"; };
+		E90A3D1C1B7B75D3007C9401 /* Conference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conference.h; path = AbstractModel/Conference.h; sourceTree = "<group>"; };
+		E90A3D1D1B7B75D3007C9401 /* Conference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conference.m; path = AbstractModel/Conference.m; sourceTree = "<group>"; };
+		E90A3D1E1B7B75D3007C9401 /* Correspondence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Correspondence.h; path = AbstractModel/Correspondence.h; sourceTree = "<group>"; };
+		E90A3D1F1B7B75D3007C9401 /* Correspondence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Correspondence.m; path = AbstractModel/Correspondence.m; sourceTree = "<group>"; };
+		E90A3D201B7B75D3007C9401 /* Figure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Figure.h; path = AbstractModel/Figure.h; sourceTree = "<group>"; };
+		E90A3D211B7B75D3007C9401 /* Figure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Figure.m; path = AbstractModel/Figure.m; sourceTree = "<group>"; };
+		E90A3D221B7B75D3007C9401 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = AbstractModel/Group.h; sourceTree = "<group>"; };
+		E90A3D231B7B75D3007C9401 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = AbstractModel/Group.m; sourceTree = "<group>"; };
+		E90A3D241B7B75D3007C9401 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Organization.h; path = AbstractModel/Organization.h; sourceTree = "<group>"; };
+		E90A3D251B7B75D3007C9401 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Organization.m; path = AbstractModel/Organization.m; sourceTree = "<group>"; };
+		E90A3D261B7B75D3007C9401 /* Reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reference.h; path = AbstractModel/Reference.h; sourceTree = "<group>"; };
+		E90A3D271B7B75D3007C9401 /* Reference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reference.m; path = AbstractModel/Reference.m; sourceTree = "<group>"; };
+		E90A3D3A1B7B79A6007C9401 /* ConferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceController.h; sourceTree = "<group>"; };
+		E90A3D3B1B7B79A6007C9401 /* ConferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceController.m; sourceTree = "<group>"; };
+		E90A3D3C1B7B79A6007C9401 /* ConferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceController.xib; sourceTree = "<group>"; };
 		E9216DDF17E74D1B0013973B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		E9216E6C17E8EAC70013973B /* Abstracts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Abstracts.xcdatamodel; sourceTree = "<group>"; };
 		E96241F619A3814900B189D6 /* Author+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Author+Format.h"; path = "AbstractModel/Author+Format.h"; sourceTree = "<group>"; };
@@ -143,27 +184,8 @@
 		E9829EC117C2C11A0024EBC0 /* ProgramEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramEventView.h; sourceTree = "<group>"; };
 		E9938ED6199CD56E003163D5 /* Abstract.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Abstract.css; sourceTree = SOURCE_ROOT; };
 		E9938EDE199CDC15003163D5 /* Abstracts.storedata */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abstracts.storedata; sourceTree = SOURCE_ROOT; };
-		E9AF81C71B789F7C0002F96D /* Abstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Abstract.h; path = AbstractModel/Abstract.h; sourceTree = "<group>"; };
-		E9AF81C81B789F7C0002F96D /* Abstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Abstract.m; path = AbstractModel/Abstract.m; sourceTree = "<group>"; };
-		E9AF81CB1B789F7C0002F96D /* Affiliation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Affiliation.h; path = AbstractModel/Affiliation.h; sourceTree = "<group>"; };
-		E9AF81CC1B789F7D0002F96D /* Affiliation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Affiliation.m; path = AbstractModel/Affiliation.m; sourceTree = "<group>"; };
-		E9AF81D31B789F7D0002F96D /* Reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reference.h; path = AbstractModel/Reference.h; sourceTree = "<group>"; };
-		E9AF81D41B789F7D0002F96D /* Reference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reference.m; path = AbstractModel/Reference.m; sourceTree = "<group>"; };
-		E9AF81D71B789F7D0002F96D /* Conference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conference.h; path = AbstractModel/Conference.h; sourceTree = "<group>"; };
-		E9AF81D81B789F7D0002F96D /* Conference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conference.m; path = AbstractModel/Conference.m; sourceTree = "<group>"; };
-		E9AF81DB1B789F7D0002F96D /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Organization.h; path = AbstractModel/Organization.h; sourceTree = "<group>"; };
-		E9AF81DC1B789F7D0002F96D /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Organization.m; path = AbstractModel/Organization.m; sourceTree = "<group>"; };
-		E9AF81DF1B789F7D0002F96D /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Author.h; path = AbstractModel/Author.h; sourceTree = "<group>"; };
-		E9AF81E01B789F7D0002F96D /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Author.m; path = AbstractModel/Author.m; sourceTree = "<group>"; };
-		E9AF81E31B789F7D0002F96D /* Correspondence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Correspondence.h; path = AbstractModel/Correspondence.h; sourceTree = "<group>"; };
-		E9AF81E41B789F7D0002F96D /* Correspondence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Correspondence.m; path = AbstractModel/Correspondence.m; sourceTree = "<group>"; };
-		E9AF81E71B789F7D0002F96D /* Figure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Figure.h; path = AbstractModel/Figure.h; sourceTree = "<group>"; };
-		E9AF81E81B789F7D0002F96D /* Figure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Figure.m; path = AbstractModel/Figure.m; sourceTree = "<group>"; };
-		E9AF81EB1B78A61E0002F96D /* ConferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceController.h; sourceTree = "<group>"; };
-		E9AF81EC1B78A61E0002F96D /* ConferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceController.m; sourceTree = "<group>"; };
-		E9AF81ED1B78A61E0002F96D /* ConferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceController.xib; sourceTree = "<group>"; };
-		E9AF81FC1B78FEC90002F96D /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = Source/AbstractModel/Group.h; sourceTree = "<group>"; };
-		E9AF81FD1B78FEC90002F96D /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = Source/AbstractModel/Group.m; sourceTree = "<group>"; };
+		E9BD1D7F1B791B1B000F197F /* CKSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKSchedule.h; path = ConferenceKit/CKSchedule.h; sourceTree = "<group>"; };
+		E9BD1D801B791B1B000F197F /* CKSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKSchedule.m; path = ConferenceKit/CKSchedule.m; sourceTree = "<group>"; };
 		E9D313C217BF7B3100DACDB4 /* GCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D313C517BF7B3100DACDB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E9D313C717BF7B3100DACDB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -278,9 +300,9 @@
 		E962420119A38A4800B189D6 /* GCAManager */ = {
 			isa = PBXGroup;
 			children = (
-				E9AF81EB1B78A61E0002F96D /* ConferenceController.h */,
-				E9AF81EC1B78A61E0002F96D /* ConferenceController.m */,
-				E9AF81ED1B78A61E0002F96D /* ConferenceController.xib */,
+				E90A3D3A1B7B79A6007C9401 /* ConferenceController.h */,
+				E90A3D3B1B7B79A6007C9401 /* ConferenceController.m */,
+				E90A3D3C1B7B79A6007C9401 /* ConferenceController.xib */,
 				E962424219A38BC500B189D6 /* JSONImporter.h */,
 				E962424319A38BC500B189D6 /* JSONImporter.m */,
 				E962420619A38A4800B189D6 /* AppDelegate.h */,
@@ -304,8 +326,6 @@
 		E9D313B917BF7B3100DACDB4 = {
 			isa = PBXGroup;
 			children = (
-				E9AF81FC1B78FEC90002F96D /* Group.h */,
-				E9AF81FD1B78FEC90002F96D /* Group.m */,
 				E9D3142117BF86D800DACDB4 /* Images */,
 				E9D313CB17BF7B3100DACDB4 /* Source */,
 				E9D3141817BF7D1600DACDB4 /* Resources */,
@@ -381,6 +401,8 @@
 				E9D313FF17BF7BE600DACDB4 /* UIColor+ConferenceKit.m */,
 				E9D3145D17BF8CF200DACDB4 /* CKDataStore.h */,
 				E9D3145E17BF8CF200DACDB4 /* CKDataStore.m */,
+				E9BD1D7F1B791B1B000F197F /* CKSchedule.h */,
+				E9BD1D801B791B1B000F197F /* CKSchedule.m */,
 			);
 			name = ConferenceKit;
 			sourceTree = "<group>";
@@ -472,22 +494,24 @@
 		E9D3144317BF8B8400DACDB4 /* AbstractModel */ = {
 			isa = PBXGroup;
 			children = (
-				E9AF81E71B789F7D0002F96D /* Figure.h */,
-				E9AF81E81B789F7D0002F96D /* Figure.m */,
-				E9AF81E31B789F7D0002F96D /* Correspondence.h */,
-				E9AF81E41B789F7D0002F96D /* Correspondence.m */,
-				E9AF81DF1B789F7D0002F96D /* Author.h */,
-				E9AF81E01B789F7D0002F96D /* Author.m */,
-				E9AF81DB1B789F7D0002F96D /* Organization.h */,
-				E9AF81DC1B789F7D0002F96D /* Organization.m */,
-				E9AF81D71B789F7D0002F96D /* Conference.h */,
-				E9AF81D81B789F7D0002F96D /* Conference.m */,
-				E9AF81D31B789F7D0002F96D /* Reference.h */,
-				E9AF81D41B789F7D0002F96D /* Reference.m */,
-				E9AF81CB1B789F7C0002F96D /* Affiliation.h */,
-				E9AF81CC1B789F7D0002F96D /* Affiliation.m */,
-				E9AF81C71B789F7C0002F96D /* Abstract.h */,
-				E9AF81C81B789F7C0002F96D /* Abstract.m */,
+				E90A3D161B7B75D3007C9401 /* Abstract.h */,
+				E90A3D171B7B75D3007C9401 /* Abstract.m */,
+				E90A3D181B7B75D3007C9401 /* Affiliation.h */,
+				E90A3D191B7B75D3007C9401 /* Affiliation.m */,
+				E90A3D1A1B7B75D3007C9401 /* Author.h */,
+				E90A3D1B1B7B75D3007C9401 /* Author.m */,
+				E90A3D1C1B7B75D3007C9401 /* Conference.h */,
+				E90A3D1D1B7B75D3007C9401 /* Conference.m */,
+				E90A3D1E1B7B75D3007C9401 /* Correspondence.h */,
+				E90A3D1F1B7B75D3007C9401 /* Correspondence.m */,
+				E90A3D201B7B75D3007C9401 /* Figure.h */,
+				E90A3D211B7B75D3007C9401 /* Figure.m */,
+				E90A3D221B7B75D3007C9401 /* Group.h */,
+				E90A3D231B7B75D3007C9401 /* Group.m */,
+				E90A3D241B7B75D3007C9401 /* Organization.h */,
+				E90A3D251B7B75D3007C9401 /* Organization.m */,
+				E90A3D261B7B75D3007C9401 /* Reference.h */,
+				E90A3D271B7B75D3007C9401 /* Reference.m */,
 				E96241F919A3816900B189D6 /* Organization+Format.h */,
 				E96241FA19A3816900B189D6 /* Organization+Format.m */,
 				E96241F619A3814900B189D6 /* Author+Format.h */,
@@ -599,7 +623,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E962424119A38B8700B189D6 /* Abstract.css in Resources */,
-				E9AF81EF1B78A61E0002F96D /* ConferenceController.xib in Resources */,
+				E9AF81EF1B78A61E0002F96D /* (null) in Resources */,
+				E90A3D3E1B7B79A6007C9401 /* ConferenceController.xib in Resources */,
 				E962420D19A38A4800B189D6 /* Images.xcassets in Resources */,
 				E962421019A38A4800B189D6 /* MainMenu.xib in Resources */,
 			);
@@ -657,23 +682,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				E962423B19A38B2F00B189D6 /* Abstracts.xcdatamodeld in Sources */,
-				E9AF81EA1B789F7D0002F96D /* Figure.m in Sources */,
-				E9AF81FF1B78FEC90002F96D /* Group.m in Sources */,
+				E90A3D291B7B75D3007C9401 /* Abstract.m in Sources */,
+				E9AF81EA1B789F7D0002F96D /* (null) in Sources */,
+				E90A3D371B7B75D3007C9401 /* Organization.m in Sources */,
+				E90A3D3D1B7B79A6007C9401 /* ConferenceController.m in Sources */,
+				E90A3D2F1B7B75D3007C9401 /* Conference.m in Sources */,
+				E90A3D391B7B75D3007C9401 /* Reference.m in Sources */,
+				E9AF81FF1B78FEC90002F96D /* (null) in Sources */,
+				E90A3D311B7B75D3007C9401 /* Correspondence.m in Sources */,
 				E962422419A38B1500B189D6 /* Organization+Format.m in Sources */,
 				E962422619A38B1500B189D6 /* Author+Format.m in Sources */,
+				E90A3D2D1B7B75D3007C9401 /* Author.m in Sources */,
 				E976936519A87A8700320EAD /* Abstract+Format.m in Sources */,
-				E9AF81CA1B789F7C0002F96D /* Abstract.m in Sources */,
-				E9AF81E61B789F7D0002F96D /* Correspondence.m in Sources */,
-				E9AF81EE1B78A61E0002F96D /* ConferenceController.m in Sources */,
-				E9AF81CE1B789F7D0002F96D /* Affiliation.m in Sources */,
+				E9AF81CA1B789F7C0002F96D /* (null) in Sources */,
+				E9AF81E61B789F7D0002F96D /* (null) in Sources */,
+				E9AF81EE1B78A61E0002F96D /* (null) in Sources */,
+				E90A3D331B7B75D3007C9401 /* Figure.m in Sources */,
+				E9AF81CE1B789F7D0002F96D /* (null) in Sources */,
 				E962424419A38BC500B189D6 /* JSONImporter.m in Sources */,
-				E9AF81E21B789F7D0002F96D /* Author.m in Sources */,
+				E9AF81E21B789F7D0002F96D /* (null) in Sources */,
+				E90A3D351B7B75D3007C9401 /* Group.m in Sources */,
 				E962423819A38B1500B189D6 /* Abstract+HTML.m in Sources */,
-				E9AF81DE1B789F7D0002F96D /* Organization.m in Sources */,
+				E9AF81DE1B789F7D0002F96D /* (null) in Sources */,
 				E962423A19A38B1500B189D6 /* AbstractGroup.m in Sources */,
-				E9AF81DA1B789F7D0002F96D /* Conference.m in Sources */,
+				E9AF81DA1B789F7D0002F96D /* (null) in Sources */,
+				E90A3D2B1B7B75D3007C9401 /* Affiliation.m in Sources */,
 				E962420819A38A4800B189D6 /* AppDelegate.m in Sources */,
-				E9AF81D61B789F7D0002F96D /* Reference.m in Sources */,
+				E9AF81D61B789F7D0002F96D /* (null) in Sources */,
 				E962420519A38A4800B189D6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,13 +717,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90A3D341B7B75D3007C9401 /* Group.m in Sources */,
 				E9D313D217BF7B3100DACDB4 /* main.m in Sources */,
-				E9AF81D51B789F7D0002F96D /* Reference.m in Sources */,
-				E9AF81E11B789F7D0002F96D /* Author.m in Sources */,
+				E9AF81D51B789F7D0002F96D /* (null) in Sources */,
+				E9AF81E11B789F7D0002F96D /* (null) in Sources */,
 				E9D313D617BF7B3100DACDB4 /* AppDelegate.m in Sources */,
 				E9D3140017BF7BE600DACDB4 /* CKMarkdownParser.m in Sources */,
 				E9D3140117BF7BE600DACDB4 /* CKMarkdownView.m in Sources */,
-				E9AF81E51B789F7D0002F96D /* Correspondence.m in Sources */,
+				E90A3D381B7B75D3007C9401 /* Reference.m in Sources */,
+				E9AF81E51B789F7D0002F96D /* (null) in Sources */,
 				E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */,
 				E9D3140217BF7BE600DACDB4 /* CKPoiManager.m in Sources */,
 				E9D3140317BF7BE600DACDB4 /* UIColor+ConferenceKit.m in Sources */,
@@ -696,24 +733,31 @@
 				E9D3141117BF7C1B00DACDB4 /* buffer.c in Sources */,
 				E9D3141217BF7C1B00DACDB4 /* markdown.c in Sources */,
 				E96241FB19A3816900B189D6 /* Organization+Format.m in Sources */,
+				E90A3D281B7B75D3007C9401 /* Abstract.m in Sources */,
 				E96241F819A3814900B189D6 /* Author+Format.m in Sources */,
 				E9D3141317BF7C1B00DACDB4 /* stack.c in Sources */,
-				E9AF81CD1B789F7D0002F96D /* Affiliation.m in Sources */,
+				E9AF81CD1B789F7D0002F96D /* (null) in Sources */,
 				E9D3141617BF7C8D00DACDB4 /* InfoVC.m in Sources */,
-				E9AF81DD1B789F7D0002F96D /* Organization.m in Sources */,
+				E9AF81DD1B789F7D0002F96D /* (null) in Sources */,
 				E9D3144217BF880600DACDB4 /* MapVC.m in Sources */,
+				E90A3D321B7B75D3007C9401 /* Figure.m in Sources */,
 				E9D3145317BF8B9E00DACDB4 /* AbstractGroup.m in Sources */,
 				E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */,
-				E9AF81D91B789F7D0002F96D /* Conference.m in Sources */,
+				E90A3D2E1B7B75D3007C9401 /* Conference.m in Sources */,
+				E9AF81D91B789F7D0002F96D /* (null) in Sources */,
 				E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */,
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
+				E90A3D2C1B7B75D3007C9401 /* Author.m in Sources */,
 				E976936419A87A8700320EAD /* Abstract+Format.m in Sources */,
 				E9D3146B17BFAEB500DACDB4 /* AbstractVC.m in Sources */,
-				E9AF81FE1B78FEC90002F96D /* Group.m in Sources */,
+				E9AF81FE1B78FEC90002F96D /* (null) in Sources */,
 				E9D3146E17BFAEFD00DACDB4 /* Abstract+HTML.m in Sources */,
-				E9AF81C91B789F7C0002F96D /* Abstract.m in Sources */,
+				E90A3D2A1B7B75D3007C9401 /* Affiliation.m in Sources */,
+				E9AF81C91B789F7C0002F96D /* (null) in Sources */,
 				E9D3148417C0A39800DACDB4 /* ProgramRootVC.m in Sources */,
-				E9AF81E91B789F7D0002F96D /* Figure.m in Sources */,
+				E90A3D301B7B75D3007C9401 /* Correspondence.m in Sources */,
+				E90A3D361B7B75D3007C9401 /* Organization.m in Sources */,
+				E9AF81E91B789F7D0002F96D /* (null) in Sources */,
 				E9D3148717C0A62400DACDB4 /* ProgramPointCell.m in Sources */,
 				E9D3148D17C0A6C200DACDB4 /* ProgramDayTVC.m in Sources */,
 				E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */,
