@@ -61,10 +61,10 @@
         <relationship name="ofAbstract" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Abstract" inverseName="figures" inverseEntity="Abstract" syncable="YES"/>
     </entity>
     <entity name="Group" representedClassName="Group" syncable="YES">
+        <attribute name="brief" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prefix" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="abstracts" optional="YES" transient="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Abstract" syncable="YES"/>
         <relationship name="conference" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Conference" inverseName="groups" inverseEntity="Conference" syncable="YES"/>
     </entity>
     <entity name="Organization" representedClassName="Organization" syncable="YES">

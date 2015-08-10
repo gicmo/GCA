@@ -7,7 +7,6 @@
 //
 
 #import "Group.h"
-#import "Abstract.h"
 #import "Conference.h"
 
 
@@ -16,7 +15,7 @@
 @dynamic name;
 @dynamic prefix;
 @dynamic uuid;
+@dynamic brief;
 @dynamic conference;
-@dynamic abstracts;
 
 @end

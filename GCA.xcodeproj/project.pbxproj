@@ -51,8 +51,8 @@
 		E9AF81EA1B789F7D0002F96D /* Figure.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81E81B789F7D0002F96D /* Figure.m */; };
 		E9AF81EE1B78A61E0002F96D /* ConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81EC1B78A61E0002F96D /* ConferenceController.m */; };
 		E9AF81EF1B78A61E0002F96D /* ConferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9AF81ED1B78A61E0002F96D /* ConferenceController.xib */; };
-		E9AF81F61B78F7510002F96D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81F51B78F7510002F96D /* Group.m */; };
-		E9AF81F71B78F7510002F96D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81F51B78F7510002F96D /* Group.m */; };
+		E9AF81FE1B78FEC90002F96D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81FD1B78FEC90002F96D /* Group.m */; };
+		E9AF81FF1B78FEC90002F96D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AF81FD1B78FEC90002F96D /* Group.m */; };
 		E9D313C617BF7B3100DACDB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C517BF7B3100DACDB4 /* UIKit.framework */; };
 		E9D313C817BF7B3100DACDB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C717BF7B3100DACDB4 /* Foundation.framework */; };
 		E9D313CA17BF7B3100DACDB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C917BF7B3100DACDB4 /* CoreGraphics.framework */; };
@@ -162,8 +162,8 @@
 		E9AF81EB1B78A61E0002F96D /* ConferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceController.h; sourceTree = "<group>"; };
 		E9AF81EC1B78A61E0002F96D /* ConferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceController.m; sourceTree = "<group>"; };
 		E9AF81ED1B78A61E0002F96D /* ConferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceController.xib; sourceTree = "<group>"; };
-		E9AF81F41B78F7510002F96D /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = AbstractModel/Group.h; sourceTree = "<group>"; };
-		E9AF81F51B78F7510002F96D /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = AbstractModel/Group.m; sourceTree = "<group>"; };
+		E9AF81FC1B78FEC90002F96D /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = Source/AbstractModel/Group.h; sourceTree = "<group>"; };
+		E9AF81FD1B78FEC90002F96D /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = Source/AbstractModel/Group.m; sourceTree = "<group>"; };
 		E9D313C217BF7B3100DACDB4 /* GCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D313C517BF7B3100DACDB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E9D313C717BF7B3100DACDB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -304,6 +304,8 @@
 		E9D313B917BF7B3100DACDB4 = {
 			isa = PBXGroup;
 			children = (
+				E9AF81FC1B78FEC90002F96D /* Group.h */,
+				E9AF81FD1B78FEC90002F96D /* Group.m */,
 				E9D3142117BF86D800DACDB4 /* Images */,
 				E9D313CB17BF7B3100DACDB4 /* Source */,
 				E9D3141817BF7D1600DACDB4 /* Resources */,
@@ -470,8 +472,6 @@
 		E9D3144317BF8B8400DACDB4 /* AbstractModel */ = {
 			isa = PBXGroup;
 			children = (
-				E9AF81F41B78F7510002F96D /* Group.h */,
-				E9AF81F51B78F7510002F96D /* Group.m */,
 				E9AF81E71B789F7D0002F96D /* Figure.h */,
 				E9AF81E81B789F7D0002F96D /* Figure.m */,
 				E9AF81E31B789F7D0002F96D /* Correspondence.h */,
@@ -658,7 +658,7 @@
 			files = (
 				E962423B19A38B2F00B189D6 /* Abstracts.xcdatamodeld in Sources */,
 				E9AF81EA1B789F7D0002F96D /* Figure.m in Sources */,
-				E9AF81F71B78F7510002F96D /* Group.m in Sources */,
+				E9AF81FF1B78FEC90002F96D /* Group.m in Sources */,
 				E962422419A38B1500B189D6 /* Organization+Format.m in Sources */,
 				E962422619A38B1500B189D6 /* Author+Format.m in Sources */,
 				E976936519A87A8700320EAD /* Abstract+Format.m in Sources */,
@@ -709,7 +709,7 @@
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
 				E976936419A87A8700320EAD /* Abstract+Format.m in Sources */,
 				E9D3146B17BFAEB500DACDB4 /* AbstractVC.m in Sources */,
-				E9AF81F61B78F7510002F96D /* Group.m in Sources */,
+				E9AF81FE1B78FEC90002F96D /* Group.m in Sources */,
 				E9D3146E17BFAEFD00DACDB4 /* Abstract+HTML.m in Sources */,
 				E9AF81C91B789F7C0002F96D /* Abstract.m in Sources */,
 				E9D3148417C0A39800DACDB4 /* ProgramRootVC.m in Sources */,
