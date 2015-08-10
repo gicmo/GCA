@@ -2,8 +2,8 @@
 //  Organization.m
 //  GCA
 //
-//  Created by Christian Kellner on 19/08/14.
-//  Copyright (c) 2014 G-Node. All rights reserved.
+//  Created by Christian Kellner on 10/08/15.
+//  Copyright (c) 2015 G-Node. All rights reserved.
 //
 
 #import "Organization.h"

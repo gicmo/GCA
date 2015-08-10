@@ -2,14 +2,14 @@
 //  Abstract.h
 //  GCA
 //
-//  Created by Christian Kellner on 19/08/14.
-//  Copyright (c) 2014 G-Node. All rights reserved.
+//  Created by Christian Kellner on 10/08/15.
+//  Copyright (c) 2015 G-Node. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Affiliation, Author, Correspondence, Figure, Reference;
+@class Affiliation, Author, Conference, Correspondence, Figure, Reference;
 
 @interface Abstract : NSManagedObject
 
@@ -33,6 +33,7 @@
 @property (nonatomic, retain) NSSet *correspondenceAt;
 @property (nonatomic, retain) NSOrderedSet *figures;
 @property (nonatomic, retain) NSOrderedSet *references;
+@property (nonatomic, retain) Conference *conference;
 @end
 
 @interface Abstract (CoreDataGeneratedAccessors)
