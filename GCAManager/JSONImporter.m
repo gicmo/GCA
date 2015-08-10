@@ -17,7 +17,7 @@
 #import "Reference.h"
 #import "Figure.h"
 #import "Conference.h"
-
+#import "Group.h"
 
 //******************************************************************************
 @interface NSString (Import)
@@ -235,7 +235,21 @@
     Conference *conf = [self openObj:@"Conference" WithUUID:uuid];
     conf.name = dict[@"name"];
     conf.uuid = uuid;
-    
+
+    NSMutableOrderedSet *groups = [[NSMutableOrderedSet alloc] init];
+    for(NSDictionary *gd in dict[@"groups"]) {
+        Group *g = [NSEntityDescription insertNewObjectForEntityForName:@"Group"
+                                                 inManagedObjectContext:context];
+
+        g.uuid = gd[@"uuid"];
+        g.name = [NSString mkStringForJS:gd[@"name"]];
+        g.brief = [NSString mkStringForJS:gd[@"short"]];
+
+        [groups addObject:g];
+    }
+
+    conf.groups = groups;
+
     return YES;
 }
 
