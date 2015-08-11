@@ -128,13 +128,6 @@
                 <menuItem title="Edit" id="217">
                     <menu key="submenu" title="Edit" id="205">
                         <items>
-                            <menuItem title="Delete Abstract" id="750">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="deleteAbstract:" target="494" id="752"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="751"/>
                             <menuItem title="Undo" keyEquivalent="z" id="207">
                                 <connections>
                                     <action selector="undo:" target="-1" id="223"/>
@@ -144,15 +137,6 @@
                                 <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                 <connections>
                                     <action selector="redo:" target="-1" id="231"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="214">
-                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                            </menuItem>
-                            <menuItem title="Set Groups JSON" id="wk6-FY-DCb">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="menuSetGroupsJSON:" target="494" id="e4g-Vz-Qfy"/>
                                 </connections>
                             </menuItem>
                         </items>

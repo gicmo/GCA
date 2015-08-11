@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#include "Conference.h"
+
 @interface JSONImporter : NSObject
 -(id) initWithContext:(NSManagedObjectContext *)context;
--(BOOL) importAbstracts:(NSData *)data intoGroups:(NSArray *)groups;
+-(BOOL) importAbstracts:(NSData *)data intoConference:(Conference *)conference;
 -(BOOL) importConference:(NSData *)data;
 
 @property (nonatomic, strong) NSManagedObjectContext *context;

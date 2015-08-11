@@ -34,6 +34,7 @@
 #import "AbstractGroup.h"
 #import "JSONImporter.h"
 #import "ConferenceController.h"
+#import "Group.h"
 
 #import <WebKit/WebKit.h>
 
@@ -48,15 +49,14 @@
 @property (weak) IBOutlet NSOutlineView *abstractOutline;
 
 @property (weak) IBOutlet WebView *abstractView;
-@property (strong, nonatomic) NSArray *groups;
 @property (strong, nonatomic) NSString *latexStylesheet;
 @property (strong, nonatomic) NSString *htmlStylesheet;
-@property (strong, nonatomic) NSString *groupsFile;
 
 @property (weak) IBOutlet NSWindow *abstractsWindow;
 
 @property (strong, nonatomic) ConferenceController *conferenceSheet;
 
+@property (strong, nonatomic) Conference *conference;
 @end
 
 @implementation AppDelegate
@@ -66,7 +66,6 @@
 @synthesize abstractOutline = _abstractOutline;
 @synthesize latexStylesheet = _latexStylesheet;
 @synthesize htmlStylesheet = _htmlStylesheet;
-@synthesize groupsFile = _groupsFile;
 
 - (NSURL *)applicationFilesDirectory
 {
@@ -221,78 +220,14 @@
 }
 
 
-- (NSArray *) loadGroups
-{
-    NSData *data = [NSData dataWithContentsOfFile:self.groupsFile];
-    
-    if (!data) {
-        return nil;
-    }
-    
-    id list = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    if (![list isKindOfClass:[NSArray class]]) {
-        NSLog(@"NOT A ARRAY!\n");
-        return nil;
-    }
-    
-    return (NSArray *) list;
-}
-
-- (BOOL) loadGroupsAndData
-{
-    NSArray *g = (NSArray *) [self loadGroups];
-    NSUInteger count = g.count + 1;
-    NSMutableArray *roots = [NSMutableArray arrayWithCapacity:count];
-    
-    for (int i = 0; i < g.count; i++) {
-        uint8 uid = (uint8) i + 1;
-        NSString *name = [g objectAtIndex:i];
-        [roots addObject:[AbstractGroup groupWithUID:uid andName:name]];
-    }
-    
-    [roots addObject:[AbstractGroup groupWithUID:0 andName:@"Unsorted"]];
-    
-    self.groups = roots;
-    [self loadDataFromStore];
-    
-    return YES;
-}
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [self loadGroupsAndData];
-   
     self.abstractOutline.delegate = self;
     self.abstractOutline.dataSource = self;
     
     [self.abstractOutline registerForDraggedTypes:[NSArray arrayWithObject:PT_REORDER]];
     [self.abstractOutline setDraggingSourceOperationMask:NSDragOperationEvery forLocal:YES];
     [self.abstractOutline setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO];
-}
-
-
-- (NSString *) groupsFile
-{
-    if (_groupsFile == nil) {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        _groupsFile = [defaults stringForKey:@"groups_file"];
-    }
-    
-    return _groupsFile;
-}
-
-- (void) setGroupsFile:(NSString *)groupsFile
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setValue:groupsFile forKey:@"groups_file"];
-    NSLog(@"Setting groups_file\n");
-    _groupsFile = groupsFile;
-    
-    if (groupsFile) {
-        [self loadDataFromStore];
-        [self.abstractOutline reloadData];
-    }
-    
 }
 
 
@@ -308,44 +243,13 @@
 
         if (returnCode == NSModalResponseOK) {
             NSLog(@"%@", self.conferenceSheet.selectedConference.name);
+            self.conference = self.conferenceSheet.selectedConference;
+            [self.abstractOutline reloadData];
         }
 
         self.conferenceSheet = NULL;
     }];
 
-}
-
-
-- (IBAction)menuSetGroupsJSON:(id)sender {
-    NSOpenPanel *chooser = [NSOpenPanel openPanel];
-    chooser.title = @"Please select stylesheet";
-    
-    NSArray *filetypes = [NSArray arrayWithObjects:@"json", nil];
-    chooser.allowedFileTypes = filetypes;
-    
-    chooser.canChooseFiles = YES;
-    chooser.canChooseDirectories = NO;
-    chooser.allowsMultipleSelection = NO;
-    
-    [chooser beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
-        if (result == NSFileHandlingPanelOKButton) {
-            self.groupsFile = chooser.URL.path;
-        }
-    }];
-}
-
-- (IBAction)deleteAbstract:(id)sender
-{
-    NSInteger row = [self.abstractOutline selectedRow];
-    id item = [self.abstractOutline itemAtRow:row];
-    
-    if (! [item isKindOfClass:[Abstract class]]) {
-        return;
-    }
-
-    Abstract *abstract = item;
-    [self removeAbstract:abstract.aid];
-    [self.managedObjectContext deleteObject:abstract];
 }
 
 // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
@@ -376,49 +280,38 @@
             NSData *data = [[NSData alloc] initWithContentsOfURL:importDialog.URL];
             
             JSONImporter *imporer = [[JSONImporter alloc] initWithContext:self.managedObjectContext];
-            [imporer importAbstracts:data intoGroups:self.groups];
-            
-            [self loadDataFromStore];
+            [imporer importAbstracts:data intoConference:self.conference];
+
             [self.abstractOutline reloadData];
         }
     }];   
 }
 
-- (void)loadDataFromStore
-{
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Abstract"
-                                              inManagedObjectContext:self.managedObjectContext];
-    
-    [request setEntity:entity];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"aid" ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    request.sortDescriptors = sortDescriptors;
-    
-    NSArray *results = [self.managedObjectContext executeFetchRequest:request error:nil];
-    
-    NSLog(@"results.count: %lu\n", results.count);
-    self.abstracts = results;
-    
-    for (AbstractGroup *group in self.groups) {
-        [group.abstracts removeAllObjects];
-    }
-    
-    for (Abstract *abstract in self.abstracts) {
-        int32_t aid = abstract.aid;
-        NSUInteger groupIndex = (aid & 0xFFFF0000) >> 16;
-        NSLog(@"\tgroup index: %ld <- %d", groupIndex, ((aid & 0xFFFF0000) >> 16));
-        AbstractGroup *group = [self.groups objectAtIndex:groupIndex];
-        [group.abstracts addObject:abstract];//insertObject:abstract atIndex:abstractIndex];
-    }
+
+- (NSArray*)abstractsForGroup:(Group *)group {
+    NSManagedObjectContext *context = self.managedObjectContext;
+
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Abstract"];
+    NSPredicate *pd_conf = [NSPredicate predicateWithFormat:@"conference == %@", self.conference];
+
+    int32_t start = group.prefix << 16;
+    int32_t end = (group.prefix + 1) << 16;
+
+    NSLog(@"start, end: %d, %d", start, end);
+
+    NSPredicate *pd_aid = [NSPredicate predicateWithFormat:@"aid between {%d, %d}", start, end];
+    NSCompoundPredicate *all = [NSCompoundPredicate andPredicateWithSubpredicates:@[pd_conf, pd_aid]];
+
+    request.predicate = all;
+    NSArray *result = [context executeFetchRequest:request error:nil];
+
+    return result;
 }
 
 #pragma mark - TableViewDataSource
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    
-    return self.abstracts.count;
+    return self.conference.abstracts.count;
 }
 
 
@@ -428,10 +321,10 @@
 
     NSInteger nchildren = 0;
     if (item == nil)
-        nchildren = self.groups.count;
-    else if ([item isKindOfClass:[AbstractGroup class]]) {
-        AbstractGroup *group = item;
-        nchildren = group.abstracts.count;
+        nchildren = self.conference.groups.count;
+    else if ([item isKindOfClass:[Group class]]) {
+        Group *group = item;
+        nchildren = [self abstractsForGroup:group].count;
     }
     
     NSLog(@"- numberofChildren: %ld", nchildren);
@@ -441,10 +334,11 @@
 - (id) outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item
 {
     if (item == nil) {
-        return [self.groups objectAtIndex:index];
-    } else if ([item isKindOfClass:[AbstractGroup class]]) {
-        AbstractGroup *group = item;
-        return [group.abstracts objectAtIndex:index];
+        return [self.conference.groups objectAtIndex:index];
+    } else if ([item isKindOfClass:[Group class]]) {
+        Group *group = item;
+        NSArray *abstracts = [self abstractsForGroup:group];
+        return [abstracts objectAtIndex:index];
     }
     
     return nil;
@@ -452,7 +346,7 @@
 
 - (BOOL) outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
 {
-    if ([item isKindOfClass:[AbstractGroup class]]) {
+    if ([item isKindOfClass:[Group class]]) {
         return YES;
     }
     
@@ -462,13 +356,14 @@
 - (id) outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
     NSString *text = nil;
-    if ([item isKindOfClass:[AbstractGroup class]]) {
-        AbstractGroup *group = item;
+    if ([item isKindOfClass:[Group class]]) {
+        Group *group = item;
 
         if ([tableColumn.identifier isEqualToString:@"author"]) {
             text = group.name;
         } else if ([tableColumn.identifier isEqualToString:@"title"])  {
-            text = [NSString stringWithFormat:@"%ld", group.abstracts.count];
+            NSUInteger nums = [self abstractsForGroup:group].count;
+            text = [NSString stringWithFormat:@"%ld", nums];
         } else  {
             text = @"";
         }
@@ -502,147 +397,5 @@
     }
     
 }
-
-#pragma - Drag & Drop
-
-- (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView
-                pasteboardWriterForItem:(id)item
-{
-    if ([item isKindOfClass:[Abstract class]]) {
-        Abstract *abstract = item;
-        return abstract.title;
-    }
-    return nil;
-}
-
-- (void) outlineView:(NSOutlineView *)outlineView
-     draggingSession:(NSDraggingSession *)session
-    willBeginAtPoint:(NSPoint)screenPoint
-            forItems:(NSArray *)draggedItems
-{
-    int32_t aid = [[draggedItems lastObject] aid];
-    NSData *data = [NSData dataWithBytes:&aid length:sizeof(aid)];
-    [session.draggingPasteboard setData:data forType:PT_REORDER];
-}
-
-- (void) outlineView:(NSOutlineView *)outlineView
-     draggingSession:(NSDraggingSession *)session
-        endedAtPoint:(NSPoint)screenPoint
-           operation:(NSDragOperation)operation
-{
-    NSLog(@"Drag ended\n");
-}
-
-- (NSDragOperation)outlineView:(NSOutlineView *)outlineView
-                  validateDrop:(id <NSDraggingInfo>)info
-                  proposedItem:(id)item
-            proposedChildIndex:(NSInteger)childIndex
-{
-    NSDragOperation result = NSDragOperationNone;
-    
-    if ([item isKindOfClass:[AbstractGroup class]]) {
-        result = NSDragOperationGeneric;
-    }
-    
-    return result;
-}
-
-- (AbstractGroup *) groupForAbstractId:(int32_t) aid
-{
-    NSUInteger groupIndex = (aid & 0xFFFF0000) >> 16;
-    AbstractGroup *sourceGroup = [self.groups objectAtIndex:groupIndex];
-    NSLog(@"aid: %d [%lu]\n", aid, groupIndex);
-    NSLog(@"sourceGroupIdx: %lu, %@\n", groupIndex, sourceGroup.name);
-
-    return  sourceGroup;
-}
-
-- (Abstract *) removeAbstract:(int32_t) aid
-{
-    NSOutlineView *outlineView = self.abstractOutline;
-    NSUInteger abstractIndex = (aid & 0xFFFF) - 1; // abstract ids start at 1
-    AbstractGroup *sourceGroup = [self groupForAbstractId:aid];
-    Abstract *abstract = [sourceGroup.abstracts objectAtIndex:abstractIndex];
-  
-    [outlineView beginUpdates];
-    
-    [sourceGroup.abstracts removeObjectAtIndex:abstractIndex];
-    for (NSUInteger i = abstractIndex; i < sourceGroup.abstracts.count; i++) {
-        Abstract *A = [sourceGroup.abstracts objectAtIndex:i];
-        int32_t newAid = (sourceGroup.type << 16) | (int32_t) (i + 1);
-        NSLog(@"S: new aid: %d [%lu]\n", newAid, i);
-        A.aid = newAid;
-    }
-    
-    [outlineView removeItemsAtIndexes:[NSIndexSet indexSetWithIndex:abstractIndex]
-                             inParent:sourceGroup
-                        withAnimation:NSTableViewAnimationEffectNone];
-    
-    [outlineView endUpdates];
-    return abstract;
-}
-
-- (BOOL) outlineView:(NSOutlineView *)outlineView
-          acceptDrop:(id <NSDraggingInfo>)info
-                item:(id)item
-          childIndex:(NSInteger)childIndex
-{
-    if (item == nil)
-        return NO;
-    
-
-    NSPasteboard *board = [info draggingPasteboard];
-    NSData *data = [board dataForType:PT_REORDER];
-    int32_t aid;
-    [data getBytes:&aid length:sizeof(aid)];
-  
-    NSLog(@"%@ %ld", item, childIndex);
-    NSUInteger ngroups = self.groups.count;
-    NSUInteger groupIndex = ((aid & (0xFFFF << 16)) + ngroups-1) % ngroups;
-    NSUInteger abstractIndex = (aid & 0xFFFF) - 1; // abstract ids start at 1
-      NSLog(@"aid: %d [%lu %lu]\n", aid, groupIndex, abstractIndex);
-
-    AbstractGroup *sourceGroup = [self.groups objectAtIndex:groupIndex];
-    Abstract *abstract = [sourceGroup.abstracts objectAtIndex:abstractIndex];
-        NSLog(@"sourceGroupIdx: %lu, %@\n", groupIndex, sourceGroup.name);
-    [outlineView beginUpdates];
-    
-    [sourceGroup.abstracts removeObjectAtIndex:abstractIndex];
-    for (NSUInteger i = abstractIndex; i < sourceGroup.abstracts.count; i++) {
-        Abstract *A = [sourceGroup.abstracts objectAtIndex:i];
-        int32_t newAid = (sourceGroup.type << 16) | (int32_t) (i + 1);
-        NSLog(@"S: new aid: %d [%lu]\n", newAid, i);
-        A.aid = newAid;
-    }
-    
-    [outlineView removeItemsAtIndexes:[NSIndexSet indexSetWithIndex:abstractIndex]
-                             inParent:sourceGroup
-                        withAnimation:NSTableViewAnimationEffectNone];
-    
-    AbstractGroup *destGroup = item;
-    
-    if (childIndex == -1)
-        childIndex = destGroup.abstracts.count;
-    
-    
-    [destGroup.abstracts insertObject:abstract atIndex:childIndex];
-    for (NSUInteger i = childIndex; i < destGroup.abstracts.count; i++) {
-        int32_t newAid = (destGroup.type << 16) | ((int32_t) i + 1);
-        NSLog(@"new aid: %d [%lu]\n", newAid, i);
-        Abstract *A = [destGroup.abstracts objectAtIndex:i];
-        A.aid = newAid;
-
-    }
-    
-    [outlineView insertItemsAtIndexes:[NSIndexSet indexSetWithIndex:childIndex]
-                             inParent:item
-                        withAnimation:NSTableViewAnimationEffectGap];
-    
-    [outlineView endUpdates];
-    
-    NSLog(@"acceptDrop\n");
-    return NO;
-}
-
 
 @end

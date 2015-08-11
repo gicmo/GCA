@@ -74,41 +74,26 @@
     [obj setValue:uuid forKey:@"uuid"];
     return obj;
 }
-
-- (BOOL) importAbstracts:(NSData *)data intoGroups:(NSArray *)groups
+-(BOOL) importAbstracts:(NSData *)data intoConference:(Conference *)conference
 {
     id list = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     if (![list isKindOfClass:[NSArray class]]) {
         NSLog(@"NOT A ARRAY!\n");
         return NO;
     }
-    
+
     NSManagedObjectContext *context = self.context;
     NSArray *abstracts = (NSArray *) list;
-    
-    for (NSDictionary *absDict in abstracts) {
-        int32_t aid;
-        
-        AbstractGroup *group = nil;
-        int32_t abstractIndex = 0;
-        
-        NSString *idStr = [absDict objectForKey:@"sortId"];
-        if (idStr) {
-            aid = (int32_t) [idStr integerValue];
-            NSUInteger ngroups = groups.count;
-            NSUInteger groupIndex = ((aid & (0xFFFF << 16)) + ngroups-1) % ngroups;
-            group = [groups objectAtIndex:groupIndex];
-            abstractIndex = (aid & 0xFFFF) - 1;
-        } else {
-            group = [groups lastObject];
-            abstractIndex = (int32_t) group.abstracts.count;
-            aid = abstractIndex + 1;
-        }
 
+    for (NSDictionary *absDict in abstracts) {
         NSString *uuid = absDict[@"uuid"];
         Abstract *abstract = [self openObj:@"Abstract" WithUUID:uuid];
-
+        NSString *idStr = [absDict objectForKey:@"sortId"];
+        int32_t aid = (int32_t) [idStr integerValue];
         abstract.aid = aid;
+
+        abstract.conference = conference;
+
         abstract.title = [NSString mkStringForJS:absDict[@"title"]];
         abstract.text = [NSString mkStringForJS:absDict[@"text"]];
         abstract.acknoledgements = [NSString mkStringForJS:absDict[@"acknowledgements"]];
@@ -119,19 +104,8 @@
         if (absDict[@"altId"]) {
             abstract.altid = (int32_t) [absDict[@"altId"] integerValue];
         }
-        
-        NSLog(@"NEW: %@\n", [absDict objectForKey:@"title"]);
-        if (abstractIndex > [group.abstracts count]) {
-            NSLog(@"%d,%ld", aid, group.abstracts.count);
-            //FIXME assert bigger then?
-            //NSAssert(abstractIndex-1 == group.abstracts.count, @"Input out of order");
-            [group.abstracts addObject:abstract];
-        } else {
-            [group.abstracts insertObject:abstract atIndex:abstractIndex];
-        }
-        NSLog(@"N: %d %ld %@\n", abstractIndex, group.abstracts.count, group.name);
 
-        
+
         // Affiliations
         id afEntity = [absDict objectForKey:@"affiliations"];
 
@@ -164,7 +138,7 @@
 
         // Author
         NSArray *authors = [absDict objectForKey:@"authors"];
-        
+
         NSMutableOrderedSet *authorSet = [[NSMutableOrderedSet alloc] init];
         for (NSDictionary *authorDict in authors) {
             Author *author = [self openObj:@"Author"
@@ -186,7 +160,7 @@
 
             author.isAffiliatedTo = afbuilder;
         }
-        
+
         if (authorSet.count > 0)
             abstract.authors = authorSet;
 
@@ -218,9 +192,10 @@
         
         abstract.figures = figures;
     }
-    
+
     return YES;
 }
+
 
 -(BOOL) importConference:(NSData *)data {
     id dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
@@ -244,6 +219,7 @@
         g.uuid = gd[@"uuid"];
         g.name = [NSString mkStringForJS:gd[@"name"]];
         g.brief = [NSString mkStringForJS:gd[@"short"]];
+        g.prefix = (int32_t) [gd[@"prefix"] integerValue];
 
         [groups addObject:g];
     }
