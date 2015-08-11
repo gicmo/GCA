@@ -270,6 +270,22 @@
 
 - (IBAction)importData:(id)sender
 {
+    if (self.conference == NULL) {
+
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setMessageText:@"Conference needed!"];
+        [alert setInformativeText:@"Currently there is no conference selected!"];
+        [alert setAlertStyle:NSWarningAlertStyle];
+
+        [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+            //NOOP
+
+        }];
+
+        return;
+    }
+
     NSOpenPanel* importDialog = [NSOpenPanel openPanel];
     importDialog.canChooseFiles = YES;
     importDialog.canChooseDirectories = NO;
