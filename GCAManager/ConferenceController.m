@@ -19,6 +19,13 @@
 
 @implementation ConferenceController
 
+- (void) setSelectedConference:(Conference *)selectedConference
+{
+    _selectedConference = selectedConference;
+    self.selectConfButton.enabled = _selectedConference != NULL;
+}
+
+
 - (void)windowDidLoad {
     [super windowDidLoad];
 
