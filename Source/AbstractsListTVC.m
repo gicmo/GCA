@@ -77,7 +77,7 @@
     request.sortDescriptors = [NSArray arrayWithObject:sortDesc];
     self.fetchResultsCtrl = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                 managedObjectContext:store.managedObjectContext
-                                                                  sectionNameKeyPath:@"session" //was type
+                                                                  sectionNameKeyPath:@"topic" //was session
                                                                            cacheName:nil];
     [self.fetchResultsCtrl performFetch:nil];
 }
@@ -188,27 +188,7 @@
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchResultsCtrl sections] objectAtIndex:section];
     
     NSString *name = [sectionInfo name];
-    unichar ch = [name characterAtIndex:0];
-    NSString *session = @"";
-    switch (ch) {
-            
-        case 'I':
-            session = @"Invited Talk";
-            break;
-        case 'C':
-            session = @"Contributed Talk";
-            break;
-        case 'T':
-            session = @"Poster Session - Thursday";
-            break;
-        case 'W':
-            session = @"Poster Session - Wednesday";
-            break;
-        default:
-            break;
-    }
-    
-    return session;
+    return name;
 }
 
 
