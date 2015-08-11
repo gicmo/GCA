@@ -222,6 +222,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    NSManagedObjectContext *context = self.managedObjectContext;
+
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Conference"];
+    NSArray *result = [context executeFetchRequest:request error:nil];
+
+    if (result.count > 0) {
+        self.conference = result[0];
+    }
+
     self.abstractOutline.delegate = self;
     self.abstractOutline.dataSource = self;
     
