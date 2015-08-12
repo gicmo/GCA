@@ -1,38 +1,57 @@
-[
-    {
-        "ExtendedData": "", 
-        "name": "Zentrales H\u00f6rsaal Geb\u00e4ude ZHG", 
-        "point": {
-            "lat": 51.541093, 
-            "long": 9.935449000000064
-        }, 
-        "type": 0
-    }, 
-    {
-        "ExtendedData": "", 
-        "name": "Bullerjahn Speise- und Schankwirtschaft im Ratskeller", 
-        "point": {
-            "lat": 51.532991, 
-            "long": 9.934835000000021
-        }, 
-        "type": 5
-    }, 
-    {
-        "ExtendedData": "", 
-        "name": "Paulinerkirche", 
-        "point": {
-            "lat": 51.53366, 
-            "long": 9.932164000000057
-        }, 
-        "type": 0
-    }, 
-    {
-        "ExtendedData": "", 
-        "name": "Hauptbahnhof G\u00f6ttingen", 
-        "point": {
-            "lat": 51.53707, 
-            "long": 9.926979999999958
-        }, 
-        "type": 4
-    }
-]
+ [
+  {
+  "description": "Pullman Cairns International",
+  "name": "Pullman Cairns International",
+  "point": {
+  "lat": -16.924598,
+  "long": 145.778393
+  },
+  "type": 0,
+  "zoomto": 1,
+  "cid" : "510160837290046745"
+  },
+  {
+  "description": "Conference Dinner",
+  "name": "Salt House",
+  "point": {
+  "lat":  -16.918710,
+  "long": 145.780511
+  },
+  "type": 5,
+  "zoomto": 1,
+  "cid": "459380363919386213"
+  },
+  {
+  "description": "Gilligans Backpacker Hostel",
+  "name": "Gilligans Backpacker Hostel",
+  "point": {
+  "lat": -16.923875,
+  "long": 145.775247
+  },
+  "type": 2,
+  "zoomto": 1,
+  "cid" : "510160837290046745"
+  },
+  {
+  "description": "Hides Hotel Cairns",
+  "name": "Hides Hotel Cairns",
+  "point": {
+  "lat": -16.922518,
+  "long": 145.775817;-)
+  },
+  "type": 2,
+  "zoomto": 1,
+  "cid" : "510160837290046745"
+  },
+  {
+  "description": "Airport",
+  "name": "Airport",
+  "point": {
+  "lat": -16.877973,
+  "long": 145.750220
+  },
+  "type": 4,
+  "zoomto": 1,
+  "cid" : "510160837290046745"
+  }
+  ]
