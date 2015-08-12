@@ -4,6 +4,8 @@
 
 
 #import "Abstract+Format.h"
+#import "Conference.h"
+#import "Group.h"
 
 @implementation Abstract (Format)
 
@@ -17,41 +19,23 @@
     return self.aid & 0xFFFF;
 }
 
-+ (NSString *) formatGroupId:(int32_t) groupId
-{
-    switch (groupId) {
-        case 0:
-            return @"I";
-            break;
-        case 1:
-            return @"C";
-            
-        case 2:
-            return @"W";
-            
-        case 3:
-            return @"T";
-        default:
-            break;
-    }
-    
-    return @"U";
-}
-
-
 - (NSString *) formatId:(BOOL)withSpace
 {
-    return [Abstract formatId:self.aid withSpaces:withSpace];
-}
+    int32_t aid = self.abstractId;
+    int32_t gid = self.groupId;
 
+    NSString *brief = @"?";
+    for (Group *g in self.conference.groups) {
+        if (g.prefix == gid) {
+            brief = g.brief;
+            break;
+        }
+    }
 
-+ (NSString *) formatId:(int32_t)sortId withSpaces:(BOOL)withSpace
-{
-    int32_t aid = sortId & 0xFFFF;
-    int32_t gid = (sortId & (0xFFFF << 16)) >> 16;
     NSString *str = [NSString stringWithFormat:@"%@%s%d",
-                     [Abstract formatGroupId:gid],
+                     brief,
                      withSpace ? " " : "", aid];
     return str;
 }
+
 @end

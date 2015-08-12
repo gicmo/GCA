@@ -10,5 +10,4 @@
 @property (nonatomic, readonly) int32_t groupId;
 
 - (NSString *) formatId:(BOOL)withSpace;
-+ (NSString *) formatId:(int32_t)sortId withSpaces:(BOOL)withSpace;
 @end

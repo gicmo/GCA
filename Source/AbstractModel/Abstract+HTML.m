@@ -80,7 +80,7 @@
 
     if (self.altid) {
         [html appendFormat:@"<div>See also poster: %@</div>",
-         [Abstract formatId:self.altid withSpaces:YES]];
+         [self formatId:YES]];
     }
     
     if (self.acknoledgements && self.acknoledgements.length)
