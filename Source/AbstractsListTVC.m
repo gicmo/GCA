@@ -134,7 +134,7 @@
     }
     
     //FIXME
-    if ([authorLabel sizeWithFont:font].width < infoCell.frame.size.width - 40) {
+    if ([authorLabel sizeWithAttributes:@{NSFontAttributeName: font}].width < infoCell.frame.size.width - 40) {
         infoCell.authors.text = authorLabel;
     } else {
         infoCell.authors.text = [NSString stringWithFormat:@"%@ et al.", [author formatName]];
