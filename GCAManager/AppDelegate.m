@@ -231,6 +231,12 @@
         self.conference = result[0];
     }
 
+    if (self.conference) {
+        for (Abstract *abs in self.conference.abstracts) {
+            NSLog(@"[A] %@", abs.title);
+        }
+    }
+
     self.abstractOutline.delegate = self;
     self.abstractOutline.dataSource = self;
     
@@ -329,7 +335,6 @@
 
     request.predicate = all;
     NSArray *result = [context executeFetchRequest:request error:nil];
-
     return result;
 }
 
