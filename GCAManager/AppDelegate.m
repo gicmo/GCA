@@ -31,7 +31,6 @@
 #import "Author.h"
 #import "Author+Format.h"
 #import "Affiliation.h"
-#import "AbstractGroup.h"
 #import "JSONImporter.h"
 #import "ConferenceController.h"
 #import "Group.h"

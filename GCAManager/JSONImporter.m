@@ -12,7 +12,6 @@
 #import "Abstract+HTML.h"
 #import "Author.h"
 #import "Affiliation.h"
-#import "AbstractGroup.h"
 #import "Organization.h"
 #import "Reference.h"
 #import "Figure.h"
