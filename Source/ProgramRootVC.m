@@ -23,7 +23,6 @@
 
 @property (strong, nonatomic) NSLayoutConstraint *leftConstraint;
 
-@property (strong, nonatomic) NSDateFormatter *dayDateFormatter;
 @property (strong, nonatomic) NSArray *dayController; //of type ProgramDayTVC
 @property (nonatomic) NSInteger dayIndex;
 @end
@@ -134,9 +133,6 @@
     
     NSArray *days = (NSArray *) list;
     
-    NSDateFormatter *dayDateFormatter = [[NSDateFormatter alloc] init];
-    [dayDateFormatter setDateFormat:@"dd.MM.yyyy"];
-    
     NSMutableArray *vcList = [[NSMutableArray alloc] initWithCapacity:days.count];
     
     UIView *lastView = nil;
@@ -161,9 +157,6 @@
     
     self.dayController = vcList;
     
-    self.dayDateFormatter = [[NSDateFormatter alloc] init];
-    [self.dayDateFormatter setDateFormat:@"EEEE, dd.MM."];
-    
     self.dayIndex = 0;
 }
 
@@ -174,7 +167,7 @@
     self.dayNext.enabled = dayIndex != self.dayController.count - 1;
     
     ProgramDayTVC *pdvc = self.dayController[dayIndex];
-    self.dayLabel.title = [self.dayDateFormatter stringFromDate:pdvc.date];
+    self.dayLabel.title = [NSString stringWithFormat:@"%0.2d.%0.2d", pdvc.day.date.day, pdvc.day.date.month];
     
     _dayIndex = dayIndex;
 }
