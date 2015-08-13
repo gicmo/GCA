@@ -8,7 +8,6 @@
 
 #import "ProgramDayTVC.h"
 #import "ProgramPointCell.h"
-#import "WorkshopCell.h"
 
 @interface ProgramDayTVC () <UITableViewDataSource, UITableViewDelegate>
 
@@ -19,15 +18,21 @@
 @synthesize date;
 @synthesize events = _events;
 @synthesize delegate = _delegate;
+@synthesize day = _day;
 
-
-
-+(ProgramDayTVC *)controllerForDay:(NSDate *)date withEvents:(NSArray *)events
-{
-    ProgramDayTVC *pdvc = [[ProgramDayTVC alloc] init];
-    pdvc.date = date;
-    pdvc.events = events;
+-(instancetype) initWithDay:(CKDay *)day {
+    self = [super initWithNibName:@"ProgramDayTVC" bundle:nil];
     
+    if (self) {
+        _day = day;
+    }
+    
+    return self;
+}
+
++(ProgramDayTVC *)controllerForDay:(CKDay *)day
+{
+    ProgramDayTVC *pdvc = [[ProgramDayTVC alloc] initWithDay:day];
     return pdvc;
 }
 
@@ -37,9 +42,6 @@
     
     UINib *programCellNib = [UINib nibWithNibName:@"ProgramPointCell" bundle:nil];
     [self.tableView registerNib:programCellNib forCellReuseIdentifier:@"ProgramPointCell"];
-    
-    UINib *workshopCellNib = [UINib nibWithNibName:@"WorkshopCell" bundle:nil];
-    [self.tableView registerNib:workshopCellNib forCellReuseIdentifier:@"WorkshopCell"];
     
     self.tableView.delegate = self;
     
@@ -61,7 +63,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.events.count;
+    return self.day.events.count;
 }
 
 //Header
@@ -79,31 +81,17 @@
 //Cell
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *event = [self.events objectAtIndex:indexPath.row];
-    NSString *eventType = event[@"type"];
-    
-    if ([eventType isEqualToString:@"workshop"]) {
-        return [WorkshopCell heightForEvent:event];
-    } else {
-        return [ProgramPointCell heightForEvent:event];
-    }
+    CKScheduleItem *item = self.day.events[indexPath.row];
+    return [ProgramPointCell heightForEvent:item];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell<ProgramEventView> *cell = nil;
-    NSDictionary *event = [self.events objectAtIndex:indexPath.row];
-    NSString *eventType = event[@"type"];
-   
-    if (![eventType isEqualToString:@"workshop"]) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"ProgramPointCell"];
-    } else {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"WorkshopCell"];
-    }
-    
+    CKScheduleItem *item = self.day.events[indexPath.row];
+    ProgramPointCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProgramPointCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell setEvent:event];
+    [cell setEvent:item];
     return cell;
 }
 
@@ -112,8 +100,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSDictionary *event = [self.events objectAtIndex:indexPath.row];
-    [self.delegate programDay:self didSelectEvent:event];
+    CKScheduleItem *item = self.day.events[indexPath.row];
+    
+    if ([item isKindOfClass:[CKEvent class]]) {
+        //FIXME [self.delegate programDay:self didSelectEvent:event];
+    }
 }
 
 @end

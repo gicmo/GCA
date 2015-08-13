@@ -141,27 +141,23 @@
     
     UIView *lastView = nil;
     
-    for (NSDictionary *dayDict in days) {
-        NSString *dateString = [dayDict objectForKey:@"date"];
-        NSDate *date = [dayDateFormatter dateFromString:dateString];
+    CKSchedule *schedule = [[CKDataStore defaultStore] schedule];
+    
+    for (CKDay *day in schedule.days) {
+        ProgramDayTVC *pdvc = [[ProgramDayTVC alloc] initWithDay:day];
         
-        ProgramDayTVC *pdvc = [[ProgramDayTVC alloc] initWithNibName:@"ProgramDayTVC" bundle:nil];
-        pdvc.events = [dayDict objectForKey:@"events"];
-        pdvc.date = date;
-        pdvc.delegate = self;
         pdvc.view.translatesAutoresizingMaskIntoConstraints = NO;
         
         [self.container addSubview:pdvc.view];
         [self addConstraintsForView:pdvc.view leftOf:lastView];
         lastView = pdvc.view;
-
+        
         if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
             pdvc.tableView.contentInset = UIEdgeInsetsMake(10, 0, 88, 0);
         }
         
         [vcList addObject:pdvc];
     }
-    
     
     self.dayController = vcList;
     

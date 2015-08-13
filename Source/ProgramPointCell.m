@@ -26,67 +26,33 @@
     [super setSelected:selected animated:animated];
 }
 
--(void) setEvent:(NSDictionary *)event
+-(void) setEvent:(CKScheduleItem *)event
 {
-    self.time.text = [event objectForKey:@"time"];
+    self.title.text = event.title;
+    if (event.subtitle && ![event.subtitle isEqualToString:@""]) {
+        self.title.text = [NSString stringWithFormat:@"%@: %@", self.title.text, event.subtitle];
+    }
+    
+    NSString *timeText = @"";
+    if ([event isKindOfClass:[CKEvent class]]) {
+        CKEvent *ev = (CKEvent *) event;
+        
+        if (ev.begin != nil) {
+            timeText = [NSString stringWithFormat:@"%0.2d:%0.2d", ev.begin.hour, ev.begin.minute];
+        }
+        
+        if ([event isKindOfClass:[CKTalkEvent class]]) {
+            CKTalkEvent *tv = (CKTalkEvent *) event;
+            self.author.text = [tv.authors componentsJoinedByString:@", "];
+        }
+        
+    } else if ([event isKindOfClass:[CKTrack class]]) {
+        CKTrack *track = (CKTrack *) event;
+        self.author.text = track.chair;
+    }
+    
+    self.time.text = timeText;
     self.time.textColor = [UIColor ckColor];
-    
-    NSString *eventType = event[@"type"];
-    
-    if ([eventType isEqualToString:@"general"] ||
-        [eventType isEqualToString:@"food"]    ||
-        [eventType isEqualToString:@"poster"]  ||
-        [eventType isEqualToString:@"header"]) {
-        self.title.text = event[@"title"];
-        self.author.hidden = YES;
-    
-        if (event[@"info"]) {
-            self.author.text = event[@"info"];
-            self.author.hidden = NO;
-        }
-        
-    } else if ([eventType isEqualToString:@"talk"] ||
-               [eventType isEqualToString:@"ctalk"]) {
-        self.author.text = event[@"speaker"];
-        self.author.hidden = NO;
-        self.title.text = event[@"title"];
-    } else if ([eventType isEqualToString:@"session"]) {
-        if (event[@"chair"]) {
-            self.author.hidden = NO;
-            self.author.text = [NSString stringWithFormat:@"Chair: %@", event[@"chair"]];
-        } else {
-            self.author.hidden = YES;
-        }
-        
-        self.title.text = event[@"title"];
-    } else {
-        self.title.text = event[@"title"];
-        self.author.hidden = YES;
-    }
-    
-    if ([eventType isEqualToString:@"talk"] ||
-        [eventType isEqualToString:@"ctalk"]) {
-        self.titleHeight.constant = 50.0;
-        self.title.numberOfLines = 2;
-    } else {
-        self.titleHeight.constant = 25.0;
-        self.title.numberOfLines = 1;
-    }
-    
-    if ([eventType isEqualToString:@"ctalk"]) {
-        self.authorHeight.constant = 50.0;
-        self.author.numberOfLines = 2;
-    } else {
-        self.authorHeight.constant = 25.0;
-        self.author.numberOfLines = 1;
-    }
-    
-    if ([eventType isEqualToString:@"food"]) {
-        self.title.textColor = [UIColor ckColor];
-    } else {
-        self.title.textColor = [UIColor darkGrayColor];
-    }
-    
     
     [self setNeedsLayout];
 }
@@ -96,21 +62,29 @@
 #define NROW_THREE 83
 #define NROW_FOUR 108
 
-+(CGFloat)heightForEvent:(NSDictionary *)event
++(CGFloat)heightForEvent:(CKScheduleItem *)item;
 {
-    NSString *eventType = event[@"type"];
+    CKTrack *track = nil;
+    CKTalkEvent *talk = nil;
     
-    if ([eventType isEqualToString:@"talk"]) {
-        return NROW_THREE;
-    } else if ([eventType isEqualToString:@"ctalk"]) {
-        return NROW_FOUR;
-    } else if ([eventType isEqualToString:@"session"] && event[@"chair"]) {
-        return NROW_TWO;
-    } else if(event[@"info"]) {
-        return NROW_TWO;
+    switch (item.eventType) {
+        case ET_TALK:
+            talk = (CKTalkEvent *)item;
+            if (talk.authors.count > 0) {
+                return NROW_TWO;
+            } else {
+                return NROW_ONE;
+            }
+        case ET_TRACK:
+            track = (CKTrack *)item;
+            if (track.chair && ![track.chair isEqualToString:@""]) {
+                return NROW_TWO;
+            } else {
+                return NROW_ONE;
+            }
+        default:
+            return NROW_ONE;
     }
-    
-    return NROW_ONE;
 }
 
 

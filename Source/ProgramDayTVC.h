@@ -8,16 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CKSchedule.h"
 
 @protocol ProgramDayDelegate;
 
 
 @interface ProgramDayTVC : UITableViewController
+@property (strong, nonatomic, readonly) CKDay *day;
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSArray *events;
 @property (strong, nonatomic) id<ProgramDayDelegate> delegate;
 
-+(ProgramDayTVC *)controllerForDay:(NSDate *)date withEvents:(NSArray *)events;
+-(instancetype) initWithDay:(CKDay *)day;
++(ProgramDayTVC *)controllerForDay:(CKDay *)day;
 
 @end
 

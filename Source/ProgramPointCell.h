@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ProgramEventView.h"
+#import "CKSchedule.h"
 
 @interface ProgramPointCell : UITableViewCell <ProgramEventView>
-+(CGFloat)heightForEvent:(NSDictionary *)event;
++(CGFloat)heightForEvent:(CKScheduleItem *)item;
 @end

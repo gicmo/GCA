@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "CKSchedule.h"
+
 @protocol ProgramEventView
 @required
--(void) setEvent:(NSDictionary *)event;
+-(void) setEvent:(CKScheduleItem *)event;
 @end
