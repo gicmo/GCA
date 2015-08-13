@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "CKDataStore.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //this will load the schedule
+    CKSchedule *schedule = [[CKDataStore defaultStore] schedule];
+    NSLog(@"schedule: %@", schedule);
     return YES;
 }
 							
