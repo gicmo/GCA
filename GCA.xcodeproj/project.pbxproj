@@ -53,26 +53,18 @@
 		E9829D5717C288560024EBC0 /* WorkshopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9829D5617C288560024EBC0 /* WorkshopCell.xib */; };
 		E9938ED7199CD56E003163D5 /* Abstract.css in Resources */ = {isa = PBXBuildFile; fileRef = E9938ED6199CD56E003163D5 /* Abstract.css */; };
 		E9938EDF199CDC15003163D5 /* Abstracts.storedata in Resources */ = {isa = PBXBuildFile; fileRef = E9938EDE199CDC15003163D5 /* Abstracts.storedata */; };
-		E9AF81C91B789F7C0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81CA1B789F7C0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9AF81CD1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81CE1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9AF81D51B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81D61B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9AF81D91B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81DA1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9AF81DD1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81DE1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9AF81E11B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81E21B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9AF81E51B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81E61B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9AF81E91B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81EA1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81EE1B78A61E0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81EF1B78A61E0002F96D /* (null) in Resources */ = {isa = PBXBuildFile; };
-		E9AF81FE1B78FEC90002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81FF1B78FEC90002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		E9BD1D871B7C7BD1000F197F /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = E9BD1D861B7C7BD1000F197F /* schedule.json */; };
 		E9D313C617BF7B3100DACDB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C517BF7B3100DACDB4 /* UIKit.framework */; };
 		E9D313C817BF7B3100DACDB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C717BF7B3100DACDB4 /* Foundation.framework */; };
 		E9D313CA17BF7B3100DACDB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C917BF7B3100DACDB4 /* CoreGraphics.framework */; };
@@ -130,6 +122,7 @@
 		E9D3148917C0A63C00DACDB4 /* ProgramPointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D3148817C0A63C00DACDB4 /* ProgramPointCell.xib */; };
 		E9D3148D17C0A6C200DACDB4 /* ProgramDayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3148B17C0A6C200DACDB4 /* ProgramDayTVC.m */; };
 		E9D3148E17C0A6C200DACDB4 /* ProgramDayTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D3148C17C0A6C200DACDB4 /* ProgramDayTVC.xib */; };
+		E9E3A5311B7C9DAF00919B6C /* CKSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1D801B791B1B000F197F /* CKSchedule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,6 +179,7 @@
 		E9938EDE199CDC15003163D5 /* Abstracts.storedata */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abstracts.storedata; sourceTree = SOURCE_ROOT; };
 		E9BD1D7F1B791B1B000F197F /* CKSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKSchedule.h; path = ConferenceKit/CKSchedule.h; sourceTree = "<group>"; };
 		E9BD1D801B791B1B000F197F /* CKSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKSchedule.m; path = ConferenceKit/CKSchedule.m; sourceTree = "<group>"; };
+		E9BD1D861B7C7BD1000F197F /* schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schedule.json; sourceTree = SOURCE_ROOT; };
 		E9D313C217BF7B3100DACDB4 /* GCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D313C517BF7B3100DACDB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E9D313C717BF7B3100DACDB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -447,6 +441,7 @@
 		E9D3141817BF7D1600DACDB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9BD1D861B7C7BD1000F197F /* schedule.json */,
 				E9938EDE199CDC15003163D5 /* Abstracts.storedata */,
 				E9938ED6199CD56E003163D5 /* Abstract.css */,
 				E9D3141917BF7D4F00DACDB4 /* info.md */,
@@ -645,6 +640,7 @@
 				E9D3143517BF875500DACDB4 /* 02-Calendar@2x.png in Resources */,
 				E9D3143617BF875500DACDB4 /* 03-Path.png in Resources */,
 				E9D3143717BF875500DACDB4 /* 03-Path@2x.png in Resources */,
+				E9BD1D871B7C7BD1000F197F /* schedule.json in Resources */,
 				E9D3143817BF875500DACDB4 /* 04-Home.png in Resources */,
 				E9D3143917BF875500DACDB4 /* 04-Home@2x.png in Resources */,
 				E9D3143A17BF875500DACDB4 /* 05-Notebook.png in Resources */,
@@ -714,15 +710,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E3A5311B7C9DAF00919B6C /* CKSchedule.m in Sources */,
 				E90A3D341B7B75D3007C9401 /* Group.m in Sources */,
 				E9D313D217BF7B3100DACDB4 /* main.m in Sources */,
-				E9AF81D51B789F7D0002F96D /* (null) in Sources */,
-				E9AF81E11B789F7D0002F96D /* (null) in Sources */,
 				E9D313D617BF7B3100DACDB4 /* AppDelegate.m in Sources */,
 				E9D3140017BF7BE600DACDB4 /* CKMarkdownParser.m in Sources */,
 				E9D3140117BF7BE600DACDB4 /* CKMarkdownView.m in Sources */,
 				E90A3D381B7B75D3007C9401 /* Reference.m in Sources */,
-				E9AF81E51B789F7D0002F96D /* (null) in Sources */,
 				E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */,
 				E9D3140217BF7BE600DACDB4 /* CKPoiManager.m in Sources */,
 				E9D3140317BF7BE600DACDB4 /* UIColor+ConferenceKit.m in Sources */,
@@ -733,27 +727,21 @@
 				E90A3D281B7B75D3007C9401 /* Abstract.m in Sources */,
 				E96241F819A3814900B189D6 /* Author+Format.m in Sources */,
 				E9D3141317BF7C1B00DACDB4 /* stack.c in Sources */,
-				E9AF81CD1B789F7D0002F96D /* (null) in Sources */,
 				E9D3141617BF7C8D00DACDB4 /* InfoVC.m in Sources */,
-				E9AF81DD1B789F7D0002F96D /* (null) in Sources */,
 				E9D3144217BF880600DACDB4 /* MapVC.m in Sources */,
 				E90A3D321B7B75D3007C9401 /* Figure.m in Sources */,
 				E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */,
 				E90A3D2E1B7B75D3007C9401 /* Conference.m in Sources */,
-				E9AF81D91B789F7D0002F96D /* (null) in Sources */,
 				E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */,
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
 				E90A3D2C1B7B75D3007C9401 /* Author.m in Sources */,
 				E976936419A87A8700320EAD /* Abstract+Format.m in Sources */,
 				E9D3146B17BFAEB500DACDB4 /* AbstractVC.m in Sources */,
-				E9AF81FE1B78FEC90002F96D /* (null) in Sources */,
 				E9D3146E17BFAEFD00DACDB4 /* Abstract+HTML.m in Sources */,
 				E90A3D2A1B7B75D3007C9401 /* Affiliation.m in Sources */,
-				E9AF81C91B789F7C0002F96D /* (null) in Sources */,
 				E9D3148417C0A39800DACDB4 /* ProgramRootVC.m in Sources */,
 				E90A3D301B7B75D3007C9401 /* Correspondence.m in Sources */,
 				E90A3D361B7B75D3007C9401 /* Organization.m in Sources */,
-				E9AF81E91B789F7D0002F96D /* (null) in Sources */,
 				E9D3148717C0A62400DACDB4 /* ProgramPointCell.m in Sources */,
 				E9D3148D17C0A6C200DACDB4 /* ProgramDayTVC.m in Sources */,
 				E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */,

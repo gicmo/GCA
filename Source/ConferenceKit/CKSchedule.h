@@ -15,37 +15,80 @@ typedef enum {
     ET_FOOD = 3
 } kCKEventType;
 
-@interface CKEvent : NSObject
+@class CKSchedule;
+
+
+@interface CKTimePoint : NSObject
+@property (nonatomic, readonly) NSInteger hour;
+@property (nonatomic, readonly) NSInteger minute;
+
++ (CKTimePoint *) timePointFromComponents:(NSDateComponents *)comps;
+- (instancetype) initFromComponents:(NSDateComponents *)comps;
+
+- (BOOL)isEqualToTimePoint:(CKTimePoint *)timePoint;
+- (BOOL)isEqual:(id)object;
+
+
+@end
+
+@interface CKDate : NSObject
+@property (nonatomic, readonly) NSInteger day;
+@property (nonatomic, readonly) NSInteger month;
+@property (nonatomic, readonly) NSInteger year;
+
++ (CKDate *) dateFromComponents:(NSDateComponents *)comps;
+- (instancetype) initFromComponents:(NSDateComponents *)comps;
+
+- (BOOL)isEqualToDate:(CKDate *)date;
+- (BOOL)isEqual:(id)object;
+@end
+
+
+@interface CKScheduleItem : NSObject
 @property kCKEventType eventType;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *subtitle;
-@property (nonatomic, strong) NSDate *startDate;
-@property (nonatomic, strong) NSDate *endDate;
 
-- (instancetype) initFromDict:(NSDictionary *)dict;
+@property (nonatomic, weak, readonly) CKSchedule *schedule;
 
-+ (CKEvent *) eventFromDict:(NSDictionary *)dict;
+- (CKDate *)date;
+@end
 
+@interface CKEvent : CKScheduleItem
+@property (nonatomic, readonly) CKDate *date;
+@property (nonatomic, readonly) CKTimePoint *begin;
+@property (nonatomic, readonly) CKTimePoint *end;
 @end
 
 
-@interface CKTrack : CKEvent
+@interface CKSession : CKScheduleItem
+@property (nonatomic, strong) NSArray *tracks;
+@end
+
+
+@interface CKTrack : CKScheduleItem
 @property (nonatomic, strong) NSString *chair;
-@property (nonatomic, strong) NSOrderedSet *events;
+@property (nonatomic, strong) NSArray *events;
 
-- (instancetype) initFromDict:(NSDictionary *)dict;
+- (CKDate *)date;
 @end
+
 
 @interface CKTalkEvent : CKEvent
 @property (nonatomic, strong) NSString *chair;
 @property (nonatomic, strong) NSArray *authors; //NSStrings for now
 @property (nonatomic, strong) NSString *abstract; //uuid of abstract
+@end
 
-- (instancetype) initFromDict:(NSDictionary *)dict;
+
+@interface CKDay : NSObject
+@property (nonatomic, strong, readonly) CKDate *date;
+@property (nonatomic, strong) NSArray *events;
 @end
 
 @interface CKSchedule : NSObject
-@property (nonatomic, strong) NSOrderedSet *events;
+@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong, readonly) NSArray *days;
 
 - (instancetype) initFromFile:(NSString *)path;
 
