@@ -15,8 +15,6 @@
 
 @implementation ProgramDayTVC
 
-@synthesize date;
-@synthesize events = _events;
 @synthesize delegate = _delegate;
 @synthesize day = _day;
 
@@ -46,13 +44,6 @@
     self.tableView.delegate = self;
     
 }
-
-- (void)setEvents:(NSArray *)events
-{
-    _events = events;
-    [self.tableView reloadData];
-}
-
 
 #pragma mark - Table view data source
 

@@ -15,8 +15,6 @@
 
 @interface ProgramDayTVC : UITableViewController
 @property (strong, nonatomic, readonly) CKDay *day;
-@property (strong, nonatomic) NSDate *date;
-@property (strong, nonatomic) NSArray *events;
 @property (strong, nonatomic) id<ProgramDayDelegate> delegate;
 
 -(instancetype) initWithDay:(CKDay *)day;
