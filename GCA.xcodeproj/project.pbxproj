@@ -83,7 +83,6 @@
 		E9D3141617BF7C8D00DACDB4 /* InfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3141517BF7C8D00DACDB4 /* InfoVC.m */; };
 		E9D3141C17BF7D4F00DACDB4 /* info.md in Resources */ = {isa = PBXBuildFile; fileRef = E9D3141917BF7D4F00DACDB4 /* info.md */; };
 		E9D3141D17BF7D4F00DACDB4 /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D3141A17BF7D4F00DACDB4 /* map.json */; };
-		E9D3141E17BF7D4F00DACDB4 /* Program.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D3141B17BF7D4F00DACDB4 /* Program.json */; };
 		E9D3142017BF7D7000DACDB4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D3141F17BF7D7000DACDB4 /* CoreText.framework */; };
 		E9D3143117BF875500DACDB4 /* 00-StarFilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3142217BF875500DACDB4 /* 00-StarFilled@2x.png */; };
 		E9D3143217BF875500DACDB4 /* 01-Location-Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3142317BF875500DACDB4 /* 01-Location-Arrow.png */; };
@@ -210,7 +209,6 @@
 		E9D3141517BF7C8D00DACDB4 /* InfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoVC.m; sourceTree = "<group>"; };
 		E9D3141917BF7D4F00DACDB4 /* info.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = info.md; sourceTree = SOURCE_ROOT; };
 		E9D3141A17BF7D4F00DACDB4 /* map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = map.json; sourceTree = SOURCE_ROOT; };
-		E9D3141B17BF7D4F00DACDB4 /* Program.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Program.json; sourceTree = SOURCE_ROOT; };
 		E9D3141F17BF7D7000DACDB4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E9D3142217BF875500DACDB4 /* 00-StarFilled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "00-StarFilled@2x.png"; path = "Artwork/00-StarFilled@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9D3142317BF875500DACDB4 /* 01-Location-Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01-Location-Arrow.png"; path = "Artwork/01-Location-Arrow.png"; sourceTree = SOURCE_ROOT; };
@@ -441,7 +439,6 @@
 				E9938ED6199CD56E003163D5 /* Abstract.css */,
 				E9D3141917BF7D4F00DACDB4 /* info.md */,
 				E9D3141A17BF7D4F00DACDB4 /* map.json */,
-				E9D3141B17BF7D4F00DACDB4 /* Program.json */,
 			);
 			name = Resources;
 			path = NI2013;
@@ -624,7 +621,6 @@
 				E9D3141C17BF7D4F00DACDB4 /* info.md in Resources */,
 				E9D3141D17BF7D4F00DACDB4 /* map.json in Resources */,
 				E9938ED7199CD56E003163D5 /* Abstract.css in Resources */,
-				E9D3141E17BF7D4F00DACDB4 /* Program.json in Resources */,
 				E9D3143117BF875500DACDB4 /* 00-StarFilled@2x.png in Resources */,
 				E9D3143217BF875500DACDB4 /* 01-Location-Arrow.png in Resources */,
 				E9D3143317BF875500DACDB4 /* 01-Location-Arrow@2x.png in Resources */,
