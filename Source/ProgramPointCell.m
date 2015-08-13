@@ -38,7 +38,7 @@
         CKEvent *ev = (CKEvent *) event;
         
         if (ev.begin != nil) {
-            timeText = [NSString stringWithFormat:@"%0.2d:%0.2d", ev.begin.hour, ev.begin.minute];
+            timeText = [NSString stringWithFormat:@"%0.2ld:%0.2ld", (long)ev.begin.hour, (long)ev.begin.minute];
         }
         
         if ([event isKindOfClass:[CKTalkEvent class]]) {
