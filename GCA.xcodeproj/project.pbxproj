@@ -49,8 +49,6 @@
 		E9829D4717C24A490024EBC0 /* G-Node.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4517C24A490024EBC0 /* G-Node.png */; };
 		E9829D4817C24A490024EBC0 /* G-Node@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4617C24A490024EBC0 /* G-Node@2x.png */; };
 		E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9829D5117C25EED0024EBC0 /* AbstractsSVC.m */; };
-		E9829D5517C2883E0024EBC0 /* WorkshopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9829D5417C2883E0024EBC0 /* WorkshopCell.m */; };
-		E9829D5717C288560024EBC0 /* WorkshopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9829D5617C288560024EBC0 /* WorkshopCell.xib */; };
 		E9938ED7199CD56E003163D5 /* Abstract.css in Resources */ = {isa = PBXBuildFile; fileRef = E9938ED6199CD56E003163D5 /* Abstract.css */; };
 		E9938EDF199CDC15003163D5 /* Abstracts.storedata in Resources */ = {isa = PBXBuildFile; fileRef = E9938EDE199CDC15003163D5 /* Abstracts.storedata */; };
 		E9AF81CA1B789F7C0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -171,9 +169,6 @@
 		E9829D4617C24A490024EBC0 /* G-Node@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "G-Node@2x.png"; path = "Artwork/G-Node@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9829D5017C25EED0024EBC0 /* AbstractsSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractsSVC.h; sourceTree = "<group>"; };
 		E9829D5117C25EED0024EBC0 /* AbstractsSVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractsSVC.m; sourceTree = "<group>"; };
-		E9829D5317C2883E0024EBC0 /* WorkshopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkshopCell.h; sourceTree = "<group>"; };
-		E9829D5417C2883E0024EBC0 /* WorkshopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkshopCell.m; sourceTree = "<group>"; };
-		E9829D5617C288560024EBC0 /* WorkshopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkshopCell.xib; sourceTree = "<group>"; };
 		E9829EC117C2C11A0024EBC0 /* ProgramEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramEventView.h; sourceTree = "<group>"; };
 		E9938ED6199CD56E003163D5 /* Abstract.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Abstract.css; sourceTree = SOURCE_ROOT; };
 		E9938EDE199CDC15003163D5 /* Abstracts.storedata */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abstracts.storedata; sourceTree = SOURCE_ROOT; };
@@ -528,9 +523,6 @@
 				E9D3148817C0A63C00DACDB4 /* ProgramPointCell.xib */,
 				E9D3148517C0A62400DACDB4 /* ProgramPointCell.h */,
 				E9D3148617C0A62400DACDB4 /* ProgramPointCell.m */,
-				E9829D5317C2883E0024EBC0 /* WorkshopCell.h */,
-				E9829D5417C2883E0024EBC0 /* WorkshopCell.m */,
-				E9829D5617C288560024EBC0 /* WorkshopCell.xib */,
 				E9829EC117C2C11A0024EBC0 /* ProgramEventView.h */,
 			);
 			name = Views;
@@ -663,7 +655,6 @@
 				E9D3148E17C0A6C200DACDB4 /* ProgramDayTVC.xib in Resources */,
 				E9829D4717C24A490024EBC0 /* G-Node.png in Resources */,
 				E9829D4817C24A490024EBC0 /* G-Node@2x.png in Resources */,
-				E9829D5717C288560024EBC0 /* WorkshopCell.xib in Resources */,
 				E9216DE017E74D1B0013973B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -745,7 +736,6 @@
 				E9D3148717C0A62400DACDB4 /* ProgramPointCell.m in Sources */,
 				E9D3148D17C0A6C200DACDB4 /* ProgramDayTVC.m in Sources */,
 				E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */,
-				E9829D5517C2883E0024EBC0 /* WorkshopCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
