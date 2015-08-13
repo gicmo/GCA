@@ -16,6 +16,7 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize schedule = _schedule;
 
 /**
  Returns the managed object context for the application.
@@ -83,6 +84,19 @@
     return __persistentStoreCoordinator;
 }
 
+-(instancetype)init
+{
+    self = [super init];
+    
+    if (self) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"schedule" ofType:@"json"];
+        if (path) {
+            _schedule = [[CKSchedule alloc] initFromFile:path];
+        }
+     }
+    
+    return self;
+}
 
 +(CKDataStore *)defaultStore
 {
