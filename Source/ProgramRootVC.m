@@ -123,22 +123,11 @@
     self.navigationController.delegate = self;
     self.container.translatesAutoresizingMaskIntoConstraints = NO;
     
-    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Program" ofType:@"json"];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:dataPath];
-    id list= [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    if (![list isKindOfClass:[NSArray class]]) {
-        NSLog(@"Error parsing program file");
-        return;
-    }
-    
-    NSArray *days = (NSArray *) list;
-    
-    NSMutableArray *vcList = [[NSMutableArray alloc] initWithCapacity:days.count];
-    
+
     UIView *lastView = nil;
     
     CKSchedule *schedule = [[CKDataStore defaultStore] schedule];
-    
+    NSMutableArray *vcList = [[NSMutableArray alloc] initWithCapacity:schedule.days.count];
     for (CKDay *day in schedule.days) {
         ProgramDayTVC *pdvc = [[ProgramDayTVC alloc] initWithDay:day];
         
