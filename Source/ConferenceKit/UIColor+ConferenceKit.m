@@ -15,4 +15,16 @@
      return [UIColor colorWithRed:0.0235 green:0.2510 blue:0.5098 alpha:1.0000];
 }
 
+- (NSString *)hexString {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    
+    CGFloat r = components[0];
+    CGFloat g = components[1];
+    CGFloat b = components[2];
+    
+    return [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+            lroundf(r * 255),
+            lroundf(g * 255),
+            lroundf(b * 255)];
+}
 @end
