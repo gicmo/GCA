@@ -156,7 +156,8 @@
     self.dayNext.enabled = dayIndex != self.dayController.count - 1;
     
     ProgramDayTVC *pdvc = self.dayController[dayIndex];
-    self.dayLabel.title = [NSString stringWithFormat:@"%0.2ld.%0.2ld", (long)pdvc.day.date.day, (long)pdvc.day.date.month];
+    self.dayLabel.title = [NSString stringWithFormat:@"%0.2ld.%0.2ld.",
+                           (long)pdvc.day.date.day, (long)pdvc.day.date.month];
     
     _dayIndex = dayIndex;
 }
