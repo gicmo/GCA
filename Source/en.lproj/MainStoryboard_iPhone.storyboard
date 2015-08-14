@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -252,7 +251,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </mapView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-uX-31E">
-                                <rect key="frame" x="20" y="458" width="40" height="41"/>
+                                <rect key="frame" x="20" y="472" width="40" height="41"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="cUe-DP-gHL"/>
@@ -274,7 +273,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xhz-Sa-yar" firstAttribute="top" secondItem="2tB-1u-r5m" secondAttribute="top" id="CLL-BM-Wun"/>
-                            <constraint firstItem="BZb-5U-9eD" firstAttribute="top" secondItem="fDe-uX-31E" secondAttribute="bottom" constant="20" id="HTy-G0-uf5"/>
+                            <constraint firstItem="BZb-5U-9eD" firstAttribute="top" secondItem="fDe-uX-31E" secondAttribute="bottom" constant="6" id="HTy-G0-uf5"/>
                             <constraint firstItem="Xhz-Sa-yar" firstAttribute="leading" secondItem="2tB-1u-r5m" secondAttribute="leading" id="P9J-GE-lc0"/>
                             <constraint firstItem="fDe-uX-31E" firstAttribute="leading" secondItem="2tB-1u-r5m" secondAttribute="leading" constant="20" symbolic="YES" id="Pvk-Gs-8Xw"/>
                             <constraint firstItem="Xhz-Sa-yar" firstAttribute="trailing" secondItem="2tB-1u-r5m" secondAttribute="trailing" id="qlU-0i-QTc"/>
