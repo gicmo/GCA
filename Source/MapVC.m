@@ -11,12 +11,13 @@
 #import "MapVC.h"
 #import "UIColor+ConferenceKit.h"
 
-@interface MapVC () <MKMapViewDelegate>
+@interface MapVC () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) CKPoIManager *poiManager;
 @property (weak, nonatomic) IBOutlet UIButton *locateMe;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonConstraint;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @end
 
 @implementation MapVC
@@ -46,6 +47,10 @@
     if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
         self.buttonConstraint.constant += 60;
     }
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager requestWhenInUseAuthorization];
 }
 
 
@@ -70,6 +75,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
     CKPoI *venuePOI = [[self.poiManager poisMatchingType:PT_VENUE] lastObject];
     
     MKMapPoint point = MKMapPointForCoordinate(venuePOI.coordinate);
@@ -160,5 +167,17 @@
     [self toggleTracking];
 }
 
+#pragma mark -
+- (void)mapViewWillStartLocatingUser:(MKMapView *)mapView
+{
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        [self.locationManager requestWhenInUseAuthorization];
+    } else if (status == kCLAuthorizationStatusDenied) {
+        NSLog(@"Location services denied");
+        self.locateMe.enabled = NO;
+    }
+}
 
 @end
