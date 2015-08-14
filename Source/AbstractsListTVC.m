@@ -61,6 +61,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
     if (self.curAbstract) {
         [self.tableView selectRowAtIndexPath:self.curAbstract animated:NO scrollPosition:UITableViewScrollPositionMiddle];
     }
