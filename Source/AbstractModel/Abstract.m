@@ -45,7 +45,7 @@
     NSString *sep = self.topic != nil ? @" - " : @"";
     int32_t gid = (self.aid & (0xFFFF << 16)) >> 16;
     NSString *name;
-    NSString *topic = self.topic ? self.topic : @"";
+    NSString *topic = self.topic ?: @"";
 
     for (Group *g in self.conference.groups) {
         if (g.prefix == gid) {
