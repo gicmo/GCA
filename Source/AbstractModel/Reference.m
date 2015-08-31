@@ -1,10 +1,7 @@
-//
-//  Reference.m
-//  GCA
-//
-//  Created by Christian Kellner on 10/08/15.
-//  Copyright (c) 2015 G-Node. All rights reserved.
-//
+//Copyright (c) 2012-2015, German Neuroinformatics Node (G-Node)
+//Copyright (c) 2012-2015, Christian Kellner <kellner@bio.lmu.de>
+//License: BSD-3 (see LICENSE)
+
 
 #import "Reference.h"
 #import "Abstract.h"

@@ -1,10 +1,6 @@
-//
-//  Organization+Format.h
-//  AbstractManager
-//
-//  Created by Christian Kellner on 19/08/14.
-//  Copyright (c) 2014 G-Node. All rights reserved.
-//
+//Copyright (c) 2012-2015, German Neuroinformatics Node (G-Node)
+//Copyright (c) 2012-2015, Christian Kellner <kellner@bio.lmu.de>
+//License: BSD-3 (see LICENSE)
 
 #import <Foundation/Foundation.h>
 

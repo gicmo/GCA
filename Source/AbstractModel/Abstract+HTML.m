@@ -1,10 +1,7 @@
-//
-//  Abstract+HTML.m
-//  GCA
-//
-//  Created by Christian Kellner on 7/20/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
+//Copyright (c) 2012-2015, German Neuroinformatics Node (G-Node)
+//Copyright (c) 2012-2015, Christian Kellner <kellner@bio.lmu.de>
+//License: BSD-3 (see LICENSE)
+
 
 #import "Abstract+HTML.h"
 #import "Abstract+Format.h"
