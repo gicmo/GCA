@@ -94,6 +94,7 @@
     }
     
     self.navigationController.toolbarHidden = YES;
+    //self.tabBarController.tabBar.hidden = YES;
     
     self.navigationController.toolbar.tintColor = [UIColor ckColor];
     self.navigationController.toolbar.opaque = NO;
@@ -110,6 +111,12 @@
         self.toolbar.tintColor = [UIColor ckColor];
     }
     
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void)viewDidUnload
