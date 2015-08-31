@@ -13,6 +13,7 @@
 #import "Correspondence.h"
 #import "Figure.h"
 #import "Reference.h"
+#import "Group.h"
 
 
 @implementation Abstract
@@ -38,5 +39,22 @@
 @dynamic figures;
 @dynamic references;
 @dynamic conference;
+
+-(NSString *)session {
+
+    NSString *sep = self.topic != nil ? @" - " : @"";
+    int32_t gid = (self.aid & (0xFFFF << 16)) >> 16;
+    NSString *name;
+    NSString *topic = self.topic ? self.topic : @"";
+
+    for (Group *g in self.conference.groups) {
+        if (g.prefix == gid) {
+            name = g.name;
+            break;
+        }
+    }
+
+    return [NSString stringWithFormat:@"%@%@%@", name, sep, topic];
+}
 
 @end
