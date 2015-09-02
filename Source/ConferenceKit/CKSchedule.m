@@ -195,7 +195,10 @@
     self.authors = dict[@"authors"];
     self.chair = dict[@"chair"];
     self.eventType = ET_TALK;
-    
+
+    NSString *uuid = [dict[@"abstract"] lastPathComponent];
+    self.abstract = [uuid length] > 0 ? uuid : nil;
+
     return self;
 }
 
