@@ -76,12 +76,23 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
+
     CKPoI *venuePOI = [[self.poiManager poisMatchingType:PT_VENUE] lastObject];
-    
+
     MKMapPoint point = MKMapPointForCoordinate(venuePOI.coordinate);
     double offset = 20000;
     MKMapRect pointRect = MKMapRectMake(point.x-offset, point.y-offset, 2*offset, 2*offset);
+
+    for (CKPoI *poi in self.poiManager.pois) {
+        if (poi.zoomTo) {
+            NSLog(@"zooming to %@", poi.title);
+            double offset = 2000;
+            point = MKMapPointForCoordinate(poi.coordinate);
+            MKMapRect prect = MKMapRectMake(point.x-offset, point.y-offset, 2*offset, 2*offset);
+            pointRect = MKMapRectUnion(pointRect, prect);
+        }
+    }
+
     self.map.visibleMapRect = pointRect;
 }
 
