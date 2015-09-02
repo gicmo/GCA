@@ -389,11 +389,17 @@
         return nil;
     }
     
-    NSDate *date = [self.timePointFormatter dateFromString:timeString];
-    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
-    NSDateComponents *comps = [currentCalendar components:(NSCalendarUnitHour |
-                                                           NSCalendarUnitMinute) fromDate:date];
-    return [CKTimePoint timePointFromComponents:comps];
+    NSArray *comps = [timeString componentsSeparatedByString:@":"];
+    if (comps.count != 2) {
+        NSLog(@"[E] Schedule: Invalid time format: %@", timeString);
+        return [[CKTimePoint alloc] init];
+    }
+
+    NSInteger h = [comps[0] integerValue];
+    NSInteger m = [comps[1] integerValue];
+
+    return [[CKTimePoint alloc] initWithHour:h andMinute:m];
+
 }
 
 @end
