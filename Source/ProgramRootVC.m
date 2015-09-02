@@ -132,7 +132,8 @@
         ProgramDayTVC *pdvc = [[ProgramDayTVC alloc] initWithDay:day];
         
         pdvc.view.translatesAutoresizingMaskIntoConstraints = NO;
-        
+        pdvc.delegate = self;
+
         [self.container addSubview:pdvc.view];
         [self addConstraintsForView:pdvc.view leftOf:lastView];
         lastView = pdvc.view;
@@ -192,31 +193,30 @@
 #pragma mark -
 #pragma mark ProgramDayDelegate
 
--(void)programDay:(ProgramDayTVC *)programDay didSelectEvent:(NSDictionary *)event
+- (void) programDay:(ProgramDayTVC *)programDay didSelectTalk:(CKTalkEvent *)talk
 {
-    NSString *uuid = event[@"abstract"];
-    
-    if (!uuid) {
-        //no uuid, nothing to do
-        return;
+    if (talk.abstract == nil) {
+        return; //no abstract, nothing to do
     }
-    
+
+    NSString *uuid = talk.abstract;
+
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Abstract"];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uuid == %@", uuid];
     request.predicate = predicate;
-    
+
     CKDataStore *ds = [CKDataStore defaultStore];
     NSArray *result = [ds.managedObjectContext executeFetchRequest:request error:nil];
-    
+
     if (result.count < 1) {
-        //NSLog(@"Warning: Absrtact for frontid: %@ not found\n", frontid);
+        NSLog(@"Warning: Absrtact with uuid '%@' not found\n", uuid);
         return;
     }
-    
+
     AbstractVC *abc = [self.storyboard instantiateViewControllerWithIdentifier:@"AbstractVC"];
     abc.abstract = [result lastObject];
     abc.showNavigator = NO;
-    
+
     [self.navigationController pushViewController:abc animated:YES];
 }
 

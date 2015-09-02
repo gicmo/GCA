@@ -92,9 +92,9 @@
 {
     
     CKScheduleItem *item = self.day.events[indexPath.row];
-    
-    if ([item isKindOfClass:[CKEvent class]]) {
-        //FIXME [self.delegate programDay:self didSelectEvent:event];
+    if ([item isKindOfClass:[CKTalkEvent class]]) {
+        CKTalkEvent *talk = (CKTalkEvent *) item;
+        [self.delegate programDay:self didSelectTalk:talk];
     }
 }
 
