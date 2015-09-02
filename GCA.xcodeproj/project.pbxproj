@@ -28,6 +28,7 @@
 		E90A3D3D1B7B79A6007C9401 /* ConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D3B1B7B79A6007C9401 /* ConferenceController.m */; };
 		E90A3D3E1B7B79A6007C9401 /* ConferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90A3D3C1B7B79A6007C9401 /* ConferenceController.xib */; };
 		E90A3D421B7B8530007C9401 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90A3D411B7B8530007C9401 /* LaunchScreen.xib */; };
+		E91104F71B97402700E4E457 /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = E91104F61B97402700E4E457 /* MathJax */; };
 		E9216DE017E74D1B0013973B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9216DDF17E74D1B0013973B /* Images.xcassets */; };
 		E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9216E6B17E8EAC70013973B /* Abstracts.xcdatamodeld */; };
 		E96241F819A3814900B189D6 /* Author+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = E96241F719A3814900B189D6 /* Author+Format.m */; };
@@ -145,6 +146,7 @@
 		E90A3D3B1B7B79A6007C9401 /* ConferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceController.m; sourceTree = "<group>"; };
 		E90A3D3C1B7B79A6007C9401 /* ConferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceController.xib; sourceTree = "<group>"; };
 		E90A3D411B7B8530007C9401 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		E91104F61B97402700E4E457 /* MathJax */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MathJax; sourceTree = SOURCE_ROOT; };
 		E9216DDF17E74D1B0013973B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		E9216E6C17E8EAC70013973B /* Abstracts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Abstracts.xcdatamodel; sourceTree = "<group>"; };
 		E96241F619A3814900B189D6 /* Author+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Author+Format.h"; path = "AbstractModel/Author+Format.h"; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 		E9D3141817BF7D1600DACDB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E91104F61B97402700E4E457 /* MathJax */,
 				E9BD1D861B7C7BD1000F197F /* schedule.json */,
 				E9938EDE199CDC15003163D5 /* Abstracts.storedata */,
 				E9938ED6199CD56E003163D5 /* Abstract.css */,
@@ -630,6 +633,7 @@
 				E9D3143717BF875500DACDB4 /* 03-Path@2x.png in Resources */,
 				E9BD1D871B7C7BD1000F197F /* schedule.json in Resources */,
 				E9D3143817BF875500DACDB4 /* 04-Home.png in Resources */,
+				E91104F71B97402700E4E457 /* MathJax in Resources */,
 				E9D3143917BF875500DACDB4 /* 04-Home@2x.png in Resources */,
 				E9D3143A17BF875500DACDB4 /* 05-Notebook.png in Resources */,
 				E9D3143B17BF875500DACDB4 /* 05-Notebook@2x.png in Resources */,

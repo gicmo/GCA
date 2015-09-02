@@ -32,6 +32,24 @@
     [html appendString:@"<html><head>"];
     [html appendString:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"Abstract.css\" />"];
     [html appendString:@"<meta name='viewport' content='initial-scale=1.0,maximum-scale=10.0'/>"];
+
+    if ([self.text containsString:@"$"]) {
+
+        [html appendString:@""
+        "<script type='text/x-mathjax-config'>"
+        "MathJax.Hub.Config({ showMathMenu: false,"
+        "jax: ['input/TeX','output/HTML-CSS'],"
+        "tex2jax: {inlineMath: [ ['$','$']], displayMath: [ ['$$','$$'] ], processEscapes: true},"
+        "extensions: ['tex2jax.js'],"
+        "'HTML-CSS': {"
+        "availableFonts: ['TeX'],"
+        "preferredFont: 'TeX'},"
+        "TeX: { extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js'] }});"
+        "</script>"];
+
+        [html appendString:@"<script type='text/javascript' src='MathJax/MathJax.js'></script>"];
+    }
+
     [html appendString:@"</head><body>"];
     [html appendFormat:@"<div id=\"aid\">%@</div>", [self formatId:YES]];
     [html appendFormat:@"<div id=\"topic\">%@</div>", self.topic ?: @"" ];
