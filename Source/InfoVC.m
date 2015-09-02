@@ -62,9 +62,18 @@
     broughtBy.textColor = [UIColor ckColor];
     [self.container addSubview:broughtBy];
     broughtBy.translatesAutoresizingMaskIntoConstraints = NO;
-    
+
+    UILabel *version = [[UILabel alloc] init];
+    NSString *vs = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *bd = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    version.text = [NSString stringWithFormat:@"G-Node Conference App iOS version %@ [build %@]", vs, bd];
+    version.font = [UIFont systemFontOfSize:9.0];
+    version.textColor = [UIColor lightGrayColor];
+    [self.container addSubview:version];
+    version.translatesAutoresizingMaskIntoConstraints = NO;
+
     //Constraints
-    NSDictionary *viewsMap = NSDictionaryOfVariableBindings(mdView, logo, gnode, broughtBy);
+    NSDictionary *viewsMap = NSDictionaryOfVariableBindings(mdView, logo, gnode, broughtBy, version);
     
     [self.container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(>=pad)-[mdView(==width)]-(>=pad)-|"
                                                                            options:NSLayoutFormatAlignAllCenterY
@@ -115,10 +124,22 @@
                                                                   toItem:self.container
                                                                attribute:NSLayoutAttributeCenterX
                                                               multiplier:1.f constant:0.f]];
-    
+
+    [self.container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(>=pad)-[version(==gnode)]-(>=pad)-|"
+                                                                           options:0
+                                                                           metrics:@{@"width" : @(width), @"pad" : @0.0f}
+                                                                             views:viewsMap]];
+
+    [self.container addConstraint:[NSLayoutConstraint constraintWithItem:version
+                                                               attribute:NSLayoutAttributeCenterX
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.container
+                                                               attribute:NSLayoutAttributeCenterX
+                                                              multiplier:1.f constant:0.f]];
+
     CGSize size = CGSizeMake(width, CGFLOAT_MAX);
     CGSize height = [self.mdView sizeThatFits:size];
-    [self.container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[logo]-[mdView(==height)]-(20)-[broughtBy]-(10)-[gnode]|"
+    [self.container addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[logo]-[mdView(==height)]-(20)-[broughtBy]-(10)-[gnode]-(10)-[version]|"
                                                                            options:0
                                                                            metrics:@{@"height" : @(height.height)}
                                                                              views:viewsMap]];
