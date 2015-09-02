@@ -141,7 +141,15 @@
         if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
             pdvc.tableView.contentInset = UIEdgeInsetsMake(10, 0, 88, 0);
         }
-        
+
+        UISwipeGestureRecognizer *sgr = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
+        sgr.direction = UISwipeGestureRecognizerDirectionLeft;
+        [pdvc.view addGestureRecognizer:sgr];
+
+        sgr = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
+        sgr.direction = UISwipeGestureRecognizerDirectionRight;
+        [pdvc.view addGestureRecognizer:sgr];
+
         [vcList addObject:pdvc];
     }
     
@@ -202,6 +210,25 @@
     BOOL hideNavigationBar = [viewController isKindOfClass:[ProgramRootVC class]];
     self.navigationController.navigationBarHidden = hideNavigationBar;
 }
+
+-(void) didSwipeLeft:(UISwipeGestureRecognizer *)gestureRecognizer
+{
+    //swipe to left means go right!
+
+    if (self.dayIndex != self.dayController.count - 1) {
+        [self nextDay:nil];
+    }
+}
+
+-(void) didSwipeRight:(UISwipeGestureRecognizer *)gestureRecognizer
+{
+    //swipe to right means go left!
+
+    if (self.dayIndex != 0) {
+        [self prevDay:nil];
+    }
+}
+
 
 #pragma mark -
 #pragma mark ProgramDayDelegate
