@@ -159,6 +159,7 @@
                [typeStr isEqualToString:@"poster"]) {
         ev = [[CKEvent alloc] initFromDict:dict forSchedule:schedule];
     } else {
+        NSLog(@"Unkown even type: %@", typeStr);
         ev = nil;
     }
     
