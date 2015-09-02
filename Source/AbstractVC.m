@@ -116,7 +116,11 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = YES;
+
+    //There is enough space on the iPad, no need to hide the tabBar
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        self.tabBarController.tabBar.hidden = YES;
+    }
 }
 
 - (void)viewDidUnload
