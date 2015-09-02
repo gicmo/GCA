@@ -86,19 +86,23 @@
 @implementation CKTimePoint
 
 + (CKTimePoint *) timePointFromComponents:(NSDateComponents *)comps {
-    CKTimePoint *point = [[CKTimePoint alloc] initFromComponents:comps];
+    NSInteger hour = comps.hour;
+    NSInteger minute = comps.minute;
+
+    CKTimePoint *point = [[CKTimePoint alloc] initWithHour:hour andMinute:minute];
     return point;
 }
 
-- (instancetype) initFromComponents:(NSDateComponents *)comps {
+- (instancetype) initWithHour:(NSInteger)hour andMinute:(NSInteger)minute
+{
     self = [super init];
     if (!self) {
         return self;
     }
-    
-    _hour = comps.hour;
-    _minute = comps.minute;
-    
+
+    _hour = hour;
+    _minute = minute;
+
     return self;
 }
 
