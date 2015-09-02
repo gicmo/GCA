@@ -150,6 +150,11 @@
     self.dayIndex = 0;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
 
 - (void) setDayIndex:(NSInteger)dayIndex
 {
