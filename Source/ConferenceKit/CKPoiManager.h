@@ -19,6 +19,7 @@ typedef enum {
 @property kCKPoiType poiType;
 @property (nonatomic, strong) NSString *cid;
 @property (nonatomic) NSInteger poiId;
+@property (nonatomic) BOOL zoomTo;
 -(MKMapItem *) asMapItem;
 @end
 

@@ -60,6 +60,7 @@
         poi.poiType = (kCKPoiType) [[dict objectForKey:@"type"] integerValue];
         poi.cid = [dict objectForKey:@"cid"];
         poi.poiId = poiId++;
+        poi.zoomTo = [dict[@"zoomto"] boolValue];
         
         [annotations addObject:poi];
     }
