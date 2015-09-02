@@ -158,6 +158,14 @@
 
 - (void) setDayIndex:(NSInteger)dayIndex
 {
+    if (dayIndex < 0) {
+        NSLog(@"[E] setDayIndex OOB (negative value)!");
+        dayIndex = 0;
+    } else if (dayIndex > self.dayController.count - 1) {
+        NSLog(@"[E] setDayIndex OOB (> days)!");
+        dayIndex = self.dayController.count - 1;
+    }
+
     self.dayPrev.enabled = dayIndex != 0;
     self.dayNext.enabled = dayIndex != self.dayController.count - 1;
     
