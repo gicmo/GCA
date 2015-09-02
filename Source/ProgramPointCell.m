@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *author;
 @property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UIImageView *detail;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *authorHeight;
 
@@ -32,7 +34,9 @@
     if (event.subtitle && ![event.subtitle isEqualToString:@""]) {
         self.title.text = [NSString stringWithFormat:@"%@: %@", self.title.text, event.subtitle];
     }
-    
+
+    self.detail.hidden = YES;
+
     NSString *timeText = @"";
     if ([event isKindOfClass:[CKEvent class]]) {
         CKEvent *ev = (CKEvent *) event;
@@ -49,6 +53,11 @@
     } else if ([event isKindOfClass:[CKTrack class]]) {
         CKTrack *track = (CKTrack *) event;
         self.author.text = track.chair;
+    }
+
+    if ([event isKindOfClass:[CKTalkEvent class]]) {
+        CKTalkEvent *talk = (CKTalkEvent *) event;
+        self.detail.hidden = talk.abstract == nil;
     }
     
     self.time.text = timeText;
