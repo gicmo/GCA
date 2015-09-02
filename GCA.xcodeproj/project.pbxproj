@@ -555,6 +555,7 @@
 				E9D313BE17BF7B3100DACDB4 /* Sources */,
 				E9D313BF17BF7B3100DACDB4 /* Frameworks */,
 				E9D313C017BF7B3100DACDB4 /* Resources */,
+				E9A4C9821B98945E00B6B709 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -660,6 +661,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9A4C9821B98945E00B6B709 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${DEVELOPER_BIN_DIR}/agvtool\" next-version -all";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E96241FC19A38A4800B189D6 /* Sources */ = {
@@ -904,6 +921,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
@@ -923,6 +941,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
