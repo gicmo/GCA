@@ -155,7 +155,8 @@
     CKEvent *ev;
     if ([typeStr isEqualToString:@"talk"]) {
         ev = [[CKTalkEvent alloc] initFromDict:dict forSchedule:schedule];
-    } else if ([typeStr isEqualToString:@"food"]) {
+    } else if ([typeStr isEqualToString:@"food"] ||
+               [typeStr isEqualToString:@"poster"]) {
         ev = [[CKEvent alloc] initFromDict:dict forSchedule:schedule];
     } else {
         ev = nil;
