@@ -59,6 +59,7 @@ typedef enum {
 @property (nonatomic, readonly) CKDate *date;
 @property (nonatomic, readonly) CKTimePoint *begin;
 @property (nonatomic, readonly) CKTimePoint *end;
+@property (nonatomic, readonly) NSString *info;
 @end
 
 

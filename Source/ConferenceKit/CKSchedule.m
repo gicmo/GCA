@@ -7,6 +7,7 @@
 //
 
 #import "CKSchedule.h"
+#import "CKMarkdownParser.h"
 
 @interface CKScheduleItem()
 -(instancetype) initFromDict:(NSDictionary *)dict forSchedule:(CKSchedule *)schedule;
@@ -181,7 +182,7 @@
     _date = [schedule dateForString:dict[@"date"]];
     _begin = [schedule timePointForString:dict[@"start"]];
     _end = [schedule timePointForString:dict[@"end"]];
-    
+    _info = dict[@"info"];
     return self;
 }
 
