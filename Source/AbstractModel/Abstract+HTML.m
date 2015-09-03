@@ -106,7 +106,7 @@
         for (Reference *ref in self.references) {
 
             [html appendString:@"<li>"];
-            [html appendFormat:@"%@", ref.text];
+            [html appendFormat:@"%@", ref.text ?: @""];
             if (ref.link) {
                 [html appendFormat:@"<a href=\"%@\"> %@</a>",
                  ref.link, ref.text ? @"Link" : ref.link];
