@@ -28,6 +28,7 @@
 		E90A3D3D1B7B79A6007C9401 /* ConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D3B1B7B79A6007C9401 /* ConferenceController.m */; };
 		E90A3D3E1B7B79A6007C9401 /* ConferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90A3D3C1B7B79A6007C9401 /* ConferenceController.xib */; };
 		E90A3D421B7B8530007C9401 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90A3D411B7B8530007C9401 /* LaunchScreen.xib */; };
+		E90D7C011B98C40F003B3948 /* CKMarkdownVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E967A2571B987A6F00AD5768 /* CKMarkdownVC.m */; };
 		E91104F71B97402700E4E457 /* MathJax in Resources */ = {isa = PBXBuildFile; fileRef = E91104F61B97402700E4E457 /* MathJax */; };
 		E9216DE017E74D1B0013973B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9216DDF17E74D1B0013973B /* Images.xcassets */; };
 		E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9216E6B17E8EAC70013973B /* Abstracts.xcdatamodeld */; };
@@ -722,6 +723,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90D7C011B98C40F003B3948 /* CKMarkdownVC.m in Sources */,
 				E9E3A5311B7C9DAF00919B6C /* CKSchedule.m in Sources */,
 				E90A3D341B7B75D3007C9401 /* Group.m in Sources */,
 				E9D313D217BF7B3100DACDB4 /* main.m in Sources */,
@@ -744,7 +746,6 @@
 				E90A3D321B7B75D3007C9401 /* Figure.m in Sources */,
 				E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */,
 				E90A3D2E1B7B75D3007C9401 /* Conference.m in Sources */,
-				E967A2591B987A6F00AD5768 /* CKMarkdownVC.m in Sources */,
 				E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */,
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
 				E90A3D2C1B7B75D3007C9401 /* Author.m in Sources */,
