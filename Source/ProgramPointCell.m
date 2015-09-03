@@ -49,7 +49,9 @@
             CKTalkEvent *tv = (CKTalkEvent *) event;
             self.author.text = [tv.authors componentsJoinedByString:@", "];
         }
-        
+
+        self.detail.hidden = ev.info == nil;
+
     } else if ([event isKindOfClass:[CKTrack class]]) {
         CKTrack *track = (CKTrack *) event;
         self.author.text = track.chair;
@@ -57,7 +59,7 @@
 
     if ([event isKindOfClass:[CKTalkEvent class]]) {
         CKTalkEvent *talk = (CKTalkEvent *) event;
-        self.detail.hidden = talk.abstract == nil;
+        self.detail.hidden = talk.abstract == nil && talk.info == nil;
     }
     
     self.time.text = timeText;
