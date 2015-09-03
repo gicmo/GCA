@@ -11,6 +11,7 @@
 #import "UIColor+ConferenceKit.h"
 #import "AbstractVC.h"
 #import "CKDataStore.h"
+#import "CKMarkdownVC.h"
 
 @interface ProgramRootVC () <ProgramDayDelegate, UINavigationControllerDelegate>
 
@@ -258,6 +259,16 @@
     abc.showNavigator = NO;
 
     [self.navigationController pushViewController:abc animated:YES];
+}
+
+- (void) programDay:(ProgramDayTVC *)programDay didSelectEvent:(CKEvent *)event
+{
+    if (event.info == nil) {
+        return; //no abstract, nothing to do
+    }
+
+    CKMarkdownVC *vc = [[CKMarkdownVC alloc] initWithResource:event.info ofType:@"md"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
