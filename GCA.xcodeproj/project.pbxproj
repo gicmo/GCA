@@ -164,6 +164,8 @@
 		E962423E19A38B5700B189D6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		E962424219A38BC500B189D6 /* JSONImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONImporter.h; sourceTree = "<group>"; };
 		E962424319A38BC500B189D6 /* JSONImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONImporter.m; sourceTree = "<group>"; };
+		E967A2561B987A6F00AD5768 /* CKMarkdownVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKMarkdownVC.h; path = ConferenceKit/CKMarkdownVC.h; sourceTree = "<group>"; };
+		E967A2571B987A6F00AD5768 /* CKMarkdownVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKMarkdownVC.m; path = ConferenceKit/CKMarkdownVC.m; sourceTree = "<group>"; };
 		E976936219A87A8700320EAD /* Abstract+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Abstract+Format.h"; path = "AbstractModel/Abstract+Format.h"; sourceTree = "<group>"; };
 		E976936319A87A8700320EAD /* Abstract+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Abstract+Format.m"; path = "AbstractModel/Abstract+Format.m"; sourceTree = "<group>"; };
 		E9829D4517C24A490024EBC0 /* G-Node.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "G-Node.png"; path = "Artwork/G-Node.png"; sourceTree = SOURCE_ROOT; };
@@ -391,6 +393,8 @@
 				E9D3145E17BF8CF200DACDB4 /* CKDataStore.m */,
 				E9BD1D7F1B791B1B000F197F /* CKSchedule.h */,
 				E9BD1D801B791B1B000F197F /* CKSchedule.m */,
+				E967A2561B987A6F00AD5768 /* CKMarkdownVC.h */,
+				E967A2571B987A6F00AD5768 /* CKMarkdownVC.m */,
 			);
 			name = ConferenceKit;
 			sourceTree = "<group>";
@@ -740,6 +744,7 @@
 				E90A3D321B7B75D3007C9401 /* Figure.m in Sources */,
 				E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */,
 				E90A3D2E1B7B75D3007C9401 /* Conference.m in Sources */,
+				E967A2591B987A6F00AD5768 /* CKMarkdownVC.m in Sources */,
 				E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */,
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
 				E90A3D2C1B7B75D3007C9401 /* Author.m in Sources */,
