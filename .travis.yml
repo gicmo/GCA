@@ -1,0 +1,10 @@
+language: objective-c
+sudo: false
+xcode_project: GCA.xcodeproj
+osx_image: xcode6.4
+matrix:
+  include:
+    - xcode_scheme: GCA
+      xcode_sdk: iphonesimulator8.4
+    - xode_scheme: GCAManager
+      xcode_sdk: macosx10.10
