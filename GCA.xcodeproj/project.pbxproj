@@ -122,6 +122,8 @@
 		E9D3148D17C0A6C200DACDB4 /* ProgramDayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3148B17C0A6C200DACDB4 /* ProgramDayTVC.m */; };
 		E9D3148E17C0A6C200DACDB4 /* ProgramDayTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D3148C17C0A6C200DACDB4 /* ProgramDayTVC.xib */; };
 		E9E3A5311B7C9DAF00919B6C /* CKSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BD1D801B791B1B000F197F /* CKSchedule.m */; };
+		E9F29D9E1D5B58A500D6A713 /* Conference+Groups.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F29D9D1D5B58A500D6A713 /* Conference+Groups.m */; };
+		E9F29D9F1D5B58A500D6A713 /* Conference+Groups.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F29D9D1D5B58A500D6A713 /* Conference+Groups.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -259,6 +261,8 @@
 		E9D3148A17C0A6C100DACDB4 /* ProgramDayTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramDayTVC.h; sourceTree = "<group>"; };
 		E9D3148B17C0A6C200DACDB4 /* ProgramDayTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramDayTVC.m; sourceTree = "<group>"; };
 		E9D3148C17C0A6C200DACDB4 /* ProgramDayTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDayTVC.xib; sourceTree = "<group>"; };
+		E9F29D9C1D5B58A500D6A713 /* Conference+Groups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Conference+Groups.h"; path = "AbstractModel/Conference+Groups.h"; sourceTree = "<group>"; };
+		E9F29D9D1D5B58A500D6A713 /* Conference+Groups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Conference+Groups.m"; path = "AbstractModel/Conference+Groups.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +502,8 @@
 				E90A3D1D1B7B75D3007C9401 /* Conference.m */,
 				E90A3D1E1B7B75D3007C9401 /* Correspondence.h */,
 				E90A3D1F1B7B75D3007C9401 /* Correspondence.m */,
+				E9F29D9C1D5B58A500D6A713 /* Conference+Groups.h */,
+				E9F29D9D1D5B58A500D6A713 /* Conference+Groups.m */,
 				E90A3D201B7B75D3007C9401 /* Figure.h */,
 				E90A3D211B7B75D3007C9401 /* Figure.m */,
 				E90A3D221B7B75D3007C9401 /* Group.h */,
@@ -710,6 +716,7 @@
 				E9AF81E21B789F7D0002F96D /* (null) in Sources */,
 				E90A3D351B7B75D3007C9401 /* Group.m in Sources */,
 				E962423819A38B1500B189D6 /* Abstract+HTML.m in Sources */,
+				E9F29D9F1D5B58A500D6A713 /* Conference+Groups.m in Sources */,
 				E9AF81DE1B789F7D0002F96D /* (null) in Sources */,
 				E9AF81DA1B789F7D0002F96D /* (null) in Sources */,
 				E90A3D2B1B7B75D3007C9401 /* Affiliation.m in Sources */,
@@ -733,6 +740,7 @@
 				E90A3D381B7B75D3007C9401 /* Reference.m in Sources */,
 				E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */,
 				E9D3140217BF7BE600DACDB4 /* CKPoiManager.m in Sources */,
+				E9F29D9E1D5B58A500D6A713 /* Conference+Groups.m in Sources */,
 				E9D3140317BF7BE600DACDB4 /* UIColor+ConferenceKit.m in Sources */,
 				E9D3141017BF7C1B00DACDB4 /* autolink.c in Sources */,
 				E9D3141117BF7C1B00DACDB4 /* buffer.c in Sources */,
@@ -930,7 +938,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
@@ -951,7 +959,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 12;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
