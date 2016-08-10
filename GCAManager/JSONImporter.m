@@ -208,7 +208,6 @@
     NSString *uuid = dict[@"uuid"];
     Conference *conf = [self openObj:@"Conference" WithUUID:uuid];
     conf.name = dict[@"name"];
-    conf.uuid = uuid;
 
     NSMutableOrderedSet *groups = [[NSMutableOrderedSet alloc] init];
     for(NSDictionary *gd in dict[@"groups"]) {
