@@ -12,6 +12,8 @@
 #import "Reference.h"
 #import "Group.h"
 
+#import "Conference+Groups.h"
+
 
 @implementation Abstract
 
@@ -38,20 +40,13 @@
 @dynamic conference;
 
 -(NSString *)session {
-
-    NSString *sep = self.topic != nil ? @" - " : @"";
-    int32_t gid = (self.aid & (0xFFFF << 16)) >> 16;
-    NSString *name;
-    NSString *topic = self.topic ?: @"";
-
-    for (Group *g in self.conference.groups) {
-        if (g.prefix == gid) {
-            name = g.name;
-            break;
-        }
+    Group *group = [self.conference groupForSortID:self.aid];
+    
+    if (group == nil) {
+        NSLog(@"[W] no group found for abstract: %@", self.uuid);
+        return @"Unknown";
     }
-
-    return [NSString stringWithFormat:@"%@%@%@", name, sep, topic];
+    return [NSString stringWithFormat:@"%@", group.name];
 }
 
 @end
