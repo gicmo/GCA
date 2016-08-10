@@ -44,5 +44,8 @@ src/pandora_cpp.cpp
 #ignore sublime specific files
 *.sublime-*
 
+# ignore idea
+.idea/
+
 GCA.xcodeproj/project.xcworkspace/
 GCA.xcodeproj/xcuserdata/
