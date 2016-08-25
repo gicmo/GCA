@@ -321,9 +321,24 @@
             CKDay *d = [self dayForDate:[item date]];
             [d addEvents:@[item]];
             [d addEvents:track.events];
+        } else if (dict[@"tracks"]) {
+            NSDictionary *tracksDict = dict[@"tracks"];
+            for (NSDictionary *theTrack in tracksDict) {
+                CKTrack *track = [[CKTrack alloc] initFromDict:theTrack
+                                                   forSchedule:self];
+                item = track;
+
+                CKDay *d = [self dayForDate:[item date]];
+                [d addEvents:@[item]];
+                [d addEvents:track.events];
+
+                [events addObject:item];
+            }
+
+            item = nil;
         } else {
             //Session, currently not supported
-            NSLog(@"Unspported item, skipping");
+            NSLog(@"Unsupported item, skipping");
             item = nil;
         }
         
