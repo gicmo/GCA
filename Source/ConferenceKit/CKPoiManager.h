@@ -27,6 +27,7 @@ typedef enum {
 @property (nonatomic, readonly) NSArray *pois; //id<MKAnnotation>
 
 - (CKPoIManager *) initFromFile:(NSString *)path;
+- (CKPoIManager *) initFromJSON:(NSString *)json;
 - (NSArray *) poisMatchingType:(kCKPoiType) poiType;
 - (CKPoI *) poiById:(NSInteger)poiId;
 - (MKMapRect) boundingBoxForPoIs;

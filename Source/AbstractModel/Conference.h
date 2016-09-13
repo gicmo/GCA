@@ -1,5 +1,5 @@
-//Copyright (c) 2012-2015, German Neuroinformatics Node (G-Node)
-//Copyright (c) 2012-2015, Christian Kellner <kellner@bio.lmu.de>
+//Copyright (c) 2012-2016, German Neuroinformatics Node (G-Node)
+//Copyright (c) 2012-2016, Christian Kellner <kellner@bio.lmu.de>
 //License: BSD-3 (see LICENSE)
 
 
@@ -8,34 +8,18 @@
 
 @class Abstract, Group;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface Conference : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * uuid;
-@property (nonatomic, retain) NSString * link;
-@property (nonatomic, retain) NSString * desc;
-@property (nonatomic) NSTimeInterval start;
-@property (nonatomic) NSTimeInterval end;
-@property (nonatomic) NSTimeInterval deadline;
-@property (nonatomic, retain) NSSet *abstracts;
-@property (nonatomic, retain) NSOrderedSet *groups;
+// Insert code here to declare functionality of your managed object subclass
+
 @end
 
-@interface Conference (CoreDataGeneratedAccessors)
+NS_ASSUME_NONNULL_END
 
-- (void)addAbstractsObject:(Abstract *)value;
-- (void)removeAbstractsObject:(Abstract *)value;
-- (void)addAbstracts:(NSSet *)values;
-- (void)removeAbstracts:(NSSet *)values;
-
-- (void)insertObject:(Group *)value inGroupsAtIndex:(NSUInteger)idx;
-- (void)removeObjectFromGroupsAtIndex:(NSUInteger)idx;
-- (void)insertGroups:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
-- (void)removeGroupsAtIndexes:(NSIndexSet *)indexes;
-- (void)replaceObjectInGroupsAtIndex:(NSUInteger)idx withObject:(Group *)value;
-- (void)replaceGroupsAtIndexes:(NSIndexSet *)indexes withGroups:(NSArray *)values;
-- (void)addGroupsObject:(Group *)value;
-- (void)removeGroupsObject:(Group *)value;
-- (void)addGroups:(NSOrderedSet *)values;
-- (void)removeGroups:(NSOrderedSet *)values;
+@protocol ConferenceAware <NSObject>
+-(void) setConference:(Conference *)conf;
 @end
+
+#import "Conference+CoreDataProperties.h"

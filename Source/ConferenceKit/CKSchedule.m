@@ -158,7 +158,9 @@
     NSString *typeStr = dict[@"type"];
     
     CKEvent *ev;
-    if ([typeStr isEqualToString:@"talk"] || [typeStr isEqualToString:@"keynote"]) {
+    if ([typeStr isEqualToString:@"talk"] ||
+        [typeStr isEqualToString:@"keynote"] ||
+        [typeStr isEqualToString:@"publicLecture"]) {
         ev = [[CKTalkEvent alloc] initFromDict:dict forSchedule:schedule];
     } else if ([typeStr isEqualToString:@"food"] ||
                [typeStr isEqualToString:@"break"] ||
@@ -280,16 +282,19 @@
 
 
 @implementation CKSchedule
-- (instancetype) initFromFile:(NSString *)path
+- (instancetype) initFromJSON:(NSString *)json
 {
     self = [super init];
     if (!self) {
         return self;
     }
     
-    NSString *fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    
-    NSData *data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
+
+    if (data == nil) {
+        return self;
+    }
+
     NSArray *root = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     
     if (![root isKindOfClass:[NSArray class]]) {

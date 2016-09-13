@@ -1,5 +1,5 @@
-//Copyright (c) 2012-2015, German Neuroinformatics Node (G-Node)
-//Copyright (c) 2012-2015, Christian Kellner <kellner@bio.lmu.de>
+//Copyright (c) 2012-2016, German Neuroinformatics Node (G-Node)
+//Copyright (c) 2012-2016, Christian Kellner <kellner@bio.lmu.de>
 //License: BSD-3 (see LICENSE)
 
 
@@ -7,17 +7,8 @@
 #import "Abstract.h"
 #import "Group.h"
 
-
 @implementation Conference
 
-@dynamic name;
-@dynamic uuid;
-@dynamic link;
-@dynamic desc;
-@dynamic start;
-@dynamic end;
-@dynamic deadline;
-@dynamic abstracts;
-@dynamic groups;
+// Insert code here to add functionality to your managed object subclass
 
 @end

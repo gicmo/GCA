@@ -13,8 +13,6 @@
 		E90A3D2B1B7B75D3007C9401 /* Affiliation.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D191B7B75D3007C9401 /* Affiliation.m */; };
 		E90A3D2C1B7B75D3007C9401 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1B1B7B75D3007C9401 /* Author.m */; };
 		E90A3D2D1B7B75D3007C9401 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1B1B7B75D3007C9401 /* Author.m */; };
-		E90A3D2E1B7B75D3007C9401 /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1D1B7B75D3007C9401 /* Conference.m */; };
-		E90A3D2F1B7B75D3007C9401 /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1D1B7B75D3007C9401 /* Conference.m */; };
 		E90A3D301B7B75D3007C9401 /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1F1B7B75D3007C9401 /* Correspondence.m */; };
 		E90A3D311B7B75D3007C9401 /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D1F1B7B75D3007C9401 /* Correspondence.m */; };
 		E90A3D321B7B75D3007C9401 /* Figure.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A3D211B7B75D3007C9401 /* Figure.m */; };
@@ -51,6 +49,11 @@
 		E9829D4717C24A490024EBC0 /* G-Node.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4517C24A490024EBC0 /* G-Node.png */; };
 		E9829D4817C24A490024EBC0 /* G-Node@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9829D4617C24A490024EBC0 /* G-Node@2x.png */; };
 		E9829D5217C25EED0024EBC0 /* AbstractsSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9829D5117C25EED0024EBC0 /* AbstractsSVC.m */; };
+		E98CAC621D88241C00E28E1A /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC5F1D88241C00E28E1A /* Conference.m */; };
+		E98CAC631D88241C00E28E1A /* Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC5F1D88241C00E28E1A /* Conference.m */; };
+		E98CAC661D882D1500E28E1A /* Conference+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC651D882D1500E28E1A /* Conference+CoreDataProperties.m */; };
+		E98CAC671D882D1500E28E1A /* Conference+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC651D882D1500E28E1A /* Conference+CoreDataProperties.m */; };
+		E98CAC6A1D88346C00E28E1A /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC691D88346C00E28E1A /* TabBarVC.m */; };
 		E9938ED7199CD56E003163D5 /* Abstract.css in Resources */ = {isa = PBXBuildFile; fileRef = E9938ED6199CD56E003163D5 /* Abstract.css */; };
 		E9938EDF199CDC15003163D5 /* Abstracts.storedata in Resources */ = {isa = PBXBuildFile; fileRef = E9938EDE199CDC15003163D5 /* Abstracts.storedata */; };
 		E9AF81CA1B789F7C0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -64,7 +67,6 @@
 		E9AF81EE1B78A61E0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81EF1B78A61E0002F96D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		E9AF81FF1B78FEC90002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
-		E9BD1D871B7C7BD1000F197F /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = E9BD1D861B7C7BD1000F197F /* schedule.json */; };
 		E9D313C617BF7B3100DACDB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C517BF7B3100DACDB4 /* UIKit.framework */; };
 		E9D313C817BF7B3100DACDB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C717BF7B3100DACDB4 /* Foundation.framework */; };
 		E9D313CA17BF7B3100DACDB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D313C917BF7B3100DACDB4 /* CoreGraphics.framework */; };
@@ -83,8 +85,6 @@
 		E9D3141217BF7C1B00DACDB4 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = E9D3140C17BF7C1B00DACDB4 /* markdown.c */; };
 		E9D3141317BF7C1B00DACDB4 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = E9D3140E17BF7C1B00DACDB4 /* stack.c */; };
 		E9D3141617BF7C8D00DACDB4 /* InfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D3141517BF7C8D00DACDB4 /* InfoVC.m */; };
-		E9D3141C17BF7D4F00DACDB4 /* info.md in Resources */ = {isa = PBXBuildFile; fileRef = E9D3141917BF7D4F00DACDB4 /* info.md */; };
-		E9D3141D17BF7D4F00DACDB4 /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D3141A17BF7D4F00DACDB4 /* map.json */; };
 		E9D3142017BF7D7000DACDB4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D3141F17BF7D7000DACDB4 /* CoreText.framework */; };
 		E9D3143117BF875500DACDB4 /* 00-StarFilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3142217BF875500DACDB4 /* 00-StarFilled@2x.png */; };
 		E9D3143217BF875500DACDB4 /* 01-Location-Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D3142317BF875500DACDB4 /* 01-Location-Arrow.png */; };
@@ -133,8 +133,6 @@
 		E90A3D191B7B75D3007C9401 /* Affiliation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Affiliation.m; path = AbstractModel/Affiliation.m; sourceTree = "<group>"; };
 		E90A3D1A1B7B75D3007C9401 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Author.h; path = AbstractModel/Author.h; sourceTree = "<group>"; };
 		E90A3D1B1B7B75D3007C9401 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Author.m; path = AbstractModel/Author.m; sourceTree = "<group>"; };
-		E90A3D1C1B7B75D3007C9401 /* Conference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conference.h; path = AbstractModel/Conference.h; sourceTree = "<group>"; };
-		E90A3D1D1B7B75D3007C9401 /* Conference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conference.m; path = AbstractModel/Conference.m; sourceTree = "<group>"; };
 		E90A3D1E1B7B75D3007C9401 /* Correspondence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Correspondence.h; path = AbstractModel/Correspondence.h; sourceTree = "<group>"; };
 		E90A3D1F1B7B75D3007C9401 /* Correspondence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Correspondence.m; path = AbstractModel/Correspondence.m; sourceTree = "<group>"; };
 		E90A3D201B7B75D3007C9401 /* Figure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Figure.h; path = AbstractModel/Figure.h; sourceTree = "<group>"; };
@@ -176,11 +174,16 @@
 		E9829D5017C25EED0024EBC0 /* AbstractsSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractsSVC.h; sourceTree = "<group>"; };
 		E9829D5117C25EED0024EBC0 /* AbstractsSVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractsSVC.m; sourceTree = "<group>"; };
 		E9829EC117C2C11A0024EBC0 /* ProgramEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramEventView.h; sourceTree = "<group>"; };
+		E98CAC5E1D88241C00E28E1A /* Conference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conference.h; path = AbstractModel/Conference.h; sourceTree = "<group>"; };
+		E98CAC5F1D88241C00E28E1A /* Conference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conference.m; path = AbstractModel/Conference.m; sourceTree = "<group>"; };
+		E98CAC641D882D1500E28E1A /* Conference+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Conference+CoreDataProperties.h"; path = "AbstractModel/Conference+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E98CAC651D882D1500E28E1A /* Conference+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Conference+CoreDataProperties.m"; path = "AbstractModel/Conference+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E98CAC681D88346C00E28E1A /* TabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarVC.h; sourceTree = "<group>"; };
+		E98CAC691D88346C00E28E1A /* TabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarVC.m; sourceTree = "<group>"; };
 		E9938ED6199CD56E003163D5 /* Abstract.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Abstract.css; sourceTree = SOURCE_ROOT; };
 		E9938EDE199CDC15003163D5 /* Abstracts.storedata */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abstracts.storedata; sourceTree = SOURCE_ROOT; };
 		E9BD1D7F1B791B1B000F197F /* CKSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKSchedule.h; path = ConferenceKit/CKSchedule.h; sourceTree = "<group>"; };
 		E9BD1D801B791B1B000F197F /* CKSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKSchedule.m; path = ConferenceKit/CKSchedule.m; sourceTree = "<group>"; };
-		E9BD1D861B7C7BD1000F197F /* schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schedule.json; sourceTree = SOURCE_ROOT; };
 		E9D313C217BF7B3100DACDB4 /* GCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D313C517BF7B3100DACDB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E9D313C717BF7B3100DACDB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -214,8 +217,6 @@
 		E9D3140F17BF7C1B00DACDB4 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = ConferenceKit/sundown/src/stack.h; sourceTree = "<group>"; };
 		E9D3141417BF7C8D00DACDB4 /* InfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoVC.h; sourceTree = "<group>"; };
 		E9D3141517BF7C8D00DACDB4 /* InfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoVC.m; sourceTree = "<group>"; };
-		E9D3141917BF7D4F00DACDB4 /* info.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = info.md; sourceTree = SOURCE_ROOT; };
-		E9D3141A17BF7D4F00DACDB4 /* map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = map.json; sourceTree = SOURCE_ROOT; };
 		E9D3141F17BF7D7000DACDB4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E9D3142217BF875500DACDB4 /* 00-StarFilled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "00-StarFilled@2x.png"; path = "Artwork/00-StarFilled@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9D3142317BF875500DACDB4 /* 01-Location-Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01-Location-Arrow.png"; path = "Artwork/01-Location-Arrow.png"; sourceTree = SOURCE_ROOT; };
@@ -438,6 +439,8 @@
 				E9D3148A17C0A6C100DACDB4 /* ProgramDayTVC.h */,
 				E9D3148B17C0A6C200DACDB4 /* ProgramDayTVC.m */,
 				E9D3148C17C0A6C200DACDB4 /* ProgramDayTVC.xib */,
+				E98CAC681D88346C00E28E1A /* TabBarVC.h */,
+				E98CAC691D88346C00E28E1A /* TabBarVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -446,11 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				E91104F61B97402700E4E457 /* MathJax */,
-				E9BD1D861B7C7BD1000F197F /* schedule.json */,
 				E9938EDE199CDC15003163D5 /* Abstracts.storedata */,
 				E9938ED6199CD56E003163D5 /* Abstract.css */,
-				E9D3141917BF7D4F00DACDB4 /* info.md */,
-				E9D3141A17BF7D4F00DACDB4 /* map.json */,
 			);
 			name = Resources;
 			path = NI2013;
@@ -492,14 +492,16 @@
 		E9D3144317BF8B8400DACDB4 /* AbstractModel */ = {
 			isa = PBXGroup;
 			children = (
+				E98CAC641D882D1500E28E1A /* Conference+CoreDataProperties.h */,
+				E98CAC651D882D1500E28E1A /* Conference+CoreDataProperties.m */,
+				E98CAC5E1D88241C00E28E1A /* Conference.h */,
+				E98CAC5F1D88241C00E28E1A /* Conference.m */,
 				E90A3D161B7B75D3007C9401 /* Abstract.h */,
 				E90A3D171B7B75D3007C9401 /* Abstract.m */,
 				E90A3D181B7B75D3007C9401 /* Affiliation.h */,
 				E90A3D191B7B75D3007C9401 /* Affiliation.m */,
 				E90A3D1A1B7B75D3007C9401 /* Author.h */,
 				E90A3D1B1B7B75D3007C9401 /* Author.m */,
-				E90A3D1C1B7B75D3007C9401 /* Conference.h */,
-				E90A3D1D1B7B75D3007C9401 /* Conference.m */,
 				E90A3D1E1B7B75D3007C9401 /* Correspondence.h */,
 				E90A3D1F1B7B75D3007C9401 /* Correspondence.m */,
 				E9F29D9C1D5B58A500D6A713 /* Conference+Groups.h */,
@@ -633,8 +635,6 @@
 				E9D313D017BF7B3100DACDB4 /* InfoPlist.strings in Resources */,
 				E9D313DF17BF7B3100DACDB4 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E9D313E217BF7B3100DACDB4 /* MainStoryboard_iPad.storyboard in Resources */,
-				E9D3141C17BF7D4F00DACDB4 /* info.md in Resources */,
-				E9D3141D17BF7D4F00DACDB4 /* map.json in Resources */,
 				E9938ED7199CD56E003163D5 /* Abstract.css in Resources */,
 				E9D3143117BF875500DACDB4 /* 00-StarFilled@2x.png in Resources */,
 				E9D3143217BF875500DACDB4 /* 01-Location-Arrow.png in Resources */,
@@ -643,7 +643,6 @@
 				E9D3143517BF875500DACDB4 /* 02-Calendar@2x.png in Resources */,
 				E9D3143617BF875500DACDB4 /* 03-Path.png in Resources */,
 				E9D3143717BF875500DACDB4 /* 03-Path@2x.png in Resources */,
-				E9BD1D871B7C7BD1000F197F /* schedule.json in Resources */,
 				E9D3143817BF875500DACDB4 /* 04-Home.png in Resources */,
 				E91104F71B97402700E4E457 /* MathJax in Resources */,
 				E9D3143917BF875500DACDB4 /* 04-Home@2x.png in Resources */,
@@ -696,10 +695,10 @@
 			files = (
 				E962423B19A38B2F00B189D6 /* Abstracts.xcdatamodeld in Sources */,
 				E90A3D291B7B75D3007C9401 /* Abstract.m in Sources */,
+				E98CAC671D882D1500E28E1A /* Conference+CoreDataProperties.m in Sources */,
 				E9AF81EA1B789F7D0002F96D /* (null) in Sources */,
 				E90A3D371B7B75D3007C9401 /* Organization.m in Sources */,
 				E90A3D3D1B7B79A6007C9401 /* ConferenceController.m in Sources */,
-				E90A3D2F1B7B75D3007C9401 /* Conference.m in Sources */,
 				E90A3D391B7B75D3007C9401 /* Reference.m in Sources */,
 				E9AF81FF1B78FEC90002F96D /* (null) in Sources */,
 				E90A3D311B7B75D3007C9401 /* Correspondence.m in Sources */,
@@ -708,6 +707,7 @@
 				E90A3D2D1B7B75D3007C9401 /* Author.m in Sources */,
 				E976936519A87A8700320EAD /* Abstract+Format.m in Sources */,
 				E9AF81CA1B789F7C0002F96D /* (null) in Sources */,
+				E98CAC631D88241C00E28E1A /* Conference.m in Sources */,
 				E9AF81E61B789F7D0002F96D /* (null) in Sources */,
 				E9AF81EE1B78A61E0002F96D /* (null) in Sources */,
 				E90A3D331B7B75D3007C9401 /* Figure.m in Sources */,
@@ -740,10 +740,12 @@
 				E90A3D381B7B75D3007C9401 /* Reference.m in Sources */,
 				E9216E6D17E8EAC70013973B /* Abstracts.xcdatamodeld in Sources */,
 				E9D3140217BF7BE600DACDB4 /* CKPoiManager.m in Sources */,
+				E98CAC6A1D88346C00E28E1A /* TabBarVC.m in Sources */,
 				E9F29D9E1D5B58A500D6A713 /* Conference+Groups.m in Sources */,
 				E9D3140317BF7BE600DACDB4 /* UIColor+ConferenceKit.m in Sources */,
 				E9D3141017BF7C1B00DACDB4 /* autolink.c in Sources */,
 				E9D3141117BF7C1B00DACDB4 /* buffer.c in Sources */,
+				E98CAC621D88241C00E28E1A /* Conference.m in Sources */,
 				E9D3141217BF7C1B00DACDB4 /* markdown.c in Sources */,
 				E96241FB19A3816900B189D6 /* Organization+Format.m in Sources */,
 				E90A3D281B7B75D3007C9401 /* Abstract.m in Sources */,
@@ -753,8 +755,8 @@
 				E9D3144217BF880600DACDB4 /* MapVC.m in Sources */,
 				E90A3D321B7B75D3007C9401 /* Figure.m in Sources */,
 				E9D3145F17BF8CF200DACDB4 /* CKDataStore.m in Sources */,
-				E90A3D2E1B7B75D3007C9401 /* Conference.m in Sources */,
 				E9D3146217BF9EFF00DACDB4 /* AbstractsListTVC.m in Sources */,
+				E98CAC661D882D1500E28E1A /* Conference+CoreDataProperties.m in Sources */,
 				E9D3146817BFA1B800DACDB4 /* AbstractInfoCell.m in Sources */,
 				E90A3D2C1B7B75D3007C9401 /* Author.m in Sources */,
 				E976936419A87A8700320EAD /* Abstract+Format.m in Sources */,
@@ -938,7 +940,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 34;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
@@ -959,7 +961,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 34;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";

@@ -92,6 +92,6 @@ typedef enum {
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong, readonly) NSArray *days;
 
-- (instancetype) initFromFile:(NSString *)path;
+- (instancetype) initFromJSON:(NSString *)json;
 
 @end

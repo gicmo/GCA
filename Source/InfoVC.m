@@ -10,10 +10,12 @@
 #import "CKMarkdownParser.h"
 #import "CKMarkdownView.h"
 #import "UIColor+ConferenceKit.h"
+#import "AbstractModel/Conference.h"
 
-@interface InfoVC ()
+@interface InfoVC () <ConferenceAware>
 @property (weak, nonatomic) IBOutlet UIScrollView *container;
 @property (strong, nonatomic) CKMarkdownView *mdView;
+@property (strong, nonatomic) Conference *conference;
 @end
 
 @implementation InfoVC
@@ -21,11 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"md"];
-    NSString *fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    
-    NSAttributedString *attrStr = [CKMarkdownParser parseString:fileContents];
+
+    NSLog(@"Loaded info VC");
+
+    NSAttributedString *attrStr = [CKMarkdownParser parseString:self.conference.info];
     
     self.mdView = [[CKMarkdownView alloc] init];
     self.mdView.fgColor = [UIColor ckColor];

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 4.1">
     <entity name="Abstract" representedClassName="Abstract" syncable="YES">
         <attribute name="acknoledgements" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="aid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -42,8 +42,13 @@
         <attribute name="deadline" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="end" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="etag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="etagAbstracts" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="map" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="schedule" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="start" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="uuid" attributeType="String" minValueString="36" maxValueString="36" indexed="YES" syncable="YES"/>
         <relationship name="abstracts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Abstract" inverseName="conference" inverseEntity="Abstract" syncable="YES"/>
@@ -84,14 +89,14 @@
         <relationship name="ofAbstract" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Abstract" inverseName="references" inverseEntity="Abstract" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Abstract" positionX="-47" positionY="-81" width="128" height="358"/>
+        <element name="Abstract" positionX="-47" positionY="-81" width="128" height="360"/>
         <element name="Affiliation" positionX="250" positionY="-27" width="128" height="90"/>
         <element name="Author" positionX="259" positionY="-378" width="128" height="163"/>
+        <element name="Conference" positionX="-243" positionY="-351" width="128" height="255"/>
         <element name="Correspondence" positionX="340" positionY="171" width="128" height="90"/>
         <element name="Figure" positionX="216" positionY="-216" width="128" height="103"/>
+        <element name="Group" positionX="-27" positionY="-216" width="128" height="120"/>
         <element name="Organization" positionX="475" positionY="0" width="128" height="150"/>
         <element name="Reference" positionX="207" positionY="-225" width="128" height="118"/>
-        <element name="Conference" positionX="-243" positionY="-351" width="128" height="178"/>
-        <element name="Group" positionX="-27" positionY="-216" width="128" height="120"/>
     </elements>
 </model>

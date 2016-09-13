@@ -10,14 +10,16 @@
 #import "CKPoiManager.h"
 #import "MapVC.h"
 #import "UIColor+ConferenceKit.h"
+#import "AbstractModel/Conference.h"
 
-@interface MapVC () <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface MapVC () <MKMapViewDelegate, CLLocationManagerDelegate, ConferenceAware>
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) CKPoIManager *poiManager;
 @property (weak, nonatomic) IBOutlet UIButton *locateMe;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonConstraint;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) Conference *conference;
 @end
 
 @implementation MapVC
@@ -25,9 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"map" ofType:@"json"];
-    self.poiManager = [[CKPoIManager alloc] initFromFile:jsonPath];
+
+    self.poiManager = [[CKPoIManager alloc] initFromJSON:self.conference.map];
     self.map.delegate = self;
     
     NSArray *annotations = [self.poiManager pois];

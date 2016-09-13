@@ -13,9 +13,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //this will load the schedule
-    CKSchedule *schedule = [[CKDataStore defaultStore] schedule];
-    NSLog(@"schedule: %@", schedule);
     return YES;
 }
 

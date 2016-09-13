@@ -12,8 +12,9 @@
 #import "AbstractVC.h"
 #import "CKDataStore.h"
 #import "CKMarkdownVC.h"
+#import "AbstractModel/Conference.h"
 
-@interface ProgramRootVC () <ProgramDayDelegate, UINavigationControllerDelegate>
+@interface ProgramRootVC () <ProgramDayDelegate, UINavigationControllerDelegate, ConferenceAware>
 
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *dayLabel;
@@ -26,6 +27,8 @@
 
 @property (strong, nonatomic) NSArray *dayController; //of type ProgramDayTVC
 @property (nonatomic) NSInteger dayIndex;
+
+@property (strong, nonatomic) Conference *conference;
 @end
 
 @implementation ProgramRootVC
@@ -126,8 +129,8 @@
     
 
     UIView *lastView = nil;
-    
-    CKSchedule *schedule = [[CKDataStore defaultStore] schedule];
+    NSString *sdata = self.conference.schedule;
+    CKSchedule *schedule = [[CKSchedule alloc] initFromJSON:sdata];
     NSMutableArray *vcList = [[NSMutableArray alloc] initWithCapacity:schedule.days.count];
     for (CKDay *day in schedule.days) {
         ProgramDayTVC *pdvc = [[ProgramDayTVC alloc] initWithDay:day];

@@ -32,16 +32,25 @@
 {
     self = [super init];
     if (self) {
-        [self loadData:path];
+        NSString *fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        NSData *data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+        [self loadData:data];
     }
     return self;
 }
 
-- (void)loadData:(NSString *)path
+- (CKPoIManager *) initFromJSON:(NSString *)json
 {
-    NSString *fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    
-    NSData *data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+    self = [super init];
+    if (self) {
+        NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
+        [self loadData:data];
+    }
+    return self;
+}
+
+- (void)loadData:(NSData *)data
+{
     NSArray *root = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     
     

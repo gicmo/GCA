@@ -224,6 +224,9 @@
 
     conf.groups = groups;
 
+    conf.info = dict[@"info"];
+    conf.map = dict[@"geo"];
+    conf.schedule = dict[@"schedule"];
     return YES;
 }
 
