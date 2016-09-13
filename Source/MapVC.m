@@ -19,22 +19,36 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonConstraint;
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) Conference *conference;
 @end
 
 @implementation MapVC
+
+- (void) setConference:(Conference *)conference
+{
+    if (self.poiManager != nil && self.map != nil) {
+        NSArray *annotations = [self.poiManager pois];
+        [self.map removeAnnotations:annotations];
+    }
+
+    self.poiManager = [[CKPoIManager alloc] initFromJSON:conference.map];
+
+    if (self.map != nil) {
+        NSArray *annotations = [self.poiManager pois];
+        [self.map addAnnotations:annotations];
+    }
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.poiManager = [[CKPoIManager alloc] initFromJSON:self.conference.map];
     self.map.delegate = self;
-    
     NSArray *annotations = [self.poiManager pois];
-    [self.map addAnnotations:annotations];
+    if (self.map.annotations.count != annotations.count) {
+        [self.map addAnnotations:annotations];
+    }
+
     self.map.showsUserLocation = YES;
-    
     [self.locateMe setTitleColor:[UIColor ckColor] forState:UIControlStateHighlighted];
     
     UIImage *source = [UIImage imageNamed:@"01-Location-Arrow.png"];

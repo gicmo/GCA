@@ -15,23 +15,33 @@
 @interface InfoVC () <ConferenceAware>
 @property (weak, nonatomic) IBOutlet UIScrollView *container;
 @property (strong, nonatomic) CKMarkdownView *mdView;
-@property (strong, nonatomic) Conference *conference;
+@property (strong, nonatomic) NSAttributedString *info;
 @end
 
 @implementation InfoVC
+
+- (void)setConference:(Conference *)conf
+{
+    self.info = [CKMarkdownParser parseString:conf.info];
+}
+
+- (void)setInfo:(NSAttributedString *)info {
+    if (_info != info) {
+        _info = info;
+        self.mdView.text = self.info;
+    }
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     NSLog(@"Loaded info VC");
-
-    NSAttributedString *attrStr = [CKMarkdownParser parseString:self.conference.info];
     
     self.mdView = [[CKMarkdownView alloc] init];
     self.mdView.fgColor = [UIColor ckColor];
     self.mdView.backgroundColor = [UIColor whiteColor];
-    self.mdView.text = attrStr;
+    self.mdView.text = self.info;
     self.mdView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.container addSubview:self.mdView];
