@@ -10,5 +10,6 @@
 
 @interface UIColor (ConferenceKit)
 + (UIColor *)ckColor;
++ (UIColor *)incfBlack;
 - (NSString *)hexString;
 @end

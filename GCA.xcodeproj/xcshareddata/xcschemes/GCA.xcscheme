@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9D313C117BF7B3100DACDB4"
-               BuildableName = "GCA.app"
+               BuildableName = "NI17.app"
                BlueprintName = "GCA"
                ReferencedContainer = "container:GCA.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9D313C117BF7B3100DACDB4"
-            BuildableName = "GCA.app"
+            BuildableName = "NI17.app"
             BlueprintName = "GCA"
             ReferencedContainer = "container:GCA.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9D313C117BF7B3100DACDB4"
-            BuildableName = "GCA.app"
+            BuildableName = "NI17.app"
             BlueprintName = "GCA"
             ReferencedContainer = "container:GCA.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9D313C117BF7B3100DACDB4"
-            BuildableName = "GCA.app"
+            BuildableName = "NI17.app"
             BlueprintName = "GCA"
             ReferencedContainer = "container:GCA.xcodeproj">
          </BuildableReference>

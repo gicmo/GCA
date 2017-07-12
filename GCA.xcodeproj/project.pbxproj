@@ -184,7 +184,7 @@
 		E9938EDE199CDC15003163D5 /* Abstracts.storedata */ = {isa = PBXFileReference; lastKnownFileType = file; path = Abstracts.storedata; sourceTree = SOURCE_ROOT; };
 		E9BD1D7F1B791B1B000F197F /* CKSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKSchedule.h; path = ConferenceKit/CKSchedule.h; sourceTree = "<group>"; };
 		E9BD1D801B791B1B000F197F /* CKSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKSchedule.m; path = ConferenceKit/CKSchedule.m; sourceTree = "<group>"; };
-		E9D313C217BF7B3100DACDB4 /* GCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D313C217BF7B3100DACDB4 /* NI17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NI17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D313C517BF7B3100DACDB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E9D313C717BF7B3100DACDB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9D313C917BF7B3100DACDB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -333,7 +333,7 @@
 		E9D313C317BF7B3100DACDB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9D313C217BF7B3100DACDB4 /* GCA.app */,
+				E9D313C217BF7B3100DACDB4 /* NI17.app */,
 				E962420019A38A4800B189D6 /* GCAManager.app */,
 			);
 			name = Products;
@@ -576,7 +576,7 @@
 			);
 			name = GCA;
 			productName = NI2013;
-			productReference = E9D313C217BF7B3100DACDB4 /* GCA.app */;
+			productReference = E9D313C217BF7B3100DACDB4 /* NI17.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -592,7 +592,7 @@
 						CreatedOnToolsVersion = 6.0;
 					};
 					E9D313C117BF7B3100DACDB4 = {
-						DevelopmentTeam = 42RKK3EW2J;
+						DevelopmentTeam = DV35PT4UH5;
 					};
 				};
 			};
@@ -954,18 +954,19 @@
 		E9D313F417BF7B3100DACDB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = INCF;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 104;
+				DEVELOPMENT_TEAM = DV35PT4UH5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.g-node.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GCA;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.g-node.incf17";
+				PRODUCT_NAME = NI17;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -975,18 +976,19 @@
 		E9D313F517BF7B3100DACDB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = INCF;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 104;
+				DEVELOPMENT_TEAM = DV35PT4UH5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
 				INFOPLIST_FILE = "Source/GCA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.g-node.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GCA;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.g-node.incf17";
+				PRODUCT_NAME = NI17;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};

@@ -15,6 +15,11 @@
      return [UIColor colorWithRed:0.0235 green:0.2510 blue:0.5098 alpha:1.0000];
 }
 
++ (UIColor *)incfBlack
+{
+    return [UIColor colorWithRed:0.145 green:0.145 blue:0.145 alpha:1.0000];
+}
+
 - (NSString *)hexString {
     const CGFloat *components = CGColorGetComponents(self.CGColor);
     
