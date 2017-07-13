@@ -137,4 +137,39 @@ Uploading an app requires
 - a BundleID from iTunes connect; every app requires its own ID
     ... bundleID for the app has to be the same in xcode.
 
+Registration process
+- xcode - accounts - manage - [developer apple account] - enable iOS create
+- iOS developer website `developer.apple.com`.
+    - login with app developer account
+    - Certificates, IDs, Profiles
+    - create appID/bundleID e.g. org.g-node.BC17 or org.g-node.NI17
+    - add some Name e.g. BC17 or NI17
+- xcode:
+    - project - general
+    - add display and adjust bundleID
+    - team [developer]
+    - project - info - change Bundle name (or change whatever the variable there references) to e.g. BC17 or NI17
+    - build - analyze
+    - select [CGA][actual apple device], wait, wait, wait...
+    - product - archive
+- iTunes connect - login [developer] - app store
+    - here add new app
+    - add name e.g. BC17 or NI17
+    - select proper bundleID and add bundleID as SKU
+    - add category Education
+
+    - select prepare for submission
+    - add app display name
+    - add keywords e.g. INCF Conference, Neuroinformatics, Brain, Computational Neuroscience
+    - copy description and promotional text from previous app
+    - change version to same as in xcode
+    - switch sign in required off
+    - upload icon (requires 1024x1024 resultion)
+    - make screenshots in xcode for phone and pad
+    - start app - "command"+S for screenshot
+    - drag - drop screenshots to iTunes connect
+    - select pricing, price "free"
+- xcode - archive - after the process is done upload to app store
+- iTunes connect - submit for review
+
 
