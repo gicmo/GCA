@@ -61,19 +61,24 @@ conference instance. Use `GCA-Python` for that.
     links provided, escaped and put into the conference.json manually!
 
     schedule data:
-    - fetch schedule json via link in conference.schedule.
-    - escape it to string (take care of these nasty quotes) e.g. by freeformatter.com.
+    - fetch schedule json via link in conference.schedule if available or handcraft the schedule.json.
+    - in any case any text used in the schedule json.field `type` has to be supported by the event types
+	implemented in `Source\ConferenceKit\CKSchedule.*`, otherwise the import will fail.
+    - escape the json to string (take care of these nasty quotes) e.g. via freeformatter.com.
     - remove link and paste the escaped string into the conference json `schedule` field.
 
     geo (type has to match enum in `Source\Controller\MapVC`):
-    - fetch geo json via link in conference.geo.
-    - escape it to string.
+    - fetch geo json via link in conference.geo or handcraft it.
+    - escape the json to string.
     - remove link and paste the escaped string into the conference json `geo` field.
 
-    info:
+    info (has to be sundown flavored markdown!):
     - fetch info markdown via link in conference.info.
-    - escape linebreaks with newline characters.
+    - escape linebreaks properly.
     - remove link and paste the escaped string into the conference json `info` field.
+    - the markdown parser was taken from [here](https://github.com/vmg/sundown), 
+         the documentation for it is probably [here](http://fossil.instinctive.eu/natawstat/md_rules),
+         but currently only rendering of headlines is supported.
 
 - Note: if maps data is not available at the time when the first version of the
    iOS app is created and uploaded, it will simply show a random map screen.
