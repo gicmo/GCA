@@ -166,10 +166,15 @@ Registration process
     - switch sign in required off
     - upload icon (requires 1024x1024 resultion)
     - make screenshots in xcode for phone and pad
+    - NOTE: always create screenshots only for the largest available iPhone/iPad.
+        The app store scales all images down for smaller devices, but not up.
     - start app - "command"+S for screenshot
     - drag - drop screenshots to iTunes connect
     - select pricing, price "free"
-- xcode - archive - after the process is done upload to app store
+- xcode - archive
+    - validate
+    - upload to store
+    - NOTE: when being behind a firewall the upload process might fail
 - iTunes connect - submit for review
 
 
