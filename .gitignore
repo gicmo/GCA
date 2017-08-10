@@ -19,6 +19,7 @@ doc/html
 *.swp
 *~
 *.orig
+*cache
 
 # ignore files from dbg
 .dbg.
