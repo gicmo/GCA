@@ -1,9 +1,8 @@
 //
 //  CKDataStore.m
-//  NI2013
 //
 //  Created by Christian Kellner on 17/08/2013.
-//  Copyright (c) 2013 G-Node. All rights reserved.
+//  Copyright (c) 2013-2022 G-Node. All rights reserved.
 //
 
 #import "CKDataStore.h"
@@ -29,7 +28,7 @@
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        __managedObjectContext = [[NSManagedObjectContext alloc] init];
+        __managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [__managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return __managedObjectContext;
@@ -60,13 +59,18 @@
     {
         return __persistentStoreCoordinator;
     }
-    NSString *absractDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Abstracts.storedata"];
-    NSURL *url = [NSURL fileURLWithPath:absractDBPath];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSArray *urls = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    assert(urls && [urls count] > 0);
+    
+    NSURL *url = [urls[0] URLByAppendingPathComponent:@"Abstracts.storedata"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
 
-    NSDictionary *ps_opts = @{NSReadOnlyPersistentStoreOption: @YES,
+    NSDictionary *ps_opts = @{
                               NSSQLitePragmasOption: @{@"journal_mode":@"DELETE"},
                             };
     
