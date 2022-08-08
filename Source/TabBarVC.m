@@ -37,7 +37,7 @@
     NSError *error = nil;
     NSArray *arr = [store.managedObjectContext executeFetchRequest:request error:&error];
 
-    if (!arr) {
+    if (!arr || [arr count] < 1) {
         NSLog(@"Could not fetch conference!");
         return;
     }
