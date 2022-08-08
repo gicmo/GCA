@@ -13,8 +13,7 @@
 
 
 @synthesize managedObjectContext = __managedObjectContext;
-@synthesize managedObjectModel = __managedObjectModel;
-@synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize container = __container;
 
 /**
  Returns the managed object context for the application.
@@ -22,69 +21,37 @@
  */
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (__managedObjectContext != nil) {
-        return __managedObjectContext;
-    }
-    
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        __managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
-    return __managedObjectContext;
+    return self.container.viewContext;
 }
 
-/**
- Returns the managed object model for the application.
- If the model doesn't already exist, it is created from the application's model.
- */
-- (NSManagedObjectModel *)managedObjectModel
-{
-    if (__managedObjectModel != nil) {
-        return __managedObjectModel;
-    }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Abstracts" withExtension:@"momd"];
-    //NSLog(@"modelURL exits?: %d\n", [[NSFileManager defaultManager] fileExistsAtPath:[modelURL path]]);
-    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    return __managedObjectModel;
-}
+-(NSPersistentContainer *) container {
 
-/**
- Returns the persistent store coordinator for the application.
- If the coordinator doesn't already exist, it is created and the application's store added to it.
- */
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
-{
-    if (__persistentStoreCoordinator != nil)
-    {
-        return __persistentStoreCoordinator;
+    // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
+    @synchronized (self) {
+        if (__container == nil) {
+            __container = [[NSPersistentContainer alloc] initWithName:@"Abstracts"];
+            [__container loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
+                if (error != nil) {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    
+                    /*
+                     Typical reasons for an error here include:
+                     * The parent directory does not exist, cannot be created, or disallows writing.
+                     * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                     * The device is out of space.
+                     * The store could not be migrated to the current model version.
+                     Check the error message to determine what the actual problem was.
+                    */
+                    NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                    abort();
+                }
+            }];
+        }
     }
     
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return __container;
     
-    NSArray *urls = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-    assert(urls && [urls count] > 0);
-    
-    NSURL *url = [urls[0] URLByAppendingPathComponent:@"Abstracts.storedata"];
-    
-    NSError *error = nil;
-    __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-
-    NSDictionary *ps_opts = @{
-                              NSSQLitePragmasOption: @{@"journal_mode":@"DELETE"},
-                            };
-    
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
-                                                    configuration:nil
-                                                              URL:url
-                                                          options:ps_opts
-                                                            error:&error])
-    {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    
-    return __persistentStoreCoordinator;
 }
 
 -(instancetype)init
@@ -104,7 +71,5 @@
     
     return store;
 }
-
-
 
 @end
