@@ -16,6 +16,8 @@
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong) NSPersistentContainer *container;
+@property (readonly, strong) NSPersistentHistoryToken *lastToken;
+@property (readonly, strong) NSURL *tokenURL;
 
 + (CKDataStore *) defaultStore;
 
