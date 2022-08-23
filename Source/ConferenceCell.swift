@@ -9,6 +9,8 @@
 import UIKit
 
 class ConferenceCell: UITableViewCell {
+    
+    @IBOutlet var button: UILabel?
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -19,6 +19,8 @@
 @property (readonly, strong) NSPersistentHistoryToken *lastToken;
 @property (readonly, strong) NSURL *tokenURL;
 
+-(void) fetchConferences;
+
 + (CKDataStore *) defaultStore;
 
 @end

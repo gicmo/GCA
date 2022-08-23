@@ -54,6 +54,9 @@
 		E98CAC661D882D1500E28E1A /* Conference+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC651D882D1500E28E1A /* Conference+CoreDataProperties.m */; };
 		E98CAC671D882D1500E28E1A /* Conference+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC651D882D1500E28E1A /* Conference+CoreDataProperties.m */; };
 		E98CAC6A1D88346C00E28E1A /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CAC691D88346C00E28E1A /* TabBarVC.m */; };
+		E9924C9F289DC04D00C608B0 /* ConferenceListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9924C9E289DC04D00C608B0 /* ConferenceListTVC.swift */; };
+		E9924D2928A30EC700C608B0 /* ConferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9924D2728A30EC700C608B0 /* ConferenceCell.swift */; };
+		E9924D2A28A30EC700C608B0 /* ConferenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9924D2828A30EC700C608B0 /* ConferenceCell.xib */; };
 		E9938ED7199CD56E003163D5 /* Abstract.css in Resources */ = {isa = PBXBuildFile; fileRef = E9938ED6199CD56E003163D5 /* Abstract.css */; };
 		E9AF81CA1B789F7C0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9AF81CE1B789F7D0002F96D /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -179,6 +182,10 @@
 		E98CAC651D882D1500E28E1A /* Conference+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Conference+CoreDataProperties.m"; path = "AbstractModel/Conference+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E98CAC681D88346C00E28E1A /* TabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarVC.h; sourceTree = "<group>"; };
 		E98CAC691D88346C00E28E1A /* TabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarVC.m; sourceTree = "<group>"; };
+		E9924C9B289DBDAD00C608B0 /* GCA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCA-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9924C9E289DC04D00C608B0 /* ConferenceListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListTVC.swift; sourceTree = "<group>"; };
+		E9924D2728A30EC700C608B0 /* ConferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCell.swift; sourceTree = "<group>"; };
+		E9924D2828A30EC700C608B0 /* ConferenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConferenceCell.xib; sourceTree = "<group>"; };
 		E9938ED6199CD56E003163D5 /* Abstract.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Abstract.css; sourceTree = SOURCE_ROOT; };
 		E9BD1D7F1B791B1B000F197F /* CKSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKSchedule.h; path = ConferenceKit/CKSchedule.h; sourceTree = "<group>"; };
 		E9BD1D801B791B1B000F197F /* CKSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKSchedule.m; path = ConferenceKit/CKSchedule.m; sourceTree = "<group>"; };
@@ -422,6 +429,7 @@
 		E9D3141717BF7C9900DACDB4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9924C9E289DC04D00C608B0 /* ConferenceListTVC.swift */,
 				E9D3144017BF880600DACDB4 /* MapVC.h */,
 				E9D3144117BF880600DACDB4 /* MapVC.m */,
 				E9D3141417BF7C8D00DACDB4 /* InfoVC.h */,
@@ -439,6 +447,7 @@
 				E9D3148C17C0A6C200DACDB4 /* ProgramDayTVC.xib */,
 				E98CAC681D88346C00E28E1A /* TabBarVC.h */,
 				E98CAC691D88346C00E28E1A /* TabBarVC.m */,
+				E9924C9B289DBDAD00C608B0 /* GCA-Bridging-Header.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -534,6 +543,8 @@
 				E9D3148517C0A62400DACDB4 /* ProgramPointCell.h */,
 				E9D3148617C0A62400DACDB4 /* ProgramPointCell.m */,
 				E9829EC117C2C11A0024EBC0 /* ProgramEventView.h */,
+				E9924D2728A30EC700C608B0 /* ConferenceCell.swift */,
+				E9924D2828A30EC700C608B0 /* ConferenceCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -565,7 +576,7 @@
 				E9D313BE17BF7B3100DACDB4 /* Sources */,
 				E9D313BF17BF7B3100DACDB4 /* Frameworks */,
 				E9D313C017BF7B3100DACDB4 /* Resources */,
-				E9A4C9821B98945E00B6B709 /* ShellScript */,
+				E9A4C9821B98945E00B6B709 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -649,6 +660,7 @@
 				E9D3143C17BF875500DACDB4 /* 06-Next.png in Resources */,
 				E9D3143D17BF875500DACDB4 /* 06-Next@2x.png in Resources */,
 				E9D3143E17BF875500DACDB4 /* 07-Previous.png in Resources */,
+				E9924D2A28A30EC700C608B0 /* ConferenceCell.xib in Resources */,
 				E9D3143F17BF875500DACDB4 /* 07-Previous@2x.png in Resources */,
 				E9D3146517BF9F7800DACDB4 /* AbstractInfoCell.xib in Resources */,
 				E9D3147517BFB03E00DACDB4 /* 00-Star.png in Resources */,
@@ -670,18 +682,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E9A4C9821B98945E00B6B709 /* ShellScript */ = {
+		E9A4C9821B98945E00B6B709 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${DEVELOPER_BIN_DIR}/agvtool\" next-version -all";
+			shellScript = "\"${DEVELOPER_BIN_DIR}/agvtool\" next-version -all\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -730,6 +743,7 @@
 				E90D7C011B98C40F003B3948 /* CKMarkdownVC.m in Sources */,
 				E9E3A5311B7C9DAF00919B6C /* CKSchedule.m in Sources */,
 				E90A3D341B7B75D3007C9401 /* Group.m in Sources */,
+				E9924C9F289DC04D00C608B0 /* ConferenceListTVC.swift in Sources */,
 				E9D313D217BF7B3100DACDB4 /* main.m in Sources */,
 				E9D313D617BF7B3100DACDB4 /* AppDelegate.m in Sources */,
 				E9D3140017BF7BE600DACDB4 /* CKMarkdownParser.m in Sources */,
@@ -747,6 +761,7 @@
 				E96241FB19A3816900B189D6 /* Organization+Format.m in Sources */,
 				E90A3D281B7B75D3007C9401 /* Abstract.m in Sources */,
 				E96241F819A3814900B189D6 /* Author+Format.m in Sources */,
+				E9924D2928A30EC700C608B0 /* ConferenceCell.swift in Sources */,
 				E9D3141317BF7C1B00DACDB4 /* stack.c in Sources */,
 				E9D3141617BF7C8D00DACDB4 /* InfoVC.m in Sources */,
 				E9D3144217BF880600DACDB4 /* MapVC.m in Sources */,
@@ -916,6 +931,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "BD3873E0-7F7C-44B6-BC78-FE84AD43BD2E";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "GCA-Bridging-Header";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -963,6 +979,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "BD3873E0-7F7C-44B6-BC78-FE84AD43BD2E";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "GCA-Bridging-Header";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -975,7 +992,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 135;
+				CURRENT_PROJECT_VERSION = 188;
 				DEVELOPMENT_TEAM = DV35PT4UH5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
@@ -985,6 +1002,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.g-node.incf17";
 				PRODUCT_NAME = NI17;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/GCA-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
@@ -998,7 +1016,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 135;
+				CURRENT_PROJECT_VERSION = 188;
 				DEVELOPMENT_TEAM = DV35PT4UH5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/GCA-Prefix.pch";
@@ -1008,6 +1026,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.g-node.incf17";
 				PRODUCT_NAME = NI17;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/GCA-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};

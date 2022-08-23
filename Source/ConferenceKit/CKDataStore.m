@@ -7,10 +7,14 @@
 
 #import "CKDataStore.h"
 
+#import "Conference.h"
 
+@interface CKDataStore()
+@property (strong) NSString *remoteChangeToken;
+- (void)remoteStoreChanged:(NSNotification *)notification;
+@end
 
 @implementation CKDataStore
-
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize container = __container;
@@ -32,6 +36,8 @@
     @synchronized (self) {
         if (__container == nil) {
             __container = [[NSPersistentContainer alloc] initWithName:@"Abstracts"];
+           
+            [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(remoteStoreChanged:) name:NSPersistentStoreRemoteChangeNotification object:nil];
             
             NSPersistentStoreDescription *desc = __container.persistentStoreDescriptions.firstObject;
             
@@ -39,6 +45,12 @@
                 NSNumber *trueNum = [NSNumber numberWithBool:YES];
                 [desc setOption:trueNum forKey:NSPersistentHistoryTrackingKey];
                 [desc setOption:trueNum forKey:NSPersistentStoreRemoteChangeNotificationPostOptionKey];
+            }
+            
+            // for debugging and developing
+            if (YES) {
+                desc.URL = [NSURL fileURLWithPath:@"/dev/null"];
+                self.lastToken = nil;
             }
             
             [__container loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
@@ -53,9 +65,49 @@
         __container.viewContext.name = @"viewContext";
         __container.viewContext.undoManager = nil;
         __container.viewContext.shouldDeleteInaccessibleFaults = YES;
+        //__container.viewContext.automaticallyMergesChangesFromParent = YES;
     }
     
     return __container;
+}
+
+- (void)remoteStoreChanged:(NSNotification *)notification {
+    NSLog(@"Got remote store changed notification");
+    
+    NSManagedObjectContext *ctx = [self.container newBackgroundContext];
+    
+    ctx.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;
+    ctx.undoManager = nil;
+    
+    [ctx performBlock:^{
+        NSPersistentHistoryToken *token = self.lastToken;
+        NSLog(@"last token: %@", token);
+        NSPersistentHistoryChangeRequest *req = [NSPersistentHistoryChangeRequest fetchHistoryAfterToken:token];
+        
+        NSError *error = nil;
+        NSPersistentHistoryResult *res = [ctx executeRequest:req error:&error];
+        
+        if (res == nil) {
+            NSLog(@"WARN: could not fetch history: %@", error);
+            return;
+        }
+        
+        NSArray *history = (NSArray *) res.result;
+        NSLog(@"history count: %ld", history.count);
+        if (history.count > 0) {
+           
+            [self.container.viewContext performBlock:^{
+                for (NSPersistentHistoryTransaction *tx in history) {
+                    NSLog(@"TX: %@", tx);
+                    [self.container.viewContext mergeChangesFromContextDidSaveNotification:tx.objectIDNotification];
+                    self.lastToken = tx.token;
+                }
+                [self.container.viewContext save:nil];
+            }];
+            
+        }
+        
+    }];
 }
 
 -(NSPersistentHistoryToken *) lastToken {
@@ -81,6 +133,8 @@
 -(void) setLastToken:(NSPersistentHistoryToken *)lastToken {
     
     if (lastToken == nil) {
+        __lastToken = nil;
+        [[NSFileManager defaultManager] removeItemAtURL:self.tokenURL error:nil];
         return;
     }
     
@@ -120,6 +174,80 @@
     
     __tokenURL = [dir URLByAppendingPathComponent:@"history.token" isDirectory:NO];
     return __tokenURL;
+}
+
+-(void) decodeConferences:(NSData *)data {
+    NSManagedObjectContext *ctx = [self.container newBackgroundContext];
+    
+    ctx.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;
+    ctx.undoManager = nil;
+    
+    [ctx performBlock:^{
+        id lst = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        if (![lst isKindOfClass:[NSArray class]]) {
+            NSLog(@"NOT A Array!\n");
+            return;
+        }
+        
+        NSArray *confData = (NSArray *) lst;
+        NSMutableDictionary *confByUUID = [NSMutableDictionary dictionary];
+        NSMutableSet *server = [NSMutableSet setWithCapacity:confData.count];
+        
+        for (NSDictionary *d in lst) {
+            NSLog(@"server: %@", d);
+            [server addObject:d[@"uuid"]];
+            confByUUID[d[@"uuid"]] = d;
+        }
+        
+        NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:@"Conference"];
+        req.propertiesToFetch = @[@"uuid"];
+        req.resultType = NSDictionaryResultType;
+       
+        NSError *error = nil;
+        NSArray *res = [ctx executeFetchRequest:req error:&error];
+        
+        NSMutableSet *local = [NSMutableSet setWithCapacity:res.count];
+        for (NSDictionary *d in res) {
+            NSLog(@"have: %@", d);
+            [server addObject:d[@"uuid"]];
+        }
+       
+        NSMutableSet *created = [NSMutableSet setWithCapacity:server.count];
+        [created setSet:server];
+        [created minusSet:local];
+        
+        for (NSString *uuid in created) {
+            NSLog(@"created: %@", uuid);
+            NSDictionary *detail = confByUUID[uuid];
+            
+            Conference *conf = [NSEntityDescription insertNewObjectForEntityForName:@"Conference"
+                                                             inManagedObjectContext:ctx];
+            conf.uuid = uuid;
+            conf.name = detail[@"name"];
+        }
+        
+        BOOL ok = [ctx save:&error];
+        if (!ok) {
+            NSLog(@"failed to save context: %@", error);
+        }
+    }];
+}
+
+-(void) fetchConferences {
+    NSURL *url = [NSURL URLWithString:@"https://abstracts.g-node.org/api/conferences"];
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSHTTPURLResponse *res = (NSHTTPURLResponse *) response;
+        NSLog(@"status code: %ld", res.statusCode);
+        if (res.statusCode == 200) {
+            [self decodeConferences:data];
+        }
+    }];
+    
+    [task resume];
 }
 
 
